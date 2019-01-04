@@ -1,0 +1,6 @@
+@include breakpoint(md) {
+  .c-main {
+    display: grid;
+    grid-template-columns: auto minmax(calc(100% - 320px), 70%);
+  }
+}

@@ -1,0 +1,23 @@
+.c-sidebar {
+  .c-docs-nav {
+    display: none;
+  }
+
+  &.is-active {
+    .c-docs-nav {
+      display: block;
+    }
+  }
+}
+
+@include md {
+  .c-sidebar {
+    > .c-button {
+      display: none;
+    }
+
+    .c-docs-nav {
+      display: block;
+    }
+  }
+}
