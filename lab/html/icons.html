@@ -1,0 +1,28 @@
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example-tab.html' import ExampleTab %}
+
+{% block content %}
+    <h1>Icons</h1>
+
+    <p>Place vector icons anywhere using our SVG sprite generator.</p>
+
+    <h3>Usage</h3>
+
+    <div class="c-example">
+        <div class="c-example__tabs">
+            {{ExampleTab('/lab/iframes/icons.html', 'Open this example in a new window')}}
+        </div>
+        <iframe class="c-example__iframe" src="/lab/iframes/icons.html"></iframe>
+    </div>
+
+    <div class="c-code">
+        <pre><code>
+        &lt;span class="o-icon o-icon--bell"&gt;
+            &lt;svg viewbox="0 0 1 1"&gt;
+                &lt;use xlink:href="/assets/images/icons.svg#bell"&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+        &lt;/span&gt;
+        </code></pre>
+    </div>
+{% endblock %}

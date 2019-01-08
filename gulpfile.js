@@ -62,12 +62,22 @@ const lab_html_paths = {
     `${CONFIG.BASE}/lab/html/**/*.html`,
     `!${CONFIG.BASE}/lab/html/{components,layouts,shared,macros,data}/**`
   ],
-  src_render: [`${CONFIG.BASE}/lab/html`, `${CONFIG.BASE}/html`]
+  src_render: [
+    `${CONFIG.BASE}/lab/html`,
+    `./node_modules/giza-lab/html`,
+    `${CONFIG.BASE}/html`
+  ]
 };
 
 const lab_sass_paths = {
-  src: [`${CONFIG.BASE}/lab/scss/app.scss`],
-  build: `${CONFIG.DEST_BUILD}/lab/assets/css`
+  src: [`${CONFIG.BASE}/lab/scss/lab.scss`],
+  build: `${CONFIG.DEST_BUILD}/lab/css`
+};
+
+const lab_js_paths = {
+  src: [`./node_modules/giza-lab/dist/js/lab.js`],
+  build: `${CONFIG.DEST_BUILD}/lab/js`,
+  prod: `${CONFIG.DEST_PROD}/lab/js`
 };
 
 var webpackConfig = {
@@ -194,6 +204,10 @@ gulp.task("lab_sass", function() {
     .pipe(gulp.dest(lab_sass_paths.build));
 });
 
+gulp.task("lab_js", function() {
+  return gulp.src(lab_js_paths.src).pipe(gulp.dest(lab_js_paths.build));
+});
+
 gulp.task("watch", function() {
   gulp.watch(`${CONFIG.BASE}/html/**/*`, ["html", browser.reload]);
   gulp.watch(`${CONFIG.BASE}/scss/**/*`, ["sass", browser.reload]);
@@ -232,7 +246,8 @@ gulp.task("build", [
   "fonts",
   "icons",
   "lab_html",
-  "lab_sass"
+  "lab_sass",
+  "lab_js"
 ]);
 
 gulp.task("default", ["serve", "watch"]);

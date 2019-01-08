@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <script>
+      if (document.documentElement) {
+        document
+          .documentElement
+          .classList
+          .add('js');
+      }
+    </script>
+  </head>
+  <body>
+    <div style="padding: 1rem;">
+      {% block body %}{% endblock %}
+    </div>
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>
