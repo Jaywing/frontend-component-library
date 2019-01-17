@@ -3,6 +3,8 @@ const gulpif = require("gulp-if");
 const gulpSequence = require("gulp-sequence");
 const path = require("path");
 const clean = require("del").sync;
+const data = require("gulp-data");
+const fs = require("fs");
 const nunjucksRender = require("gulp-nunjucks-render");
 const sass = require("gulp-sass");
 const plumber = require("gulp-plumber");
@@ -177,8 +179,14 @@ gulp.task("icons", function() {
 });
 
 gulp.task("lab_html", function() {
+  const dataFunction = function() {
+    var dataPath = path.resolve(`${CONFIG.BASE}/lab/html/data/global.json`);
+    return JSON.parse(fs.readFileSync(dataPath, "utf8"));
+  };
+
   return gulp
     .src(lab_html_paths.src)
+    .pipe(data(dataFunction))
     .pipe(nunjucksRender({ path: lab_html_paths.src_render }))
     .pipe(gulp.dest(CONFIG.DEST_LAB_BUILD));
 });
