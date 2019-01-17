@@ -4,7 +4,7 @@
   "nav_getting_started": [
     {
       "id": "introduction",
-      "url": "introduction.html",
+      "url": "index.html",
       "title": "Introduction"
     },
     { "id": "example", "url": "example.html", "title": "Example" }
