@@ -1,6 +1,10 @@
 @include breakpoint(md) {
+  .o-site__content {
+    display: flex;
+  }
+
   .c-main {
-    display: grid;
-    grid-template-columns: auto minmax(calc(100% - 320px), 70%);
+    display: flex;
+    flex: 1;
   }
 }

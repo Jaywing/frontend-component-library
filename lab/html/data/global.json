@@ -9,7 +9,8 @@
     }
   ],
   "nav_layout": [
-    { "id": "side-content", "url": "layout.side-content.html", "title": "Side Content" }
+    { "id": "content", "url": "layout.content.html", "title": "Content" },
+    { "id": "sidebar-content", "url": "layout.sidebar-content.html", "title": "Sidebar / Content" }
   ],
   "nav_content": [
     { "id": "typography", "url": "content.typography.html", "title": "Typography" },
