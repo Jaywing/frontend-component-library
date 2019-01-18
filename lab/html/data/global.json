@@ -19,7 +19,5 @@
     { "id": "icons", "url": "content.icons.html", "title": "Icons" },
     { "id": "tables", "url": "content.tables.html", "title": "Tables" }
   ],
-  "nav_components": [
-    { "id": "example", "url": "example.html", "title": "Example" }
-  ]
+  "nav_components": []
 }
