@@ -91,9 +91,9 @@ var webpackConfig = {
     app: ["babel-polyfill", "app.js"]
   },
   output: {
-    path: path.resolve("_build/site/assets/js/"),
+    path: path.resolve("_build/javascripts/"),
     filename: "app.js",
-    publicPath: "/assets/javascripts/"
+    publicPath: "/javascripts/"
   },
   resolve: {
     modules: [path.resolve("javascripts/"), path.resolve("node_modules")]
