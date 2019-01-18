@@ -79,7 +79,7 @@ const lab_sass_paths = {
 };
 
 const lab_js_paths = {
-  src: [`./node_modules/giza-lab/dist/js/lab.js`],
+  src: [`./node_modules/giza-lab/dist/javascripts/lab.js`],
   dest: projectPath(CONFIG.dest, CONFIG.javascripts.dest),
   dist: projectPath(CONFIG.dist, CONFIG.javascripts.dest)
 };
