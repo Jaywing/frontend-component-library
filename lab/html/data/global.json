@@ -19,5 +19,15 @@
     { "id": "icons", "url": "content.icons.html", "title": "Icons" },
     { "id": "tables", "url": "content.tables.html", "title": "Tables" }
   ],
-  "nav_components": []
+  "nav_components": [
+    { "id": "accordion", "url": "components.accordion.html", "title": "Accordion" },
+    { "id": "alert", "url": "components.alert.html", "title": "Alert" },
+    { "id": "breadcrumb", "url": "components.breadcrumb.html", "title": "Breadcrumb" },
+    { "id": "card", "url": "components.card.html", "title": "Card" },
+    { "id": "cookie-message", "url": "components.cookie-message.html", "title": "Cookie Message" },
+    { "id": "hero", "url": "components.hero.html", "title": "Hero" },
+    { "id": "nav", "url": "components.nav.html", "title": "Nav" },
+    { "id": "pagination", "url": "components.pagination.html", "title": "Pagination" },
+    { "id": "slider", "url": "components.slider.html", "title": "Slider" }
+  ]
 }
