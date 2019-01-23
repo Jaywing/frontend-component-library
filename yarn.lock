@@ -3490,9 +3490,9 @@ giza-framework@*:
     webpack-stream "^5.1.1"
 
 giza-lab@*:
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.0.18.tgz#2b81d8e72c179c133cfa738e46ecd4b7626b6b5d"
-  integrity sha512-o5TUITK5RB5aOCH7VCunWuqx+kiNidulvZQ5+jEBHxVt86lHGe/6lX4+ecFUs0XI8BrbwaqCsK5WnyGK+lT7BA==
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.0.19.tgz#97e4088f161c70986fe89d5bd20da1fd6596b340"
+  integrity sha512-HZDUxriQDTt9AEx+BjDMs0Kk0qssrWHUPGkrVNcE+hGtq3dU4/G74cWIxgClqyC0/f65FXUBK0JAX1QRgkiGyg==
   dependencies:
     giza-framework "*"
     gulp-data "^1.2.1"
@@ -7834,9 +7834,9 @@ sprintf-js@~1.0.2:
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
 sshpk@^1.7.0:
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.16.0.tgz#1d4963a2fbffe58050aa9084ca20be81741c07de"
-  integrity sha512-Zhev35/y7hRMcID/upReIvRse+I9SVhyVre/KTJSJQWMz3C3+G+HpO7m1wK/yckEtujKZ7dS4hkVxAnmHaIGVQ==
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.16.1.tgz#fb661c0bef29b39db40769ee39fa70093d6f6877"
+  integrity sha512-HXXqVUq7+pcKeLqqZj6mHFUMvXtOJt1uoUx09pFW6011inTMxqI8BA8PM95myrIyyKwdnzjdFjLiE6KBPVtJIg==
   dependencies:
     asn1 "~0.2.3"
     assert-plus "^1.0.0"

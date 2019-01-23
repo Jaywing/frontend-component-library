@@ -5,19 +5,35 @@
 {% set pageId = "breadcrumb" %}
 
 {% block content %}
-    <h1>Breadcrumb</h1>
+  <h1>Breadcrumb</h1>
 
-    <h3>Usage</h3>
+  <h3>Usage</h3>
 
-    <div class="c-example">
-        <div class="c-example__tabs">
-            {{ExampleTab('/iframes/components.breadcrumb.html', 'Open this example in a new window')}}
-        </div>
-        <iframe class="c-example__iframe" src="/iframes/components.breadcrumb.html" data-module="LabFrame"></iframe>
+  <div class="c-example">
+    <div class="c-example__tabs">
+      {{ExampleTab('/iframes/components.breadcrumb.html', 'Open this example in a new window')}}
     </div>
-    <div class="c-code">
-        <pre><code>
-        &lt;div&gt;&lt;/div&gt;
-        </code></pre>
-    </div>
+    <iframe class="c-example__iframe" src="/iframes/components.breadcrumb.html" data-module="LabFrame"></iframe>
+  </div>
+  <div class="c-code">
+    <pre><code>
+    &lt;ol class="c-breadcrumb"&gt;
+      &lt;li class="c-breadcrumb__item" itemscope="itemscope" itemtype="http://data-vocabulary.org/breadcrumb"&gt;
+        &lt;a class="c-breadcrumb__link" href="https://example.com/" itemprop="url"&gt;
+          &lt;span itemprop="title"&gt;home&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="c-breadcrumb__item" itemscope="itemscope" itemtype="http://data-vocabulary.org/breadcrumb"&gt;
+        &lt;a class="c-breadcrumb__link" href="https://example.com/furniture/" itemprop="url"&gt;
+          &lt;span itemprop="title"&gt;furniture&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="c-breadcrumb__item is-active" itemscope="itemscope" itemtype="http://data-vocabulary.org/breadcrumb"&gt;
+        &lt;a class="c-breadcrumb__link" href="https://example.com/arts/furniture/kitchen/" itemprop="url"&gt;
+          &lt;span itemprop="title"&gt;kitchen&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+    </code></pre>
+  </div>
 {% endblock %}

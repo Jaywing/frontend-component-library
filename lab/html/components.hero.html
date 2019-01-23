@@ -5,19 +5,29 @@
 {% set pageId = "hero" %}
 
 {% block content %}
-    <h1>Hero</h1>
+  <h1>Hero</h1>
 
-    <h3>Usage</h3>
+  <h3>Usage</h3>
 
-    <div class="c-example">
-        <div class="c-example__tabs">
-            {{ExampleTab('/iframes/components.hero.html', 'Open this example in a new window')}}
-        </div>
-        <iframe class="c-example__iframe" src="/iframes/components.hero.html" data-module="LabFrame"></iframe>
+  <div class="c-example">
+    <div class="c-example__tabs">
+      {{ExampleTab('/iframes/components.hero.html', 'Open this example in a new window')}}
     </div>
-    <div class="c-code">
-        <pre><code>
-        &lt;div&gt;&lt;/div&gt;
-        </code></pre>
-    </div>
+    <iframe class="c-example__iframe" src="/iframes/components.hero.html" data-module="LabFrame"></iframe>
+  </div>
+  <div class="c-code">
+    <pre><code>
+    &lt;div class="c-hero"&gt;
+      &lt;div class="c-hero__img" style="background-image: url('//placehold.it/998x490');"&gt;&lt;/div&gt;
+      &lt;div class="c-hero__body"&gt;
+        &lt;div class="c-hero__title"&gt;
+          hero title
+        &lt;/div&gt;
+        &lt;div class="c-hero__text"&gt;
+          &lt;p&gt;lorem ipsum dolor sit amet consectetur adipiscing elit, id venenatis accumsan condimentum platea pharetra convallis phasellus, fringilla libero ridiculus faucibus enim parturient.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    </code></pre>
+  </div>
 {% endblock %}
