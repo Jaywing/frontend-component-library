@@ -16,15 +16,7 @@
         </script>
     </head>
     <body class="o-site">
-        <header class="o-site__header c-site-header">
-            {% include 'shared/site-header.html' %}
-        </header>
-        <main class="o-site__content">
-            {% block body %}{% endblock %}
-        </main>
-        <footer class="o-site__footer c-site-footer">
-            {% include 'shared/site-footer.html' %}
-        </footer>
+        {% block content %}{% endblock %}
         <script src="/javascripts/app.js"></script>
     </body>
 </html>
