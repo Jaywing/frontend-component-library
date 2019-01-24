@@ -3490,9 +3490,9 @@ giza-framework@*:
     webpack-stream "^5.1.1"
 
 giza-lab@*:
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.0.19.tgz#97e4088f161c70986fe89d5bd20da1fd6596b340"
-  integrity sha512-HZDUxriQDTt9AEx+BjDMs0Kk0qssrWHUPGkrVNcE+hGtq3dU4/G74cWIxgClqyC0/f65FXUBK0JAX1QRgkiGyg==
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.0.20.tgz#232ebe5e255cec826e7af564246710fc3a6ce3c6"
+  integrity sha512-AduRQRPN0eI2e+whtNIrUcNXpj2LhyrmInMqGoszzEMEZcSvtvF2nEroL+YoMmP5JvQwWSLv7bITv3Ic7DA5tg==
   dependencies:
     giza-framework "*"
     gulp-data "^1.2.1"
@@ -6462,11 +6462,11 @@ postcss-less@^1.1.0:
     postcss "^5.2.16"
 
 postcss-less@^3.1.0:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-less/-/postcss-less-3.1.1.tgz#87347038bf9cdec9c47722ecf97648bacd171cc3"
-  integrity sha512-yVa0hb03p7xj914Z4qDDA/PGwXYvCEfjJizWVYQvnEQr8SgJ098qejCvbCGk1dDYQpQEGKkvYHQCo66DwTocjg==
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/postcss-less/-/postcss-less-3.1.2.tgz#fb67e7ba351dbdf69de3c52eebd1184c52bfaea6"
+  integrity sha512-66ZBVo1JGkQ7r13M97xcHcyarWpgg21RaqIZWZXHE3XOtb5+ywK1uZWeY1DYkYRkIX/l8Hvxnx9iSKB68nFr+w==
   dependencies:
-    postcss "^7.0.3"
+    postcss "^7.0.14"
 
 postcss-load-config@^2.0.0:
   version "2.0.0"
@@ -6604,7 +6604,7 @@ postcss@^6.0.14, postcss@^6.0.17, postcss@^6.0.23, postcss@^6.0.6, postcss@^6.0.
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.13, postcss@^7.0.2, postcss@^7.0.3, postcss@^7.0.7:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.13, postcss@^7.0.14, postcss@^7.0.2, postcss@^7.0.7:
   version "7.0.14"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.14.tgz#4527ed6b1ca0d82c53ce5ec1a2041c2346bbd6e5"
   integrity sha512-NsbD6XUUMZvBxtQAJuWDJeeC4QFsmWsfozWxCJPWf3M55K9iu2iMDaKqyoOdTJ1R4usBXuxlVFAIo8rZPQD4Bg==
@@ -9180,9 +9180,9 @@ ws@~3.3.1:
     ultron "~1.1.0"
 
 ws@~6.1.0:
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-6.1.2.tgz#3cc7462e98792f0ac679424148903ded3b9c3ad8"
-  integrity sha512-rfUqzvz0WxmSXtJpPMX2EeASXabOrSMk1ruMOV3JBTBjo4ac2lDjGGsbQSyxj8Odhw5fBib8ZKEjDNvgouNKYw==
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-6.1.3.tgz#d2d2e5f0e3c700ef2de89080ebc0ac6e1bf3a72d"
+  integrity sha512-tbSxiT+qJI223AP4iLfQbkbxkwdFcneYinM2+x46Gx2wgvbaOMO36czfdfVUBRTHvzAMRhDd98sA5d/BuWbQdg==
   dependencies:
     async-limiter "~1.0.0"
 

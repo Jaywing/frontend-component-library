@@ -8,7 +8,7 @@
       "title": "Introduction"
     }
   ],
-  "nav_layout": [
+  "nav_layouts": [
     { "id": "content", "url": "layouts.content.html", "title": "Content" },
     {
       "id": "sidebar-content",
