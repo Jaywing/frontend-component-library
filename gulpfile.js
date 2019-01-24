@@ -25,8 +25,14 @@ function projectPath(...paths) {
 let production = false;
 
 const html_paths = {
-  src: [projectPath(CONFIG.BASE, CONFIG.html.src, '**/*.html'),
-  '!' + projectPath(CONFIG.BASE, CONFIG.html.src, '**/{components,layouts,shared,macros,data}/**')
+  src: [
+    projectPath(CONFIG.BASE, CONFIG.html.src, "**/*.html"),
+    "!" +
+      projectPath(
+        CONFIG.BASE,
+        CONFIG.html.src,
+        "**/{components,layouts,shared,macros,data}/**"
+      )
   ],
   src_render: [projectPath(CONFIG.BASE, CONFIG.html.src)],
   dest: projectPath(CONFIG.dest, CONFIG.site),
@@ -34,45 +40,56 @@ const html_paths = {
 };
 
 const stylesheets_paths = {
-  src: projectPath(CONFIG.BASE, CONFIG.stylesheets.src, '**/*.scss'),
+  src: projectPath(CONFIG.BASE, CONFIG.stylesheets.src, "**/*.scss"),
   dest: projectPath(CONFIG.dest, CONFIG.stylesheets.dest),
   dist: projectPath(CONFIG.dist, CONFIG.stylesheets.dest)
 };
 
 const javascripts_paths = {
-  src: projectPath(CONFIG.BASE, CONFIG.javascripts.src, '**/*.js'),
+  src: projectPath(CONFIG.BASE, CONFIG.javascripts.src, "**/*.js"),
   dest: projectPath(CONFIG.dest, CONFIG.javascripts.dest),
   dist: projectPath(CONFIG.dist, CONFIG.javascripts.dest)
 };
 
 const images_paths = {
-  src: projectPath(CONFIG.BASE, CONFIG.images.src, '**/*{jpg,png,svg}'),
+  src: projectPath(CONFIG.BASE, CONFIG.images.src, "**/*{jpg,png,svg}"),
   dest: projectPath(CONFIG.dest, CONFIG.images.dest),
   dist: projectPath(CONFIG.dist, CONFIG.images.dest)
 };
 
 const fonts_paths = {
-  src: projectPath(CONFIG.BASE, CONFIG.fonts.src, '/**/*'),
+  src: projectPath(CONFIG.BASE, CONFIG.fonts.src, "/**/*"),
   dest: projectPath(CONFIG.dest, CONFIG.fonts.dest),
   dist: projectPath(CONFIG.dist, CONFIG.fonts.dest)
 };
 
 const icons_paths = {
-  src: projectPath(CONFIG.BASE, CONFIG.icons.src, '*.svg'),
+  src: projectPath(CONFIG.BASE, CONFIG.icons.src, "*.svg"),
   dest: projectPath(CONFIG.dest, CONFIG.icons.dest),
   dist: projectPath(CONFIG.dist, CONFIG.icons.dest)
 };
 
 const lab_html_paths = {
-  src: [projectPath(
-    CONFIG.lab, CONFIG.html.src, '**/*.html'), '!' + projectPath(CONFIG.lab, CONFIG.html.src, '**/{components,layouts,shared,macros,data}/**')],
-  src_render: [projectPath(CONFIG.lab, CONFIG.html.src), `./node_modules/giza-lab/html`, projectPath(CONFIG.BASE, CONFIG.html.src)],
+  src: [
+    projectPath(CONFIG.lab, CONFIG.html.src, "**/*.html"),
+    "!" +
+      projectPath(
+        CONFIG.lab,
+        CONFIG.html.src,
+        "**/{components,layouts,shared,macros,data}/**"
+      )
+  ],
+  src_render: [
+    projectPath(CONFIG.lab, CONFIG.html.src),
+    `./node_modules/giza-lab/html`,
+    projectPath(CONFIG.BASE, CONFIG.html.src)
+  ],
   dest: projectPath(CONFIG.dest),
   dist: projectPath(CONFIG.dist)
 };
 
 const lab_stylesheets_paths = {
-  src: projectPath(CONFIG.lab, CONFIG.stylesheets.src, 'lab.scss'),
+  src: projectPath(CONFIG.lab, CONFIG.stylesheets.src, "lab.scss"),
   dest: projectPath(CONFIG.dest, CONFIG.stylesheets.dest),
   dist: projectPath(CONFIG.dist, CONFIG.stylesheets.dest)
 };
@@ -124,7 +141,7 @@ gulp.task("html", function() {
     .src(html_paths.src)
     .pipe(nunjucksRender({ path: html_paths.src_render }))
     .pipe(gulpif(!production, gulp.dest(html_paths.dest)))
-    .pipe(gulpif(production, gulp.dest(html_paths.dist)))
+    .pipe(gulpif(production, gulp.dest(html_paths.dist)));
 });
 
 gulp.task("stylesheets", function() {
@@ -190,7 +207,7 @@ gulp.task("lab_html", function() {
     .pipe(data(dataFunction))
     .pipe(nunjucksRender({ path: lab_html_paths.src_render }))
     .pipe(gulpif(!production, gulp.dest(lab_html_paths.dest)))
-    .pipe(gulpif(production, gulp.dest(lab_html_paths.dist)))
+    .pipe(gulpif(production, gulp.dest(lab_html_paths.dist)));
 });
 
 gulp.task("lab_stylesheets", function() {
@@ -211,11 +228,15 @@ gulp.task("lab_stylesheets", function() {
       ])
     )
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(lab_stylesheets_paths.dest));
+    .pipe(gulpif(!production, gulp.dest(lab_stylesheets_paths.dest)))
+    .pipe(gulpif(production, gulp.dest(lab_stylesheets_paths.dist)));
 });
 
 gulp.task("lab_javascripts", function() {
-  return gulp.src(lab_javascripts_paths.src).pipe(gulp.dest(lab_javascripts_paths.dest));
+  return gulp
+    .src(lab_javascripts_paths.src)
+    .pipe(gulpif(!production, gulp.dest(lab_javascripts_paths.dest)))
+    .pipe(gulpif(production, gulp.dest(lab_javascripts_paths.dist)));
 });
 
 gulp.task("watch", function() {
@@ -248,10 +269,10 @@ gulp.task("build_dist", function() {
   production = true;
 
   gulp.start([
-    "clean_build",
-    "html",
-    "stylesheets",
-    "javascripts",
+    "clean_dist",
+    "lab_html",
+    "lab_stylesheets",
+    "lab_javascripts",
     "images",
     "fonts",
     "icons"
