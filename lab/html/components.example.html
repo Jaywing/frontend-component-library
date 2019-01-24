@@ -2,14 +2,22 @@
 
 {% from 'macros/lab-example.html' import LabExample %}
 
-{% set pageId = "nav" %}
+{% set pageId = "example" %}
 
 {% block content %}
-  <h1>Nav</h1>
+  <h1>Example</h1>
 
   <h3>Usage</h3>
 
-  {{LabExample('components', 'nav')}}
+  {{LabExample('components', 'example')}}
+
+  <div class="c-code">
+    <pre><code>
+    &lt;div&gt;&lt;/div&gt;
+    </code></pre>
+  </div>
+
+  {{LabExample('components', 'example', 'child')}}
 
   <div class="c-code">
     <pre><code>

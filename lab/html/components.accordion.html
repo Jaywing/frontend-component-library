@@ -1,6 +1,6 @@
 {% extends 'layouts/lab-side-content.html' %}
 
-{% from 'macros/lab-example-tab.html' import ExampleTab %}
+{% from 'macros/lab-example.html' import LabExample %}
 
 {% set pageId = "accordion" %}
 
@@ -9,12 +9,8 @@
 
   <h3>Usage</h3>
 
-  <div class="c-example">
-    <div class="c-example__tabs">
-      {{ExampleTab('/iframes/components.accordion.html', 'Open this example in a new window')}}
-    </div>
-    <iframe class="c-example__iframe" src="/iframes/components.accordion.html" data-module="LabFrame"></iframe>
-  </div>
+  {{LabExample('components', 'accordion')}}
+
   <div class="c-code">
     <pre><code>
     &lt;ul class="c-accordion" data-module="accordion"&gt;

@@ -1,6 +1,6 @@
 {% extends 'layouts/lab-side-content.html' %}
 
-{% from 'macros/lab-example-tab.html' import ExampleTab %}
+{% from 'macros/lab-example.html' import LabExample %}
 
 {% set pageId = "content" %}
 
@@ -9,12 +9,8 @@
 
   <h3>Usage</h3>
 
-  <div class="c-example">
-    <div class="c-example__tabs">
-      {{ExampleTab('/iframes/layouts.content.html', 'Open this example in a new window')}}
-    </div>
-    <iframe class="c-example__iframe" src="/iframes/layouts.content.html" data-module="LabFrame"></iframe>
-  </div>
+  {{LabExample('layouts', 'content')}}
+
   <div class="c-code">
     <pre><code>
     &lt;div&gt;&lt;/div&gt;

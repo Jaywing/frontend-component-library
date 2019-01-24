@@ -1,6 +1,6 @@
 {% extends 'layouts/lab-side-content.html' %}
 
-{% from 'macros/lab-example-tab.html' import ExampleTab %}
+{% from 'macros/lab-example.html' import LabExample %}
 
 {% set pageId = "images" %}
 
@@ -9,12 +9,7 @@
 
   <h3>Usage</h3>
 
-  <div class="c-example">
-    <div class="c-example__tabs">
-      {{ExampleTab('/iframes/content.image.html', 'Open this example in a new window')}}
-    </div>
-    <iframe class="c-example__iframe" src="/iframes/content.image.html" data-module="LabFrame"></iframe>
-  </div>
+  {{LabExample('content', 'image')}}
 
   <div class="c-code">
     <pre><code>
@@ -24,12 +19,7 @@
 
   <h3>Picture</h3>
 
-  <div class="c-example">
-    <div class="c-example__tabs">
-      {{ExampleTab('/iframes/content.picture.html', 'Open this example in a new window')}}
-    </div>
-    <iframe class="c-example__iframe" src="/iframes/content.picture.html" data-module="LabFrame"></iframe>
-  </div>
+  {{LabExample('content', 'picture')}}
 
   <div class="c-code">
     <pre><code>
