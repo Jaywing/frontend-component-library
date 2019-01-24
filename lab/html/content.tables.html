@@ -2,6 +2,7 @@
 
 {% from 'macros/lab-example.html' import LabExample %}
 
+{% set pageType = "content" %}
 {% set pageId = "tables" %}
 
 {% block content %}
@@ -11,7 +12,7 @@
 
   <h3>Usage</h3>
 
-  {{LabExample('content', 'tables')}}
+  {{LabExample(pageType, pageId)}}
 
   <div class="c-code">
     <pre><code>

@@ -2,6 +2,7 @@
 
 {% from 'macros/lab-example.html' import LabExample %}
 
+{% set pageType = "content" %}
 {% set pageId = "typography" %}
 
 {% block content %}
@@ -9,7 +10,7 @@
 
   <h3>Headings</h3>
 
-  {{LabExample('content', 'typography', 'headings')}}
+  {{LabExample(pageType, pageId, 'headings')}}
 
   <div class="c-code">
     <pre><code>
@@ -31,7 +32,7 @@
 
   <h3>Text</h3>
 
-  {{LabExample('content', 'typography', 'text')}}
+  {{LabExample(pageType, pageId, 'text')}}
 
   <div class="c-code">
     <pre><code>
@@ -49,7 +50,7 @@
 
   <h3>Lists</h3>
 
-  {{LabExample('content', 'typography', 'lists')}}
+  {{LabExample(pageType, pageId, 'lists')}}
 
   <div class="c-code">
     <pre><code>
@@ -76,7 +77,7 @@
 
   <h3>Blockquote</h3>
 
-  {{LabExample('content', 'typography', 'blockquote')}}
+  {{LabExample(pageType, pageId, 'blockquote')}}
 
   <div class="c-code">
     <pre><code>
