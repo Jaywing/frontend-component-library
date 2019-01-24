@@ -1,11 +1,9 @@
 {% extends 'layouts/lab-iframe.html' %}
 
+{% from 'macros/lab-iframe.html' import LabIframe %}
+
 {% block body %}
 
-  <div class="o-flex-grid">
-    <div class="o-flex-grid__cell--span-6@md">
-      {% include 'components/components.card.html' %}
-    </div>
-  </div>
+  {{LabIframe('components', 'card')}}
 
 {% endblock %}

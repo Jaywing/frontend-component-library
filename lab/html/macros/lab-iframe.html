@@ -1,0 +1,9 @@
+{% macro LabIframe(type, name) %}
+
+  <div class="o-flex-grid">
+    <div class="o-flex-grid__cell">
+      {% include 'components/' + type + '.' + name + '.html' %}
+    </div>
+  </div>
+
+{% endmacro %}

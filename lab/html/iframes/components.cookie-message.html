@@ -1,11 +1,9 @@
 {% extends 'layouts/lab-iframe.html' %}
 
+{% from 'macros/lab-iframe.html' import LabIframe %}
+
 {% block body %}
 
-  <div class="o-flex-grid">
-    <div class="o-flex-grid__cell">
-      {% include 'components/components.cookie-message.html' %}
-    </div>
-  </div>
+  {{LabIframe('components', 'cookie-message')}}
 
 {% endblock %}
