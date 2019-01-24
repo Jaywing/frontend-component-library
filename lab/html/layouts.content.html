@@ -2,18 +2,18 @@
 
 {% from 'macros/lab-example-tab.html' import ExampleTab %}
 
-{% set pageId = "sidebar-content" %}
+{% set pageId = "content" %}
 
 {% block content %}
-  <h1>Sidebar &amp; Content</h1>
+  <h1>Content</h1>
 
   <h3>Usage</h3>
 
   <div class="c-example">
     <div class="c-example__tabs">
-      {{ExampleTab('/iframes/layout.sidebar-content.html', 'Open this example in a new window')}}
+      {{ExampleTab('/iframes/layouts.content.html', 'Open this example in a new window')}}
     </div>
-    <iframe class="c-example__iframe" src="/iframes/layout.sidebar-content.html" data-module="LabFrame"></iframe>
+    <iframe class="c-example__iframe" src="/iframes/layouts.content.html" data-module="LabFrame"></iframe>
   </div>
   <div class="c-code">
     <pre><code>
