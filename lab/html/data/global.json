@@ -48,5 +48,12 @@
       "title": "Pagination"
     },
     { "id": "slider", "url": "components.slider.html", "title": "Slider" }
+  ],
+  "nav_contexts": [
+    {
+      "id": "nav",
+      "url": "contexts.nav.html",
+      "title": "Nav"
+    }
   ]
 }

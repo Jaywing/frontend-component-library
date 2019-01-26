@@ -3464,9 +3464,9 @@ getpass@^0.1.1:
     assert-plus "^1.0.0"
 
 giza-framework@*:
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/giza-framework/-/giza-framework-0.0.25.tgz#b262e30b53875cb1a11d94f3be86d5e512b6f07b"
-  integrity sha512-cV8TG7O6yA69lq+B+NYeMfZ50bmimRNvUZEEgFr/j4dLVugtECP8VOVxO+8f2+3pOi83D5Y0bWreo4TUwoZj9g==
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/giza-framework/-/giza-framework-0.0.27.tgz#52997ae43e52f69743c98e84204929c34ebabd39"
+  integrity sha512-OowW4zZA/CZy0ZURqOWyO0fMIAZkD39MHB9l1AFtJJ37R53cbX9CGg7/G8OoMNibQrgA8MQeqc896cNtV+oTcA==
   dependencies:
     "@babel/core" "^7.1.6"
     "@babel/preset-env" "^7.1.6"
@@ -4152,9 +4152,9 @@ ignore@^4.0.3:
   integrity sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==
 
 ignore@^5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.0.4.tgz#33168af4a21e99b00c5d41cbadb6a6cb49903a45"
-  integrity sha512-WLsTMEhsQuXpCiG173+f3aymI43SXa+fB1rSfbzyP4GkPP+ZFVuO0/3sFUGNBtifisPeDcl/uD/Y2NxZ7xFq4g==
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.0.5.tgz#c663c548d6ce186fb33616a8ccb5d46e56bdbbf9"
+  integrity sha512-kOC8IUb8HSDMVcYrDVezCxpJkzSQWTAzf3olpKM6o9rM5zpojx23O0Fl8Wr4+qJ6ZbPEHqf1fdwev/DS7v7pmA==
 
 immutable@^3:
   version "3.8.2"
