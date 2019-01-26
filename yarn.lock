@@ -3490,9 +3490,9 @@ giza-framework@*:
     webpack-stream "^5.1.1"
 
 giza-lab@*:
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.0.31.tgz#48cd47028ab87a3dd13eb9738561df3773e21c14"
-  integrity sha512-bQYCNS+HK4NyuE0a1xBXcJ+lj2GZPc2H47+CWO3cuvOar1PiGyDhawFjviF5NHl1mDmx32iCRoADrNoek7Fqmw==
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.0.32.tgz#3d200512b3f17aa0bd20f183a1849ac308eabd8b"
+  integrity sha512-77rM65sxPirCO9p8MIEdHwen8665VQmhfoH5R7A3QzlG52Sq2cb7QMl7DyM6vZsapOS7k6LM9YmJamKV6XEnbQ==
   dependencies:
     giza-framework "*"
     gulp-data "^1.2.1"

@@ -4004,23 +4004,28 @@ p {
 .c-sidebar {
   position: fixed;
   z-index: 98;
-  top: 118px;
+  top: 0;
   left: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   display: none;
+  overflow: auto;
   width: 100%;
+  height: 100%;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   padding: 1rem;
+  padding-top: 118px;
   background: #fff;
   -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
           box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6); }
   .c-sidebar.is-active {
     display: block; }
+  .c-sidebar > nav {
+    padding-top: 1rem; }
 
 .c-sidebar-toggle {
   width: 100%;
