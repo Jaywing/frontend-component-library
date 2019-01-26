@@ -147,7 +147,7 @@ gulp.task("html", function() {
 gulp.task("stylesheets", function() {
   return gulp
     .src(stylesheets_paths.src)
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(!production, sourcemaps.init()))
     .pipe(plumber())
     .pipe(
       sass({
@@ -213,7 +213,7 @@ gulp.task("lab_html", function() {
 gulp.task("lab_stylesheets", function() {
   return gulp
     .src(lab_stylesheets_paths.src)
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(!production, sourcemaps.init()))
     .pipe(plumber())
     .pipe(
       sass({
@@ -270,12 +270,15 @@ gulp.task("build_dist", function() {
 
   gulp.start([
     "clean_dist",
-    "lab_html",
-    "lab_stylesheets",
-    "lab_javascripts",
+    "html",
+    "stylesheets",
+    "javascripts",
     "images",
     "fonts",
-    "icons"
+    "icons",
+    "lab_html",
+    "lab_stylesheets",
+    "lab_javascripts"
   ]);
 });
 
