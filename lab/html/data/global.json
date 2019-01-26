@@ -15,7 +15,8 @@
       "url": "layouts.container.html",
       "title": "Container"
     },
-    { "id": "content", "url": "layouts.content.html", "title": "Content" }
+    { "id": "content", "url": "layouts.content.html", "title": "Content" },
+    { "id": "sidebar", "url": "layouts.sidebar.html", "title": "Sidebar" }
   ],
   "nav_content": [
     {
