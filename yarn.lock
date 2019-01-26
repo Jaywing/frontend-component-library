@@ -3464,9 +3464,9 @@ getpass@^0.1.1:
     assert-plus "^1.0.0"
 
 giza-framework@*:
-  version "0.0.27"
-  resolved "https://registry.yarnpkg.com/giza-framework/-/giza-framework-0.0.27.tgz#52997ae43e52f69743c98e84204929c34ebabd39"
-  integrity sha512-OowW4zZA/CZy0ZURqOWyO0fMIAZkD39MHB9l1AFtJJ37R53cbX9CGg7/G8OoMNibQrgA8MQeqc896cNtV+oTcA==
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/giza-framework/-/giza-framework-0.0.29.tgz#ade87595fa0f9b64890ab5abecae9f18794545ef"
+  integrity sha512-cPG1WnXj1aBTeUHCh/UpglgRKwvdZExE1YxrnDN7GbB1qbzLfRp/Gw8rQkde8SALzv7cNfUB6dyTb7vUeNn3NQ==
   dependencies:
     "@babel/core" "^7.1.6"
     "@babel/preset-env" "^7.1.6"
