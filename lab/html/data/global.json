@@ -10,6 +10,11 @@
     }
   ],
   "nav_layouts": [
+    {
+      "id": "container",
+      "url": "layouts.container.html",
+      "title": "Container"
+    },
     { "id": "content", "url": "layouts.content.html", "title": "Content" }
   ],
   "nav_content": [
