@@ -3464,9 +3464,9 @@ getpass@^0.1.1:
     assert-plus "^1.0.0"
 
 giza-framework@*:
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/giza-framework/-/giza-framework-0.0.31.tgz#be0f298fd57aabcb151322605f84240d603c4997"
-  integrity sha512-1UJDR9akOCCyk13r9KPtAYEa20RJn/nshCmAu+FGBFq1Cf/YJo9KTtKhG2+53pQfLvownS3eYDW2JCdAjAwqEg==
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/giza-framework/-/giza-framework-0.0.32.tgz#0d466e343bf6a2e8d0ebfc327d9780e15bec76f5"
+  integrity sha512-lKTiY0RRvYpDhc/d26AU3plXLaien6+fgyQjW4y1gCP9bwSpLy7V5MJN8EOifDQ0r951zLAT6GNudu1pNU9alw==
   dependencies:
     "@babel/core" "^7.1.6"
     "@babel/preset-env" "^7.1.6"
@@ -3490,9 +3490,9 @@ giza-framework@*:
     webpack-stream "^5.1.1"
 
 giza-lab@*:
-  version "0.0.28"
-  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.0.28.tgz#aaf993fda754fe3f3053f08735ed46268f2e5d51"
-  integrity sha512-yTYMNCK28qT56f5xgYx0b0Ze/jQvkwqbCsS2w7LocvaCtEzZWbcSZsGcPEZUk4wh1XemNnsymUWYPisKvMN3QQ==
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.0.29.tgz#57a43773055bf959a9a3509347b38d327e26f0c2"
+  integrity sha512-h3w9AZi1A4ZDBZY59iEYrUUQvNbz4pBud3I4T9ZxousqdKC0q0hNiMXZlhqSNwkylX0GvX4CVk99uYsl+tW9xg==
   dependencies:
     giza-framework "*"
     gulp-data "^1.2.1"
