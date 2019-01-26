@@ -41,6 +41,7 @@
       "title": "Cookie Message"
     },
     { "id": "hero", "url": "components.hero.html", "title": "Hero" },
+    { "id": "modal", "url": "components.modal.html", "title": "Modal" },
     { "id": "nav", "url": "components.nav.html", "title": "Nav" },
     {
       "id": "pagination",
@@ -51,9 +52,9 @@
   ],
   "nav_contexts": [
     {
-      "id": "nav",
-      "url": "contexts.nav.html",
-      "title": "Nav"
+      "id": "mega-nav",
+      "url": "contexts.mega-nav.html",
+      "title": "Mega Nav"
     }
   ]
 }

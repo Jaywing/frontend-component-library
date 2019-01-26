@@ -2,15 +2,15 @@
 
 {% from 'macros/lab-example.html' import LabExample %}
 
-{% set pageType = "contexts" %}
-{% set pageId = "nav" %}
+{% set pageType = "components" %}
+{% set pageId = "modal" %}
 
 {% block content %}
-  <h1>Nav</h1>
+  <h1>Modal</h1>
 
-  <h3>Mega</h3>
+  <h3>Usage</h3>
 
-  {{LabExample(pageType, pageId, 'mega')}}
+  {{LabExample(pageType, pageId)}}
 
   <div class="c-code">
     <pre><code>
