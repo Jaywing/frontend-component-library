@@ -18,7 +18,7 @@
   <body class="o-site">
     <header class="o-site__header c-site-header">
       <a class="c-lab-logo" href="index.html">Jaywing Frontend Lab</a>
-<span class="c-lab-version">v0.0.19</span>
+<span class="c-lab-version">v0.0.20</span>
 <button class="c-button c-sidebar-toggle" data-module="Toggle" data-options='{"target": ".c-sidebar"}'>
   <div class="c-hamburger">
     <div class="c-hamburger__inner"></div>
@@ -67,7 +67,37 @@
   
 
   <li class="c-nav__item  ">
+    <a class="c-nav__link" href="layouts.container.html">Container</a>
+  </li>
+
+    
+      
+
+  
+    
+  
+
+  
+    
+  
+
+  <li class="c-nav__item  ">
     <a class="c-nav__link" href="layouts.content.html">Content</a>
+  </li>
+
+    
+      
+
+  
+    
+  
+
+  
+    
+  
+
+  <li class="c-nav__item  ">
+    <a class="c-nav__link" href="layouts.sidebar.html">Sidebar</a>
   </li>
 
     
@@ -342,57 +372,59 @@
   
 
 
-  <div class="c-code">
-    <pre><code>
-    &lt;nav class="c-mega-nav"&gt;
-      &lt;ul class="c-nav c-nav--vertical c-nav--horizontal@lg c-nav--accordion c-nav--dropdown@lg u-position-relative" data-module="nav"&gt;
-        &lt;li class="c-nav__item is-accordion-nav-parent is-dropdown-nav-parent u-position-static"&gt;
-          &lt;a class="c-nav__link is-active" href="..."&gt;...&lt;/a&gt;
-          &lt;button class="c-button is-accordion-button"&gt;
-            &lt;span class="o-icon o-icon--chevron-down"&gt;
-              [icon]
-            &lt;/span&gt;
-          &lt;/button&gt;
-          &lt;div class="is-accordion-nav is-dropdown-nav"&gt;
-            &lt;div class="o-flex-grid u-size-width-100"&gt;
-              &lt;div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm"&gt;
-                &lt;ul class="c-nav c-nav--vertical"&gt;
-                  &lt;li class="c-nav__item"&gt;
-                    &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li class="c-nav__item"&gt;
-                    &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
-                    &lt;ul class="c-nav c-nav--nested"&gt;
-                      &lt;li class="c-nav__item"&gt;
-                        &lt;a class="c-nav__link is-active" href="..."&gt;...&lt;/a&gt;
-                      &lt;/li&gt;
-                      ...
-                    &lt;/ul&gt;
-                  &lt;/li&gt;
-                  &lt;li class="c-nav__item"&gt;
-                    &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
-                  &lt;/li&gt;
-                  ...
-                &lt;/ul&gt;
-              &lt;/div&gt;
-              &lt;div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm"&gt;
-                &lt;ul class="c-nav c-nav--vertical"&gt;
-                  &lt;li class="c-nav__item"&gt;
-                    &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
-                  &lt;/li&gt;
-                  ...
-                &lt;/ul&gt;
+  <div class="c-code" data-module="ExampleCode">
+    <pre class="language-html">
+      <code class="language-html">
+      &lt;nav class="c-mega-nav"&gt;
+        &lt;ul class="c-nav c-nav--vertical c-nav--horizontal@lg c-nav--accordion c-nav--dropdown@lg u-position-relative" data-module="nav"&gt;
+          &lt;li class="c-nav__item is-accordion-nav-parent is-dropdown-nav-parent u-position-static"&gt;
+            &lt;a class="c-nav__link is-active" href="..."&gt;...&lt;/a&gt;
+            &lt;button class="c-button is-accordion-button"&gt;
+              &lt;span class="o-icon o-icon--chevron-down"&gt;
+                [icon]
+              &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="is-accordion-nav is-dropdown-nav"&gt;
+              &lt;div class="o-flex-grid u-size-width-100"&gt;
+                &lt;div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm"&gt;
+                  &lt;ul class="c-nav c-nav--vertical"&gt;
+                    &lt;li class="c-nav__item"&gt;
+                      &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="c-nav__item"&gt;
+                      &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
+                      &lt;ul class="c-nav c-nav--nested"&gt;
+                        &lt;li class="c-nav__item"&gt;
+                          &lt;a class="c-nav__link is-active" href="..."&gt;...&lt;/a&gt;
+                        &lt;/li&gt;
+                        ...
+                      &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class="c-nav__item"&gt;
+                      &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
+                    &lt;/li&gt;
+                    ...
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm"&gt;
+                  &lt;ul class="c-nav c-nav--vertical"&gt;
+                    &lt;li class="c-nav__item"&gt;
+                      &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
+                    &lt;/li&gt;
+                    ...
+                  &lt;/ul&gt;
+                &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class="c-nav__item"&gt;
-          &lt;a class="c-nav__link" href="..."&gt;...&lt;/a&gt;
-        &lt;/li&gt;
-        ...
-      &lt;/ul&gt;
-    &lt;/nav&gt;
-    </code></pre>
+          &lt;/li&gt;
+          &lt;li class="c-nav__item"&gt;
+            &lt;a class="c-nav__link" href="..."&gt;...&lt;/a&gt;
+          &lt;/li&gt;
+          ...
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+      </code>
+    </pre>
   </div>
 
     </div>
