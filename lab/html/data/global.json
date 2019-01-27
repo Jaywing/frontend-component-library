@@ -1,7 +1,7 @@
 {
   "meta_title": "Jaywing Frontend Lab",
   "lab_title": "Jaywing Frontend Lab",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "nav_getting_started": [
     {
       "id": "introduction",
@@ -35,7 +35,6 @@
       "url": "components.accordion.html",
       "title": "Accordion"
     },
-    { "id": "alert", "url": "components.alert.html", "title": "Alert" },
     {
       "id": "breadcrumb",
       "url": "components.breadcrumb.html",
@@ -50,6 +49,7 @@
     { "id": "hero", "url": "components.hero.html", "title": "Hero" },
     { "id": "modal", "url": "components.modal.html", "title": "Modal" },
     { "id": "nav", "url": "components.nav.html", "title": "Nav" },
+    { "id": "notice", "url": "components.notice.html", "title": "Notice" },
     {
       "id": "pagination",
       "url": "components.pagination.html",

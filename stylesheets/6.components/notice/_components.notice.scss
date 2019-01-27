@@ -1,47 +1,50 @@
-.c-alert__body {
+$notice-background-color: $bonjour !default;
+$notice-text-color: $dune !default;
+
+.c-notice {
   padding: $spacer;
-  background: $medium;
-  color: $dark;
+  background: $notice-background-color;
+  color: $notice-text-color;
 }
 
-.c-alert__img {
+.c-notice__img {
   width: 100%;
 }
 
-.c-alert__content {
+.c-notice__content {
   padding: $spacer 0;
 }
 
-.c-alert__title {
+.c-notice__title {
   @include great-primer;
 
   margin-bottom: ($spacer / 2);
 }
 
-.c-alert__footer {
+.c-notice__footer {
   padding: $spacer 0;
   text-align: center;
 }
 
 @include md {
-  .c-alert__body {
+  .c-notice {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .c-alert__media {
+  .c-notice__media {
     display: flex;
     max-width: 10rem;
     align-items: center;
     padding-right: $spacer;
   }
 
-  .c-alert__content {
+  .c-notice__content {
     flex: 1;
     padding: 0 $spacer;
   }
 
-  .c-alert__footer {
+  .c-notice__footer {
     display: flex;
     align-items: center;
     padding: 0 $spacer;
