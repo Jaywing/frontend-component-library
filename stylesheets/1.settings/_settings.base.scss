@@ -65,7 +65,7 @@ $base-font-size: $font-size;
 $blockquote-margin: $spacer 0;
 
 // Elements: Headings
-$heading-margin: ($spacer/2) 0 ($spacer + $spacer/2);
+$heading-margin: ($spacer * 2) 0 $spacer;
 $heading-font: $font;
 $heading-font-weight: $font-weight-bold;
 $heading-color: inherit;

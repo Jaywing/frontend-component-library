@@ -1,3 +1,6 @@
+$slider-background-color: $dune !default;
+$slider-text-color: $light !default;
+
 .c-slider {
   overflow: hidden;
 }
@@ -78,11 +81,18 @@
 
 .c-slider__controls {
   display: flex;
+  padding: ($spacer / 2);
+  background: $slider-background-color;
+  color: $slider-text-color;
 }
 
 .c-slider__previous,
 .c-slider__next {
   cursor: pointer;
+
+  .o-icon {
+    fill: $slider-text-color;
+  }
 }
 
 .c-slider__pips {
@@ -97,13 +107,13 @@
   width: 10px;
   height: 10px;
   margin: 0 $spacer;
-  border: 2px solid $dark;
+  border: 2px solid $slider-text-color;
   border-radius: 2px;
   cursor: pointer;
   transform: translateY(-50%);
 
   &.is-active {
-    background: $dark;
+    background: $slider-text-color;
   }
 }
 
