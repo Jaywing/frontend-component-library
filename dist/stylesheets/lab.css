@@ -423,7 +423,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0.5rem 0 1.5rem;
+  margin: 2rem 0 1rem;
   color: inherit;
   font-family: "Ubuntu", sans-serif;
   font-weight: 700; }
@@ -4255,48 +4255,52 @@ p {
             flex: 1;
     overflow-x: hidden; } }
 
-.c-docs-nav h4 {
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 18px;
-  line-height: 1.125rem;
-  padding: 1rem 1rem 0.5rem;
-  margin: 0;
-  border-left: 3px solid transparent;
-  font-weight: 400; }
-  @media (min-width: 960px) {
-    .c-docs-nav h4 {
-      font-size: 15px;
-      font-size: 0.9375rem;
-      line-height: 20px;
-      line-height: 1.25rem; } }
-
-.c-docs-nav .c-nav__link {
-  color: #007bff;
-  -webkit-transition-duration: 200;
-          transition-duration: 200;
-  -webkit-transition-property: color;
-  transition-property: color;
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 18px;
-  line-height: 1.125rem;
-  padding: 0.5rem 1rem;
-  border-left: 3px solid transparent; }
-  .c-docs-nav .c-nav__link:hover, .c-docs-nav .c-nav__link:focus {
-    background-color: #f0f0f0;
-    color: #007bff; }
-  @media (min-width: 960px) {
-    .c-docs-nav .c-nav__link {
-      font-size: 15px;
-      font-size: 0.9375rem;
-      line-height: 20px;
-      line-height: 1.25rem; } }
-  .c-docs-nav .c-nav__link:hover, .c-docs-nav .c-nav__link:focus {
+.c-docs-nav {
+  padding-top: 1rem; }
+  .c-docs-nav h4 {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+    padding: 1rem 1rem 0.5rem;
+    margin: 0;
+    border-left: 3px solid transparent;
+    font-weight: 400; }
+    @media (min-width: 960px) {
+      .c-docs-nav h4 {
+        font-size: 15px;
+        font-size: 0.9375rem;
+        line-height: 20px;
+        line-height: 1.25rem; } }
+  .c-docs-nav .c-nav__link {
+    color: #007bff;
+    -webkit-transition-duration: 200;
+            transition-duration: 200;
+    -webkit-transition-property: color;
+    transition-property: color;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+    padding: 0.5rem 1rem;
+    border-left: 3px solid transparent; }
+    .c-docs-nav .c-nav__link:hover, .c-docs-nav .c-nav__link:focus {
+      background-color: #f0f0f0;
+      color: #007bff; }
+    @media (min-width: 960px) {
+      .c-docs-nav .c-nav__link {
+        font-size: 15px;
+        font-size: 0.9375rem;
+        line-height: 20px;
+        line-height: 1.25rem; } }
+    .c-docs-nav .c-nav__link:hover, .c-docs-nav .c-nav__link:focus {
+      border-color: #007bff; }
+  .c-docs-nav .c-nav__item.is-active .c-nav__link {
     border-color: #007bff; }
 
-.c-docs-nav .c-nav__item.is-active .c-nav__link {
-  border-color: #007bff; }
+@media (min-width: 768px) {
+  .c-docs-nav {
+    padding-top: 4rem; } }
 
 .c-example {
   position: relative;
@@ -4404,8 +4408,6 @@ p {
           box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6); }
   .c-sidebar.is-active {
     display: block; }
-  .c-sidebar > nav {
-    padding-top: 1rem; }
 
 .c-sidebar-toggle {
   width: 100%;
