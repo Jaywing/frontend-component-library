@@ -1,6 +1,7 @@
 {% extends 'layouts/lab-side-content.html' %}
 
 {% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
 
 {% set pageType = "layouts" %}
 {% set pageId = "container" %}
@@ -10,28 +11,24 @@
 
   <h3>Usage</h3>
 
-  <div class="c-code" data-module="ExampleCode">
-    <pre class="language-html"><code class="language-html">
-    &lt;div class="o-container"&gt;...&lt;/div&gt;
+  {{LabCode('html', '
+  <div class="o-container">...</div>
 
-    &lt;div class="o-container o-container--centered"&gt;...&lt;/div&gt;
+  <div class="o-container o-container--centered">...</div>
 
-    &lt;div class="o-container o-container--thin"&gt;...&lt;/div&gt;
+  <div class="o-container o-container--thin">...</div>
 
-    &lt;div class="o-container o-container--fluid"&gt;...&lt;/div&gt;
+  <div class="o-container o-container--fluid">...</div>
 
-    &lt;div class="o-container o-container--collapse"&gt;...&lt;/div&gt;
-    </code></pre>
-  </div>
+  <div class="o-container o-container--collapse">...</div>
+  ')}}
 
   <h4>Sidebar</h4>
 
-  <div class="c-code" data-module="ExampleCode">
-    <pre class="language-html"><code class="language-html">
-    &lt;div class="o-container"&gt;
-      &lt;div class="o-container o-container--sidebar"&gt;...&lt;/div&gt;
-      &lt;div class="o-container o-container--body"&gt;...&lt;/div&gt;
-    &lt;/div&gt;
-    </code></pre>
+  {{LabCode('html', '
+  <div class="o-container">
+    <div class="o-container o-container--sidebar">...</div>
+    <div class="o-container o-container--body">...</div>
   </div>
+  ')}}
 {% endblock %}

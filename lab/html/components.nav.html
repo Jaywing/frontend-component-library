@@ -1,6 +1,7 @@
 {% extends 'layouts/lab-side-content.html' %}
 
 {% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
 
 {% set pageType = "components" %}
 {% set pageId = "nav" %}
@@ -11,158 +12,134 @@
   <h3>Usage</h3>
 
   {{LabExample(pageType, pageId)}}
-
-  <div class="c-code" data-module="ExampleCode">
-    <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav"&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link is-active" href="..."&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link" href="..."&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link" href="..."&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link is-disabled" href="..."&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
-  </div>
+  {{LabCode('html', '
+  <ul class="c-nav">
+    <li class="c-nav__item">
+      <a class="c-nav__link is-active" href="...">...</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="...">...</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="...">...</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link is-disabled" href="...">...</a>
+    </li>
+    ...
+  </ul>
+  ')}}
 
   <h3>Vertical</h3>
 
   {{LabExample(pageType, pageId, 'vertical')}}
-
-  <div class="c-code" data-module="ExampleCode">
-    <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--vertical"&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link" href="..."&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
-  </div>
+  {{LabCode('html', '
+  <ul class="c-nav c-nav--vertical">
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="...">...</a>
+    </li>
+    ...
+  </ul>
+  ')}}
 
   <h3>Nested</h3>
 
   {{LabExample(pageType, pageId, 'nested')}}
-
-  <div class="c-code" data-module="ExampleCode">
-    <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--vertical"&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link is-active" href="..."&gt;...&lt;/a&gt;
-        &lt;ul class="c-nav c-nav--vertical c-nav--nested"&gt;
-          &lt;li class="c-nav__item"&gt;
-            &lt;a class="c-nav__link" href="..."&gt;...&lt;/a&gt;
-          &lt;/li&gt;
-          ...
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
-  </div>
+  {{LabCode('html', '
+  <ul class="c-nav c-nav--vertical">
+    <li class="c-nav__item">
+      <a class="c-nav__link is-active" href="...">...</a>
+      <ul class="c-nav c-nav--vertical c-nav--nested">
+        <li class="c-nav__item">
+          <a class="c-nav__link" href="...">...</a>
+        </li>
+        ...
+      </ul>
+    </li>
+    ...
+  </ul>
+  ')}}
 
   <h3>Dropdown</h3>
 
   {{LabExample(pageType, pageId, 'dropdown')}}
-
-  <div class="c-code" data-module="ExampleCode">
-    <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--dropdown" data-module="nav"&gt;
-      &lt;li class="c-nav__item is-dropdown-nav-parent"&gt;
-        &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
-        &lt;button class="c-button is-dropdown-button"&gt;
-          &lt;span class="o-icon o-icon--chevron-down"&gt;
-            [icon]
-          &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;ul class="c-nav is-dropdown-nav c-nav--vertical"&gt;
-          &lt;li class="c-nav__item "&gt;
-            &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
-          &lt;/li&gt;
-          ...
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
-  </div>
+  {{LabCode('html', '
+  <ul class="c-nav c-nav--dropdown" data-module="Nav">
+    <li class="c-nav__item is-dropdown-nav-parent">
+      <a href="..." class="c-nav__link">...</a>
+      <button class="c-button is-dropdown-button">
+        <span class="o-icon o-icon--chevron-down">
+          [icon]
+        </span>
+      </button>
+      <ul class="c-nav is-dropdown-nav c-nav--vertical">
+        <li class="c-nav__item ">
+          <a href="..." class="c-nav__link">...</a>
+        </li>
+        ...
+      </ul>
+    </li>
+    ...
+  </ul>
+  ')}}
 
   <h3>Accordion</h3>
 
   {{LabExample(pageType, pageId, 'accordion')}}
-
-  <div class="c-code" data-module="ExampleCode">
-    <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--vertical c-nav--accordion" data-module="nav"&gt;
-      &lt;li class="c-nav__item is-accordion-nav-parent"&gt;
-        &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
-        &lt;button class="c-button is-accordion-button"&gt;
-          &lt;span class="o-icon o-icon--chevron-down"&gt;
-            [icon]
-          &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;ul class="c-nav is-accordion-nav c-nav--vertical"&gt;
-          &lt;li class="c-nav__item "&gt;
-            &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
-          &lt;/li&gt;
-          ...
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
-  </div>
+  {{LabCode('html', '
+  <ul class="c-nav c-nav--vertical c-nav--accordion" data-module="Nav">
+    <li class="c-nav__item is-accordion-nav-parent">
+      <a href="..." class="c-nav__link">...</a>
+      <button class="c-button is-accordion-button">
+        <span class="o-icon o-icon--chevron-down">
+          [icon]
+        </span>
+      </button>
+      <ul class="c-nav is-accordion-nav c-nav--vertical">
+        <li class="c-nav__item ">
+          <a href="..." class="c-nav__link">...</a>
+        </li>
+        ...
+      </ul>
+    </li>
+    ...
+  </ul>
+  ')}}
 
   <h3>Responsive</h3>
 
   {{LabExample(pageType, pageId, 'responsive')}}
-
-  <div class="c-code" data-module="ExampleCode">
-    <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--vertical c-nav--horizontal@md"&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link" href="..."&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
-  </div>
+  {{LabCode('html', '
+  <ul class="c-nav c-nav--vertical c-nav--horizontal@md">
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="...">...</a>
+    </li>
+    ...
+  </ul>
+  ')}}
 
   <h4>Responsive dropdown</h4>
 
-  <div class="c-code" data-module="ExampleCode">
-    <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--dropdown@md" data-module="nav"&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
-  </div>
+  {{LabCode('html', '
+  <ul class="c-nav c-nav--dropdown@md" data-module="Nav">
+    ...
+  </ul>
+  ')}}
 
   <h4>Responsive accordion</h4>
 
-  <div class="c-code" data-module="ExampleCode">
-    <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--vertical c-nav--accordion@md" data-module="nav"&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
-  </div>
+  {{LabCode('html', '
+  <ul class="c-nav c-nav--vertical c-nav--accordion@md" data-module="Nav">
+    ...
+  </ul>
+  ')}}
 
   <h4>Responsive dropdown &amp; accordion</h4>
 
-  <div class="c-code" data-module="ExampleCode">
-    <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--vertical c-nav--horizontal@lg c-nav--accordion@md c-nav--dropdown@lg" data-module="nav"&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
-  </div>
+  {{LabCode('html', '
+  <ul class="c-nav c-nav--vertical c-nav--horizontal@lg c-nav--accordion@md c-nav--dropdown@lg" data-module="Nav">
+    ...
+  </ul>
+  ')}}
 
 {% endblock %}

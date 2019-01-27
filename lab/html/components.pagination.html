@@ -1,6 +1,7 @@
 {% extends 'layouts/lab-side-content.html' %}
 
 {% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
 
 {% set pageType = "components" %}
 {% set pageId = "pagination" %}
@@ -11,21 +12,18 @@
   <h3>Usage</h3>
 
   {{LabExample(pageType, pageId)}}
-
-  <div class="c-code" data-module="ExampleCode">
-    <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-pagination"&gt;
-      &lt;li class="c-pagination__item is-disabled"&gt;
-        &lt;span class="c-pagination__link" href="#"&gt;...&lt;/span&gt;
-      &lt;/li&gt;
-      &lt;li class="c-pagination__item"&gt;
-        &lt;a class="c-pagination__link" href="#"&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      ...
-      &lt;li class="c-pagination__item"&gt;
-        &lt;a class="c-pagination__link" href="#"&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-    </code></pre>
-  </div>
+  {{LabCode('html', '
+  <ul class="c-pagination">
+    <li class="c-pagination__item is-disabled">
+      <span class="c-pagination__link" href="#">...</span>
+    </li>
+    <li class="c-pagination__item">
+      <a class="c-pagination__link" href="#">...</a>
+    </li>
+    ...
+    <li class="c-pagination__item">
+      <a class="c-pagination__link" href="#">...</a>
+    </li>
+  </ul>
+  ')}}
 {% endblock %}

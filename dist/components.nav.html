@@ -18,7 +18,7 @@
   <body class="o-site">
     <header class="o-site__header c-site-header">
       <a class="c-lab-logo" href="index.html">Jaywing Frontend Lab</a>
-<span class="c-lab-version">v0.0.21</span>
+<span class="c-lab-version">v0.0.22</span>
 <button class="c-button c-sidebar-toggle" data-module="Toggle" data-options='{"target": ".c-sidebar"}'>
   <div class="c-hamburger">
     <div class="c-hamburger__inner"></div>
@@ -371,26 +371,27 @@
     </div>
   
 
-
+  
   <div class="c-code" data-module="ExampleCode">
     <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav"&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link is-active" href="..."&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link" href="..."&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link" href="..."&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link is-disabled" href="..."&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
+  &lt;ul class=&quot;c-nav&quot;&gt;
+    &lt;li class=&quot;c-nav__item&quot;&gt;
+      &lt;a class=&quot;c-nav__link is-active&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-nav__item&quot;&gt;
+      &lt;a class=&quot;c-nav__link&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-nav__item&quot;&gt;
+      &lt;a class=&quot;c-nav__link&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-nav__item&quot;&gt;
+      &lt;a class=&quot;c-nav__link is-disabled&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
+    &lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+  </code></pre>
   </div>
+
 
   <h3>Vertical</h3>
 
@@ -404,17 +405,18 @@
     </div>
   
 
-
+  
   <div class="c-code" data-module="ExampleCode">
     <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--vertical"&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link" href="..."&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
+  &lt;ul class=&quot;c-nav c-nav--vertical&quot;&gt;
+    &lt;li class=&quot;c-nav__item&quot;&gt;
+      &lt;a class=&quot;c-nav__link&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
+    &lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+  </code></pre>
   </div>
+
 
   <h3>Nested</h3>
 
@@ -428,23 +430,24 @@
     </div>
   
 
-
+  
   <div class="c-code" data-module="ExampleCode">
     <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--vertical"&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link is-active" href="..."&gt;...&lt;/a&gt;
-        &lt;ul class="c-nav c-nav--vertical c-nav--nested"&gt;
-          &lt;li class="c-nav__item"&gt;
-            &lt;a class="c-nav__link" href="..."&gt;...&lt;/a&gt;
-          &lt;/li&gt;
-          ...
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
+  &lt;ul class=&quot;c-nav c-nav--vertical&quot;&gt;
+    &lt;li class=&quot;c-nav__item&quot;&gt;
+      &lt;a class=&quot;c-nav__link is-active&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
+      &lt;ul class=&quot;c-nav c-nav--vertical c-nav--nested&quot;&gt;
+        &lt;li class=&quot;c-nav__item&quot;&gt;
+          &lt;a class=&quot;c-nav__link&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
+        &lt;/li&gt;
+        ...
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+  </code></pre>
   </div>
+
 
   <h3>Dropdown</h3>
 
@@ -458,28 +461,29 @@
     </div>
   
 
-
+  
   <div class="c-code" data-module="ExampleCode">
     <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--dropdown" data-module="nav"&gt;
-      &lt;li class="c-nav__item is-dropdown-nav-parent"&gt;
-        &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
-        &lt;button class="c-button is-dropdown-button"&gt;
-          &lt;span class="o-icon o-icon--chevron-down"&gt;
-            [icon]
-          &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;ul class="c-nav is-dropdown-nav c-nav--vertical"&gt;
-          &lt;li class="c-nav__item "&gt;
-            &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
-          &lt;/li&gt;
-          ...
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
+  &lt;ul class=&quot;c-nav c-nav--dropdown&quot; data-module=&quot;Nav&quot;&gt;
+    &lt;li class=&quot;c-nav__item is-dropdown-nav-parent&quot;&gt;
+      &lt;a href=&quot;...&quot; class=&quot;c-nav__link&quot;&gt;...&lt;/a&gt;
+      &lt;button class=&quot;c-button is-dropdown-button&quot;&gt;
+        &lt;span class=&quot;o-icon o-icon--chevron-down&quot;&gt;
+          [icon]
+        &lt;/span&gt;
+      &lt;/button&gt;
+      &lt;ul class=&quot;c-nav is-dropdown-nav c-nav--vertical&quot;&gt;
+        &lt;li class=&quot;c-nav__item &quot;&gt;
+          &lt;a href=&quot;...&quot; class=&quot;c-nav__link&quot;&gt;...&lt;/a&gt;
+        &lt;/li&gt;
+        ...
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+  </code></pre>
   </div>
+
 
   <h3>Accordion</h3>
 
@@ -493,28 +497,29 @@
     </div>
   
 
-
+  
   <div class="c-code" data-module="ExampleCode">
     <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--vertical c-nav--accordion" data-module="nav"&gt;
-      &lt;li class="c-nav__item is-accordion-nav-parent"&gt;
-        &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
-        &lt;button class="c-button is-accordion-button"&gt;
-          &lt;span class="o-icon o-icon--chevron-down"&gt;
-            [icon]
-          &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;ul class="c-nav is-accordion-nav c-nav--vertical"&gt;
-          &lt;li class="c-nav__item "&gt;
-            &lt;a href="..." class="c-nav__link"&gt;...&lt;/a&gt;
-          &lt;/li&gt;
-          ...
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
+  &lt;ul class=&quot;c-nav c-nav--vertical c-nav--accordion&quot; data-module=&quot;Nav&quot;&gt;
+    &lt;li class=&quot;c-nav__item is-accordion-nav-parent&quot;&gt;
+      &lt;a href=&quot;...&quot; class=&quot;c-nav__link&quot;&gt;...&lt;/a&gt;
+      &lt;button class=&quot;c-button is-accordion-button&quot;&gt;
+        &lt;span class=&quot;o-icon o-icon--chevron-down&quot;&gt;
+          [icon]
+        &lt;/span&gt;
+      &lt;/button&gt;
+      &lt;ul class=&quot;c-nav is-accordion-nav c-nav--vertical&quot;&gt;
+        &lt;li class=&quot;c-nav__item &quot;&gt;
+          &lt;a href=&quot;...&quot; class=&quot;c-nav__link&quot;&gt;...&lt;/a&gt;
+        &lt;/li&gt;
+        ...
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+  </code></pre>
   </div>
+
 
   <h3>Responsive</h3>
 
@@ -528,47 +533,54 @@
     </div>
   
 
-
+  
   <div class="c-code" data-module="ExampleCode">
     <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--vertical c-nav--horizontal@md"&gt;
-      &lt;li class="c-nav__item"&gt;
-        &lt;a class="c-nav__link" href="..."&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
+  &lt;ul class=&quot;c-nav c-nav--vertical c-nav--horizontal@md&quot;&gt;
+    &lt;li class=&quot;c-nav__item&quot;&gt;
+      &lt;a class=&quot;c-nav__link&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
+    &lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+  </code></pre>
   </div>
+
 
   <h4>Responsive dropdown</h4>
 
+  
   <div class="c-code" data-module="ExampleCode">
     <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--dropdown@md" data-module="nav"&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
+  &lt;ul class=&quot;c-nav c-nav--dropdown@md&quot; data-module=&quot;Nav&quot;&gt;
+    ...
+  &lt;/ul&gt;
+  </code></pre>
   </div>
+
 
   <h4>Responsive accordion</h4>
 
+  
   <div class="c-code" data-module="ExampleCode">
     <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--vertical c-nav--accordion@md" data-module="nav"&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
+  &lt;ul class=&quot;c-nav c-nav--vertical c-nav--accordion@md&quot; data-module=&quot;Nav&quot;&gt;
+    ...
+  &lt;/ul&gt;
+  </code></pre>
   </div>
+
 
   <h4>Responsive dropdown &amp; accordion</h4>
 
+  
   <div class="c-code" data-module="ExampleCode">
     <pre class="language-html"><code class="language-html">
-    &lt;ul class="c-nav c-nav--vertical c-nav--horizontal@lg c-nav--accordion@md c-nav--dropdown@lg" data-module="nav"&gt;
-      ...
-    &lt;/ul&gt;
-    </code></pre>
+  &lt;ul class=&quot;c-nav c-nav--vertical c-nav--horizontal@lg c-nav--accordion@md c-nav--dropdown@lg&quot; data-module=&quot;Nav&quot;&gt;
+    ...
+  &lt;/ul&gt;
+  </code></pre>
   </div>
+
 
 
     </div>
