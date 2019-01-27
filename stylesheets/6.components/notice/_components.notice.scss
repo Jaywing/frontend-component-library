@@ -11,7 +11,7 @@ $notice-text-color: $light !default;
   width: 100%;
 }
 
-.c-notice__content {
+.c-notice__body {
   padding: $spacer 0;
 }
 
@@ -39,7 +39,7 @@ $notice-text-color: $light !default;
     padding-right: $spacer;
   }
 
-  .c-notice__content {
+  .c-notice__body {
     flex: 1;
     padding: 0 $spacer;
   }

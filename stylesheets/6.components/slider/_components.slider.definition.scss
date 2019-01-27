@@ -1,8 +1,12 @@
+$slider-max-width: $site-max-width !default;
 $slider-background-color: $dune !default;
 $slider-text-color: $light !default;
 
 .c-slider {
   overflow: hidden;
+  max-width: $slider-max-width;
+  background: $slider-background-color;
+  color: $slider-text-color;
 }
 
 .c-slider__picture {
@@ -82,7 +86,6 @@ $slider-text-color: $light !default;
 .c-slider__controls {
   display: flex;
   padding: ($spacer / 2);
-  background: $slider-background-color;
   color: $slider-text-color;
 }
 
