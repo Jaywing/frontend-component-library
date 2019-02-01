@@ -1,67 +1,96 @@
 {
   "meta_title": "Jaywing Frontend Lab",
   "lab_title": "Jaywing Frontend Lab",
-  "version": "0.0.24",
-  "nav_getting_started": [
+  "version": "0.0.25",
+  "nav": [
     {
-      "id": "introduction",
+      "id": "getting-started",
       "url": "index.html",
-      "title": "Introduction"
-    }
-  ],
-  "nav_layouts": [
+      "title": "Getting started",
+      "children": [
+        {
+          "id": "introduction",
+          "url": "index.html",
+          "title": "Introduction"
+        }
+      ]
+    },
     {
-      "id": "container",
+      "id": "layouts",
       "url": "layouts.container.html",
-      "title": "Container"
+      "title": "Layout",
+      "children": [
+        {
+          "id": "container",
+          "url": "layouts.container.html",
+          "title": "Container"
+        }
+      ]
     },
-    { "id": "content", "url": "layouts.content.html", "title": "Content" },
-    { "id": "sidebar", "url": "layouts.sidebar.html", "title": "Sidebar" }
-  ],
-  "nav_content": [
     {
-      "id": "typography",
-      "url": "content.typography.html",
-      "title": "Typography"
+      "id": "content",
+      "url": "content.icons.html",
+      "title": "Content",
+      "children": [
+        { "id": "icons", "url": "content.icons.html", "title": "Icons" },
+        { "id": "images", "url": "content.images.html", "title": "Images" },
+        {
+          "id": "typography",
+          "url": "content.typography.html",
+          "title": "Typography"
+        }
+      ]
     },
-    { "id": "images", "url": "content.images.html", "title": "Images" },
-    { "id": "buttons", "url": "content.buttons.html", "title": "Buttons" },
-    { "id": "icons", "url": "content.icons.html", "title": "Icons" },
-    { "id": "tables", "url": "content.tables.html", "title": "Tables" }
-  ],
-  "nav_components": [
     {
-      "id": "accordion",
+      "id": "components",
       "url": "components.accordion.html",
-      "title": "Accordion"
+      "title": "Components",
+      "children": [
+        {
+          "id": "accordion",
+          "url": "components.accordion.html",
+          "title": "Accordion"
+        },
+        {
+          "id": "breadcrumb",
+          "url": "components.breadcrumb.html",
+          "title": "Breadcrumb"
+        },
+        {
+          "id": "buttons",
+          "url": "components.buttons.html",
+          "title": "Buttons"
+        },
+        { "id": "card", "url": "components.card.html", "title": "Card" },
+        {
+          "id": "cookie-message",
+          "url": "components.cookie-message.html",
+          "title": "Cookie Message"
+        },
+        { "id": "hero", "url": "components.hero.html", "title": "Hero" },
+        { "id": "modal", "url": "components.modal.html", "title": "Modal" },
+        { "id": "nav", "url": "components.nav.html", "title": "Nav" },
+        { "id": "notice", "url": "components.notice.html", "title": "Notice" },
+        {
+          "id": "pagination",
+          "url": "components.pagination.html",
+          "title": "Pagination"
+        },
+        { "id": "slider", "url": "components.slider.html", "title": "Slider" },
+        { "id": "tables", "url": "components.tables.html", "title": "Tables" }
+      ]
     },
     {
-      "id": "breadcrumb",
-      "url": "components.breadcrumb.html",
-      "title": "Breadcrumb"
-    },
-    { "id": "card", "url": "components.card.html", "title": "Card" },
-    {
-      "id": "cookie-message",
-      "url": "components.cookie-message.html",
-      "title": "Cookie Message"
-    },
-    { "id": "hero", "url": "components.hero.html", "title": "Hero" },
-    { "id": "modal", "url": "components.modal.html", "title": "Modal" },
-    { "id": "nav", "url": "components.nav.html", "title": "Nav" },
-    { "id": "notice", "url": "components.notice.html", "title": "Notice" },
-    {
-      "id": "pagination",
-      "url": "components.pagination.html",
-      "title": "Pagination"
-    },
-    { "id": "slider", "url": "components.slider.html", "title": "Slider" }
-  ],
-  "nav_contexts": [
-    {
-      "id": "mega-nav",
+      "id": "contexts",
       "url": "contexts.mega-nav.html",
-      "title": "Mega Nav"
+      "title": "Contexts",
+      "children": [
+        {
+          "id": "mega-nav",
+          "url": "contexts.mega-nav.html",
+          "title": "Mega Nav"
+        }
+      ]
     }
   ]
 }

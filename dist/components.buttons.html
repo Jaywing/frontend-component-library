@@ -81,8 +81,6 @@
       
 
   
-    
-  
 
   
 
@@ -94,7 +92,7 @@
     
   
 
-  <li class="c-nav__item c-nav__item-level-1 c-nav__item-parent is-active">
+  <li class="c-nav__item c-nav__item-level-1 c-nav__item-parent">
     <a class="c-nav__link" href="layouts.container.html">Layout</a>
     
       <ul class="c-nav c-nav--vertical c-nav--nested">
@@ -201,6 +199,8 @@
       
 
   
+    
+  
 
   
 
@@ -212,7 +212,7 @@
     
   
 
-  <li class="c-nav__item c-nav__item-level-1 c-nav__item-parent">
+  <li class="c-nav__item c-nav__item-level-1 c-nav__item-parent is-active">
     <a class="c-nav__link" href="components.accordion.html">Components</a>
     
       <ul class="c-nav c-nav--vertical c-nav--nested">
@@ -254,14 +254,16 @@
           
 
   
-
+    
   
 
   
 
   
 
-  <li class="c-nav__item">
+  
+
+  <li class="c-nav__item is-active">
     <a class="c-nav__link" href="components.buttons.html">Buttons</a>
     
 </li>
@@ -475,7 +477,9 @@
     </div>
     <div class="c-content">
       
-  <h1>Sidebar</h1>
+  <h1>Buttons</h1>
+
+  <p>Easily create versatile buttons in a variety of styles.</p>
 
   <h3>Usage</h3>
 
@@ -483,27 +487,16 @@
   
     <div class="c-example">
       <div class="c-example__tabs">
-        <a class="c-example__tab" href="source/layouts.sidebar.html" target="_blank">Open this example in a new window</a>
+        <a class="c-example__tab" href="source/components.buttons.html" target="_blank">Open this example in a new window</a>
       </div>
-      <iframe class="c-example__iframe" src="source/layouts.sidebar.html" data-module="LabFrame"></iframe>
+      <iframe class="c-example__iframe" src="source/components.buttons.html" data-module="LabFrame"></iframe>
     </div>
   
 
   
   <div class="c-code" data-module="ExampleCode">
     <pre class="language-html"><code class="language-html">
-  &lt;div class=&quot;o-site__header&quot;&gt;...&lt;/div&gt;
-  &lt;main class=&quot;o-site__content&quot;&gt;
-    &lt;div class=&quot;o-container o-container--collapse&quot;&gt;
-      &lt;div class=&quot;o-container__sidebar u-size-width-25@md&quot;&gt;
-        ...
-      &lt;/div&gt;
-      &lt;div class=&quot;o-container__body u-size-width-75@md&quot;&gt;
-        ...
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/main&gt;
-  &lt;div class=&quot;o-site__footer&quot;&gt;...&lt;/div&gt;
+  &lt;button class=&quot;c-button&quot;&gt;...&lt;/button&gt;
   </code></pre>
   </div>
 
