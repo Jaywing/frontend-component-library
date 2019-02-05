@@ -1,14 +1,21 @@
-<ul class="c-accordion" data-module="Accordion">
-  <li class="c-accordion__item is-active">
-    <a href="#" class="c-accordion__toggle">Accordion 1</a>
-    <div class="c-accordion__content">
-      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, id venenatis accumsan condimentum platea pharetra convallis phasellus, fringilla libero ridiculus faucibus enim parturient.</p>
-    </div>
-  </li>
-  <li class="c-accordion__item">
-    <a href="#" class="c-accordion__toggle">Accordion 2</a>
-    <div class="c-accordion__content">
-      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, id venenatis accumsan condimentum platea pharetra convallis phasellus, fringilla libero ridiculus faucibus enim parturient.</p>
-    </div>
-  </li>
-</ul>
+{% macro Accordion(modal) %}
+  <ul class="c-accordion" data-module="Accordion">
+    {% for item in modal %}
+      {% set activeClass = "" %}
+      {% if item.active %}
+        {% set activeClass = " is-active" %}
+      {% endif %}
+
+      <li class="c-accordion__item{{activeClass}}">
+        <a href="#" class="c-accordion__toggle">{{item.title}}</a>
+        <div class="c-accordion__content">
+          {{item.content|safe}}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+<div class="c-lab-example">
+  {{ Accordion([{'title': 'Accordion 1', 'content': '<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, id venenatis accumsan condimentum platea pharetra convallis phasellus, fringilla libero ridiculus faucibus enim parturient.</p>', 'active': true}, {'title': 'Accordion 2', 'content': '<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, id venenatis accumsan condimentum platea pharetra convallis phasellus, fringilla libero ridiculus faucibus enim parturient.</p>'}])}}
+</div>
