@@ -246,6 +246,7 @@ gulp.task("watch", function() {
   gulp.watch("./images/**/*", ["images", browser.reload]);
   gulp.watch("./fonts/**/*", ["fonts", browser.reload]);
   gulp.watch("./lab/**/*", ["lab_html", browser.reload]);
+  gulp.watch("./lab/stylesheets/**/*", ["lab_stylesheets", browser.reload]);
 });
 
 gulp.task("serve", ["build"], function() {

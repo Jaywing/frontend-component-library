@@ -1,9 +1,14 @@
-<div class="c-card">
-  <div class="c-card__header">Card header</div>
-  <img class="c-card__img" src="//via.placeholder.com/350x150" alt="">
-  <div class="c-card__body">Card body</div>
-  <div class="c-card__body">
-    <div class="c-card__title">Card title</div>
-    <div class="c-card__text">Card text</div>
+{% macro Card(header, imgSrc, imgAlt, title, text) %}
+  <div class="c-card">
+    <div class="c-card__header">{{header}}</div>
+    <img class="c-card__img" src="{{imgSrc}}" alt="{{imgAlt}}">
+    <div class="c-card__body">
+      <div class="c-card__title">{{title}}</div>
+      <div class="c-card__text">{{Text}}</div>
+    </div>
   </div>
+{% endmacro %}
+
+<div class="c-lab-example">
+  {{ Card('Card header', '//via.placeholder.com/350x150', '', 'Card title', '<p>Card text.</p>')}}
 </div>
