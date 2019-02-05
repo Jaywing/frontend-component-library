@@ -89,7 +89,7 @@ const lab_html_paths = {
 };
 
 const lab_stylesheets_paths = {
-  src: projectPath(CONFIG.lab, CONFIG.stylesheets.src, "lab.scss"),
+  src: projectPath(CONFIG.lab, CONFIG.stylesheets.src, "*.scss"),
   dest: projectPath(CONFIG.dest, CONFIG.stylesheets.dest),
   dist: projectPath(CONFIG.dist, CONFIG.stylesheets.dest)
 };

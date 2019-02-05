@@ -1,28 +1,43 @@
-$modal-border: 1px solid $alto !default;
-$modal-background-color: $light !default;
-$modal-padding: $spacer !default;
+$modal-background-color: rgba($light, 0.6) !default;
+$modal-content-border: 1px solid $alto !default;
+$modal-content-background-color: $light !default;
+$modal-content-padding: $spacer !default;
 $modal-header-background-color: $alto !default;
 $modal-footer-border: 1px solid $alto !default;
 
-.c-modal__content {
-  border: $modal-border;
+.c-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: $modal-background-color;
 }
 
+.c-modal__content {
+  max-width: 500px;
+  flex: 1;
+  border: $modal-content-border;
+  background: $modal-content-background-color;
+}
+
 .c-modal__header {
-  padding: $modal-padding;
+  padding: $modal-content-padding;
   background-color: $modal-header-background-color;
 }
 
 .c-modal__body {
-  padding: $modal-padding;
+  padding: $modal-content-padding;
 }
 
 .c-modal__footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: $modal-padding;
+  padding: $modal-content-padding;
   border-top: $modal-footer-border;
 
   .c-button {
