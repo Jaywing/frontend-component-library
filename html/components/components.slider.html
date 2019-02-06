@@ -1,51 +1,40 @@
 {% from 'macros/icon.html' import Icon %}
 
-<div class="c-slider" data-module="Slider">
-  <div class="c-slider__slides">
-    <div class="c-slider__slide is-active">
-      <picture class="c-slider__picture">
-        <source srcset="//placeimg.com/1600/800/tech/grayscale" media="(min-width: 768px)">
-        <img class="c-slider__image" src="//placeimg.com/600/600/tech/grayscale" alt="">
-      </picture>
-      <div class="c-slider__content">
-        <div class="c-slider__text">
-          <h1>Lorem ipsum</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+{% macro Slider(modal) %}
+  <div class="c-slider" data-module="Slider">
+    <div class="c-slider__slides">
+      {% for item in modal %}
+        {% set activeClass = "" %}
+        {% if item.active %}
+          {% set activeClass = " is-active" %}
+        {% endif %}
+
+        <div class="c-slider__slide{{activeClass}}">
+          <picture class="c-slider__picture">
+            <source srcset="{{item.imgSrcLg}}" media="(min-width: 768px)">
+            <img class="c-slider__image" src="{{item.imgSrcSm}}" alt="{{item.imgAlt}}">
+          </picture>
+          <div class="c-slider__content">
+            <div class="c-slider__text">
+              <h1>{{item.title}}</h1>
+              {{item.text|safe}}
+            </div>
+          </div>
         </div>
-      </div>
+      {% endfor %}
     </div>
-    <div class="c-slider__slide is-next">
-      <picture class="c-slider__picture">
-        <source srcset="//placeimg.com/1600/800/tech/sepia" media="(min-width: 768px)">
-        <img class="c-slider__image" src="//placeimg.com/600/600/tech/sepia" alt="">
-      </picture>
-      <div class="c-slider__content">
-        <div class="c-slider__text">
-          <h1>Cras</h1>
-          <p>Etiam sem sapien, fermentum eu lorem sit amet, efficitur imperdiet mauris. Cras.</p>
-        </div>
+    <div class="c-slider__controls">
+      <div class="c-slider__previous">
+        {{ Icon('chevron-left') }}
       </div>
-    </div>
-    <div class="c-slider__slide">
-      <picture class="c-slider__picture">
-        <source srcset="//placeimg.com/1600/800/tech/grayscale" media="(min-width: 768px)">
-        <img class="c-slider__image" src="//placeimg.com/600/600/tech/grayscale" alt="">
-      </picture>
-      <div class="c-slider__content">
-        <div class="c-slider__text">
-          <h1>Cras</h1>
-          <p>Etiam sem sapien, fermentum eu lorem sit amet, efficitur imperdiet mauris. Cras.</p>
-        </div>
+      <div class="c-slider__pips"></div>
+      <div class="c-slider__next">
+        {{ Icon('chevron-right') }}
       </div>
     </div>
   </div>
-  <div class="c-slider__controls">
-    <div class="c-slider__previous">
-      {{ Icon('chevron-left') }}
-    </div>
-    <div class="c-slider__pips"></div>
-    <div class="c-slider__next">
-      {{ Icon('chevron-right') }}
-    </div>
-  </div>
+{% endmacro %}
+
+<div class="c-lab-example">
+  {{ Slider([{'title': 'Slide title 1', 'text': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}', 'active': true}, {'title': 'Slide title 2', 'text': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}'}])}}
 </div>
