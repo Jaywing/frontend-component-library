@@ -104,7 +104,7 @@ var webpackConfig = {
   mode: "development",
   context: path.resolve("javascripts/"),
   entry: {
-    app: ["babel-polyfill", "app.js"]
+    app: ["app.js"]
   },
   output: {
     path: path.resolve("_build/javascripts/"),
@@ -121,7 +121,7 @@ var webpackConfig = {
         test: /\.js$/,
         exclude: path.resolve("node_modules"),
         query: {
-          presets: ["es2015"]
+          presets: [["es2015", { modules: false }], "stage-1"]
         }
       }
     ]
