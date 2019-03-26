@@ -2445,9 +2445,9 @@ p {
 
 .c-nav--horizontal .c-nav__item {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto; }
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto; }
 
 .c-nav--accordion .is-accordion-nav {
   display: none;
@@ -2476,9 +2476,9 @@ p {
           flex-wrap: wrap; }
   .c-nav--accordion .is-accordion-nav-parent > .c-nav__link {
     -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1; }
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
   .c-nav--accordion .is-accordion-nav-parent.is-active > .is-accordion-nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2522,9 +2522,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--accordion\@xxs .is-accordion-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--accordion\@xxs .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2565,9 +2565,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--accordion\@xs .is-accordion-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--accordion\@xs .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2608,9 +2608,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--accordion\@sm .is-accordion-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--accordion\@sm .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2651,9 +2651,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--accordion\@md .is-accordion-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--accordion\@md .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2694,9 +2694,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--accordion\@lg .is-accordion-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--accordion\@lg .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2737,9 +2737,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--accordion\@xl .is-accordion-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--accordion\@xl .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2780,9 +2780,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--accordion\@xxl .is-accordion-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--accordion\@xxl .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2833,9 +2833,9 @@ p {
           flex-wrap: wrap; }
   .c-nav--dropdown .is-dropdown-nav-parent > .c-nav__link {
     -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1; }
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
   .c-nav--dropdown .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2888,9 +2888,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--dropdown\@xxs .is-dropdown-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--dropdown\@xxs .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2940,9 +2940,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--dropdown\@xs .is-dropdown-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--dropdown\@xs .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2992,9 +2992,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--dropdown\@sm .is-dropdown-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--dropdown\@sm .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -3044,9 +3044,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--dropdown\@md .is-dropdown-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--dropdown\@md .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -3096,9 +3096,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--dropdown\@lg .is-dropdown-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--dropdown\@lg .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -3148,9 +3148,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--dropdown\@xl .is-dropdown-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--dropdown\@xl .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -3200,9 +3200,9 @@ p {
             flex-wrap: wrap; }
     .c-nav--dropdown\@xxl .is-dropdown-nav-parent > .c-nav__link {
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
     .c-nav--dropdown\@xxl .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: -webkit-box;
       display: -webkit-flex;

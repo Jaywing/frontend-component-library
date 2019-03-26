@@ -104,7 +104,7 @@ var webpackConfig = {
   mode: "development",
   context: path.resolve("javascripts/"),
   entry: {
-    app: ["app.js"]
+    app: ["babel-polyfill", "./app.js"]
   },
   output: {
     path: path.resolve("_build/javascripts/"),
