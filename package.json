@@ -1,7 +1,7 @@
 {
-  "name": "jaywing-frontend-starter-kit",
-  "version": "0.0.34",
-  "description": "Jaywing Frontend starter kit",
+  "name": "jaywing-frontend-site-template",
+  "version": "0.0.1",
+  "description": "Jaywing Frontend site template",
   "license": "MIT",
   "engines": {
     "node": ">=6.11.1",
@@ -10,14 +10,13 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
-    "build": "gulp dist",
+    "build": "gulp production",
     "fix-code": "prettier-eslint --write ./javascripts/**/*.{js,jsx}",
     "fix-styles": "prettier-stylelint --write ./stylesheets/**/*.{css,scss}"
   },
   "prettier": {},
   "dependencies": {
-    "giza-framework": "*",
-    "giza-lab": "*"
+    "jaywing-frontend-starter-kit": "*"
   },
   "devDependencies": {
     "prettier": "^1.14.2",

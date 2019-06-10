@@ -1,5 +1,4 @@
 node_modules
 _build
-
-# VS Code Local History Extension files
+_migrated
 .history
