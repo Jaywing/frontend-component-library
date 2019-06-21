@@ -20,7 +20,7 @@ gulp.task("watch", function() {
     )
   };
 
-  gulp.watch(paths.htmlSrc, ["html", browser.reload]);
+  gulp.watch(paths.htmlSrc, ["html", "lab:html", browser.reload]);
   gulp.watch(paths.stylesheetsSrc, ["stylesheets", browser.reload]);
   gulp.watch(paths.javascriptsSrc, ["javascripts", browser.reload]);
 });

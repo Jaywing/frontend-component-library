@@ -12,6 +12,11 @@
           "id": "introduction",
           "url": "index.html",
           "title": "Introduction"
+        },
+        {
+          "id": "checklist",
+          "url": "getting-started.checklist.html",
+          "title": "Checklist"
         }
       ]
     },

@@ -1,0 +1,59 @@
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% set pageType = "getting-started" %}
+{% set pageId = "checklist" %}
+
+{% block content %}
+  <h1>Checklist</h1>
+
+  <p>A comprehensive list of validation tools for your web app.</p>
+
+  <dl>
+    <dt>Generate a frontend checklist report using the below resources to test the page.</dt>
+    <dd>
+      <a href="https://frontendchecklist.io" target="blank">frontendchecklist.io</a>
+    </dd>
+    <dt>A complete automatic site checker tool</dt>
+    <dd>
+      <a href="https://developers.google.com/web/tools/lighthouse/" target="blank">developers.google.com/web/tools/lighthouse/</a>
+    </dd>
+  </dl>
+
+  <h2>Validation</h2>
+
+  <dl>
+    <dd>
+      <a href="https://validator.w3.org" target="blank">validator.w3.org</a>
+    </dd>
+  </dl>
+
+  <h2>Performance</h2>
+
+  <dl>
+    <dd>
+      <a href="https://webpagetest.org" target="blank">webpagetest.org</a>
+    </dd>
+    <dd>
+      <a href="https://developers.google.com/speed/pagespeed/insights/" target="blank">developers.google.com/speed/pagespeed/insights/</a>
+    </dd>
+  </dl>
+
+  <h2>Accessibility</h2>
+
+  <dl>
+    <dd>
+      <a href="https://wave.webaim.org" target="blank">wave.webaim.org</a>
+    </dd>
+  </dl>
+
+  <h2>SEO</h2>
+
+  <dl>
+    <dd>
+      <a href="https://seositecheckup.com" target="blank">seositecheckup.com</a>
+    </dd>
+  </dl>
+
+{% endblock %}
