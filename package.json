@@ -1,7 +1,7 @@
 {
-  "name": "jaywing-frontend-site-template",
+  "name": "jaywing-frontend-component-library",
   "version": "0.0.1",
-  "description": "Jaywing Frontend site template",
+  "description": "Jaywing Frontend Component Library",
   "license": "MIT",
   "engines": {
     "node": ">=6.11.1",
