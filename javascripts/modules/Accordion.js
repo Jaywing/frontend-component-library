@@ -3,6 +3,7 @@ export default class Accordion {
     this.el = el;
     this.init();
   }
+
   init() {
     this.dom = this.cacheDom();
     this.addEventListeners();

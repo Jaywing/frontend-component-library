@@ -2,9 +2,20 @@ $notice-background-color: $dune !default;
 $notice-text-color: $light !default;
 
 .c-notice {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: $spacer;
   background: $notice-background-color;
   color: $notice-text-color;
+}
+
+.c-notice--modal {
+  display: none;
+
+  &.is-active {
+    display: flex;
+  }
 }
 
 .c-notice__img {
@@ -23,15 +34,9 @@ $notice-text-color: $light !default;
 
 .c-notice__footer {
   padding: $spacer 0;
-  text-align: center;
 }
 
 @include md {
-  .c-notice {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .c-notice__media {
     display: flex;
     max-width: 10rem;
