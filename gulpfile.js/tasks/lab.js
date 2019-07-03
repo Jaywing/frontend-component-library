@@ -9,56 +9,49 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const projectPath = require("../lib/projectPath");
 
-lab_html_paths = {
-  src: [
-    projectPath(PATH_CONFIG.lab, "**/*.html"),
-    "!" +
-      projectPath(
-        PATH_CONFIG.lab,
-        "**/{components,layouts,shared,macros,data}/**"
-      )
-  ],
-  src_render: [
-    projectPath(PATH_CONFIG.lab),
-    `./node_modules/giza-lab/html`,
-    projectPath(PATH_CONFIG.lab),
-    projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)
-  ],
-  dest: projectPath(PATH_CONFIG.buildDest),
-  finalDest: projectPath(PATH_CONFIG.finalDest)
-};
-
-lab_stylesheets_paths = {
-  src: projectPath(PATH_CONFIG.lab, PATH_CONFIG.stylesheets.src, "**/*.scss"),
-  dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.stylesheets.dest)
-};
-
-lab_javascripts_paths = {
-  src: `./node_modules/giza-lab/dist/javascripts/lab.js`,
-  dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.javascripts.dest),
-  finalDest: projectPath(PATH_CONFIG.finalDest, PATH_CONFIG.javascripts.dest)
-};
-
 gulp.task("lab:html", function() {
+  paths = {
+    src: [
+      projectPath(PATH_CONFIG.lab, "**/*.html"),
+      "!" +
+        projectPath(
+          PATH_CONFIG.lab,
+          "**/{components,layouts,shared,macros,data}/**"
+        )
+    ],
+    src_render: [
+      projectPath(PATH_CONFIG.lab),
+      `./node_modules/giza-lab/html`,
+      projectPath(PATH_CONFIG.lab),
+      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)
+    ],
+    dest: projectPath(PATH_CONFIG.buildDest)
+  };
+
   const dataFunction = function() {
     var dataPath = path.resolve(`${PATH_CONFIG.BASE}/lab/data/global.json`);
     return JSON.parse(fs.readFileSync(dataPath, "utf8"));
   };
 
   return gulp
-    .src(lab_html_paths.src)
+    .src(paths.src)
     .pipe(data(dataFunction))
     .pipe(
       nunjucksRender({
-        path: lab_html_paths.src_render
+        path: paths.src_render
       })
     )
-    .pipe(gulp.dest(lab_html_paths.dest));
+    .pipe(gulp.dest(paths.dest));
 });
 
 gulp.task("lab:stylesheets", function() {
+  paths = {
+    src: projectPath(PATH_CONFIG.lab, PATH_CONFIG.stylesheets.src, "**/*.scss"),
+    dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.stylesheets.dest)
+  };
+
   return gulp
-    .src(lab_stylesheets_paths.src)
+    .src(paths.src)
     .pipe(plumber())
     .pipe(
       sass({
@@ -72,11 +65,13 @@ gulp.task("lab:stylesheets", function() {
         })
       ])
     )
-    .pipe(gulp.dest(lab_stylesheets_paths.dest));
+    .pipe(gulp.dest(paths.dest));
 });
 
 gulp.task("lab:javascripts", function() {
-  return gulp
-    .src(lab_javascripts_paths.src)
-    .pipe(gulp.dest(lab_javascripts_paths.dest));
+  paths = {
+    src: `./node_modules/giza-lab/dist/javascripts/lab.js`,
+    dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.javascripts.dest)
+  };
+  return gulp.src(paths.src).pipe(gulp.dest(paths.dest));
 });
