@@ -22,7 +22,6 @@ lab_html_paths = {
     projectPath(PATH_CONFIG.lab),
     `./node_modules/giza-lab/html`,
     projectPath(PATH_CONFIG.lab),
-    `./node_modules/jaywing-frontend-starter-kit/lab/html`,
     projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)
   ],
   dest: projectPath(PATH_CONFIG.buildDest),
@@ -35,7 +34,7 @@ lab_stylesheets_paths = {
 };
 
 lab_javascripts_paths = {
-  src: [`./node_modules/giza-lab/dist/javascripts/lab.js`],
+  src: `./node_modules/giza-lab/dist/javascripts/lab.js`,
   dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.javascripts.dest),
   finalDest: projectPath(PATH_CONFIG.finalDest, PATH_CONFIG.javascripts.dest)
 };
