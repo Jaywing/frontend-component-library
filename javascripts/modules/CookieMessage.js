@@ -17,7 +17,7 @@ export default class CookieMessage {
 
   cacheDom() {
     return {
-      button: this.el.querySelector(".js-notice-close")
+      button: this.el.querySelector(".js-cookie-message-close")
     };
   }
 
@@ -28,7 +28,6 @@ export default class CookieMessage {
   }
 
   handleCookieMessageClosed() {
-    console.log("clicked");
     this.setTheCookie("cookie-alert", true, 60);
     this.el.classList.remove("is-active");
   }
