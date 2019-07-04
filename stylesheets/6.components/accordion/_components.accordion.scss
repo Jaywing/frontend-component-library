@@ -1,0 +1,11 @@
+// Components: Accordion
+
+$accordion-border: 1px solid $bonjour !default;
+
+.c-accordion {
+  border: $accordion-border;
+}
+
+.c-accordion__toggle {
+  text-decoration: none;
+}
