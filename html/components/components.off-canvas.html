@@ -1,0 +1,86 @@
+{% from 'macros/icon.html' import Icon %}
+
+<nav class="c-mega-nav">
+  <ul class="c-nav c-nav--vertical c-nav--horizontal@lg c-nav--accordion c-nav--dropdown@lg u-position-relative" data-module="Nav">
+    <li class="c-nav__item is-accordion-nav-parent is-dropdown-nav-parent u-position-static">
+      <a class="c-nav__link is-active" href="#">Active</a>
+      <button class="c-button is-accordion-button">
+        <span class="o-icon o-icon--chevron-down">
+          {{Icon('chevron-down')}}
+        </span>
+      </button>
+      <div class="is-accordion-nav is-dropdown-nav">
+        <div class="o-flex-grid u-size-width-100">
+          <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm">
+            <ul class="c-nav c-nav--vertical">
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Item 1 - 1</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Item 1 - 2</a>
+                <ul class="c-nav c-nav--nested">
+                  <li class="c-nav__item">
+                    <a class="c-nav__link is-active" href="#">Item 1 - 2 - 1</a>
+                  </li>
+                  <li class="c-nav__item">
+                    <a class="c-nav__link" href="#">Item 1 - 2 - 2</a>
+                  </li>
+                  <li class="c-nav__item">
+                    <a class="c-nav__link" href="#">Item 1 - 2 - 3</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Item 1 - 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm">
+            <ul class="c-nav c-nav--vertical">
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Item 1 - 1</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Item 1 - 2</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Item 1 - 3</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="c-nav__item is-accordion-nav-parent is-dropdown-nav-parent u-position-static">
+      <a class="c-nav__link" href="#">Link</a>
+      <button class="c-button is-accordion-button">
+        <span class="o-icon o-icon--chevron-down">
+          {{Icon('chevron-down')}}
+        </span>
+      </button>
+      <div class="is-accordion-nav is-dropdown-nav">
+        <div class="o-flex-grid u-size-width-100">
+          <div class="o-flex-grid__cell">
+            <ul class="c-nav c-nav--vertical">
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Item 1 - 1</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Item 1 - 2</a>
+              </li>
+              <li class="c-nav__item">
+                <a href="#" class="c-nav__link">Item 1 - 3</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link is-disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</nav>
