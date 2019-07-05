@@ -94,6 +94,11 @@
           "id": "mega-nav",
           "url": "contexts.mega-nav.html",
           "title": "Mega Nav"
+        },
+        {
+          "id": "off-canvas",
+          "url": "contexts.off-canvas.html",
+          "title": "Off-canvas"
         }
       ]
     }

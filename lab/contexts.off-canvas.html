@@ -1,0 +1,17 @@
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% set pageType = "contexts" %}
+{% set pageId = "off-canvas" %}
+
+{% block content %}
+  <h1>Off-canvas</h1>
+
+  <h3>Usage</h3>
+
+  {{LabExample(pageType, pageId)}}
+  {{LabCode('html', '
+  ')}}
+{% endblock %}
