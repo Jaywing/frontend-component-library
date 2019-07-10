@@ -1,7 +1,7 @@
 $notice-background-color: $dune !default;
 $notice-text-color: $light !default;
 
-.c-notice {
+.notice {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -10,7 +10,7 @@ $notice-text-color: $light !default;
   color: $notice-text-color;
 }
 
-.c-notice--modal {
+.notice--modal {
   display: none;
 
   &.is-active {
@@ -18,38 +18,38 @@ $notice-text-color: $light !default;
   }
 }
 
-.c-notice__img {
+.notice__img {
   width: 100%;
 }
 
-.c-notice__body {
+.notice__body {
   padding: $spacer 0;
 }
 
-.c-notice__title {
+.notice__title {
   @include great-primer;
 
   margin-bottom: ($spacer / 2);
 }
 
-.c-notice__footer {
+.notice__footer {
   padding: $spacer 0;
 }
 
 @include md {
-  .c-notice__media {
+  .notice__media {
     display: flex;
     max-width: 10rem;
     align-items: center;
     padding-right: $spacer;
   }
 
-  .c-notice__body {
+  .notice__body {
     flex: 1;
     padding: 0 $spacer;
   }
 
-  .c-notice__footer {
+  .notice__footer {
     display: flex;
     align-items: center;
     padding: 0 $spacer;

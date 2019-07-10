@@ -1,21 +1,21 @@
 {% from 'macros/icon.html' import Icon %}
 
 {% macro Slider(modal) %}
-  <div class="c-slider" data-module="Slider">
-    <div class="c-slider__slides">
+  <div class="slider" data-module="Slider">
+    <div class="slider__slides">
       {% for item in modal %}
         {% set activeClass = "" %}
         {% if item.active %}
           {% set activeClass = " is-active" %}
         {% endif %}
 
-        <div class="c-slider__slide{{activeClass}}">
-          <picture class="c-slider__picture">
+        <div class="slider__slide{{activeClass}}">
+          <picture class="slider__picture">
             <source srcset="{{item.imgSrcLg}}" media="(min-width: 768px)">
-            <img class="c-slider__image" src="{{item.imgSrcSm}}" alt="{{item.imgAlt}}">
+            <img class="slider__image" src="{{item.imgSrcSm}}" alt="{{item.imgAlt}}">
           </picture>
-          <div class="c-slider__content">
-            <div class="c-slider__text">
+          <div class="slider__content">
+            <div class="slider__text">
               <h1>{{item.title}}</h1>
               {{item.text|safe}}
             </div>
@@ -23,12 +23,12 @@
         </div>
       {% endfor %}
     </div>
-    <div class="c-slider__controls">
-      <div class="c-slider__previous">
+    <div class="slider__controls">
+      <div class="slider__previous">
         {{ Icon('chevron-left') }}
       </div>
-      <div class="c-slider__pips"></div>
-      <div class="c-slider__next">
+      <div class="slider__pips"></div>
+      <div class="slider__next">
         {{ Icon('chevron-right') }}
       </div>
     </div>

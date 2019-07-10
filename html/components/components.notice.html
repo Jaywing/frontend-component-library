@@ -1,16 +1,16 @@
 {% macro Notice(title, imgSrc, imgAlt, text, buttonText, buttonUrl) %}
-  <div class="c-notice">
-    <div class="c-notice__media">
-      <img class="c-notice__img" src="{{imgSrc}}" alt="{{imgAlt}}">
+  <div class="notice">
+    <div class="notice__media">
+      <img class="notice__img" src="{{imgSrc}}" alt="{{imgAlt}}">
     </div>
-    <div class="c-notice__body">
-      <div class="c-notice__title">{{title}}</div>
-      <div class="c-notice__text">
+    <div class="notice__body">
+      <div class="notice__title">{{title}}</div>
+      <div class="notice__text">
         {{text|safe}}
       </div>
     </div>
-    <div class="c-notice__footer">
-      <a class="c-button" href="{{buttonUrl}}">{{buttonText}}</a>
+    <div class="notice__footer">
+      <a class="button" href="{{buttonUrl}}">{{buttonText}}</a>
     </div>
   </div>
 {% endmacro %}

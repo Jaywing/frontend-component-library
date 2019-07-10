@@ -1,12 +1,12 @@
 {% macro Modal(header, text, close) %}
-  <div class="c-modal">
-    <div class="c-modal__content">
-      <div class="c-modal__header">{{header}}</div>
-      <div class="c-modal__body">
+  <div class="modal">
+    <div class="modal__content">
+      <div class="modal__header">{{header}}</div>
+      <div class="modal__body">
         {{text|safe}}
       </div>
-      <div class="c-modal__footer">
-        <a class="c-button" href="#">{{close}}</a>
+      <div class="modal__footer">
+        <a class="button" href="#">{{close}}</a>
       </div>
     </div>
   </div>

@@ -13,18 +13,18 @@
 
   {{LabExample(pageType, pageId)}}
   {{LabCode('html', '
-  <ul class="c-nav">
-    <li class="c-nav__item">
-      <a class="c-nav__link is-active" href="...">...</a>
+  <ul class="nav">
+    <li class="nav__item">
+      <a class="nav__link is-active" href="...">...</a>
     </li>
-    <li class="c-nav__item">
-      <a class="c-nav__link" href="...">...</a>
+    <li class="nav__item">
+      <a class="nav__link" href="...">...</a>
     </li>
-    <li class="c-nav__item">
-      <a class="c-nav__link" href="...">...</a>
+    <li class="nav__item">
+      <a class="nav__link" href="...">...</a>
     </li>
-    <li class="c-nav__item">
-      <a class="c-nav__link is-disabled" href="...">...</a>
+    <li class="nav__item">
+      <a class="nav__link is-disabled" href="...">...</a>
     </li>
     ...
   </ul>
@@ -34,9 +34,9 @@
 
   {{LabExample(pageType, pageId, 'vertical')}}
   {{LabCode('html', '
-  <ul class="c-nav c-nav--vertical">
-    <li class="c-nav__item">
-      <a class="c-nav__link" href="...">...</a>
+  <ul class="nav nav--vertical">
+    <li class="nav__item">
+      <a class="nav__link" href="...">...</a>
     </li>
     ...
   </ul>
@@ -46,12 +46,12 @@
 
   {{LabExample(pageType, pageId, 'nested')}}
   {{LabCode('html', '
-  <ul class="c-nav c-nav--vertical">
-    <li class="c-nav__item">
-      <a class="c-nav__link is-active" href="...">...</a>
-      <ul class="c-nav c-nav--vertical c-nav--nested">
-        <li class="c-nav__item">
-          <a class="c-nav__link" href="...">...</a>
+  <ul class="nav nav--vertical">
+    <li class="nav__item">
+      <a class="nav__link is-active" href="...">...</a>
+      <ul class="nav nav--vertical nav--nested">
+        <li class="nav__item">
+          <a class="nav__link" href="...">...</a>
         </li>
         ...
       </ul>
@@ -64,17 +64,17 @@
 
   {{LabExample(pageType, pageId, 'dropdown')}}
   {{LabCode('html', '
-  <ul class="c-nav c-nav--dropdown" data-module="Nav">
-    <li class="c-nav__item is-dropdown-nav-parent">
-      <a href="..." class="c-nav__link">...</a>
-      <button class="c-button is-dropdown-button">
-        <span class="o-icon o-icon--chevron-down">
+  <ul class="nav nav--dropdown" data-module="Nav">
+    <li class="nav__item is-dropdown-nav-parent">
+      <a href="..." class="nav__link">...</a>
+      <button class="button is-dropdown-button">
+        <span class="icon icon--chevron-down">
           [icon]
         </span>
       </button>
-      <ul class="c-nav is-dropdown-nav c-nav--vertical">
-        <li class="c-nav__item ">
-          <a href="..." class="c-nav__link">...</a>
+      <ul class="nav is-dropdown-nav nav--vertical">
+        <li class="nav__item ">
+          <a href="..." class="nav__link">...</a>
         </li>
         ...
       </ul>
@@ -87,17 +87,17 @@
 
   {{LabExample(pageType, pageId, 'accordion')}}
   {{LabCode('html', '
-  <ul class="c-nav c-nav--vertical c-nav--accordion" data-module="Nav">
-    <li class="c-nav__item is-accordion-nav-parent">
-      <a href="..." class="c-nav__link">...</a>
-      <button class="c-button is-accordion-button">
-        <span class="o-icon o-icon--chevron-down">
+  <ul class="nav nav--vertical nav--accordion" data-module="Nav">
+    <li class="nav__item is-accordion-nav-parent">
+      <a href="..." class="nav__link">...</a>
+      <button class="button is-accordion-button">
+        <span class="icon icon--chevron-down">
           [icon]
         </span>
       </button>
-      <ul class="c-nav is-accordion-nav c-nav--vertical">
-        <li class="c-nav__item ">
-          <a href="..." class="c-nav__link">...</a>
+      <ul class="nav is-accordion-nav nav--vertical">
+        <li class="nav__item ">
+          <a href="..." class="nav__link">...</a>
         </li>
         ...
       </ul>
@@ -110,9 +110,9 @@
 
   {{LabExample(pageType, pageId, 'responsive')}}
   {{LabCode('html', '
-  <ul class="c-nav c-nav--vertical c-nav--horizontal@md">
-    <li class="c-nav__item">
-      <a class="c-nav__link" href="...">...</a>
+  <ul class="nav nav--vertical nav--horizontal@md">
+    <li class="nav__item">
+      <a class="nav__link" href="...">...</a>
     </li>
     ...
   </ul>
@@ -121,7 +121,7 @@
   <h4>Responsive dropdown</h4>
 
   {{LabCode('html', '
-  <ul class="c-nav c-nav--dropdown@md" data-module="Nav">
+  <ul class="nav nav--dropdown@md" data-module="Nav">
     ...
   </ul>
   ')}}
@@ -129,7 +129,7 @@
   <h4>Responsive accordion</h4>
 
   {{LabCode('html', '
-  <ul class="c-nav c-nav--vertical c-nav--accordion@md" data-module="Nav">
+  <ul class="nav nav--vertical nav--accordion@md" data-module="Nav">
     ...
   </ul>
   ')}}
@@ -137,7 +137,7 @@
   <h4>Responsive dropdown &amp; accordion</h4>
 
   {{LabCode('html', '
-  <ul class="c-nav c-nav--vertical c-nav--horizontal@lg c-nav--accordion@md c-nav--dropdown@lg" data-module="Nav">
+  <ul class="nav nav--vertical nav--horizontal@lg nav--accordion@md nav--dropdown@lg" data-module="Nav">
     ...
   </ul>
   ')}}

@@ -1,7 +1,7 @@
-.c-lab-example .c-card {
+.lab-example .card {
   max-width: 400px; }
 
-.c-lab-example .c-modal {
+.lab-example .modal {
   position: relative;
   top: auto;
   right: auto;
@@ -10,3 +10,6 @@
   display: flex;
   padding-top: 2rem;
   padding-bottom: 2rem; }
+
+.lab-example .notice--modal {
+  display: flex; }
