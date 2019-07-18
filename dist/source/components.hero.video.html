@@ -24,11 +24,16 @@
 
   
     <div class="hero">
-  <picture class="hero__image">
-    <source media="(min-width: 768px)" srcset="//placehold.it/1000x300"/>
-    <source srcset="//placehold.it/600x300"/>
-    <img src="//placehold.it/1000x300" alt=""/>
-  </picture>
+  <div class="hero__media">
+    <picture class="hero__image">
+      <source media="(min-width: 768px)" srcset="//placehold.it/1000x300"/>
+      <source srcset="//placehold.it/600x300"/>
+      <img src="//placehold.it/1000x300" alt=""/>
+    </picture>
+    <video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" class="hero__video">
+      <source src="/images/SonicShort.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="hero__body">
     <div class="hero__title">
       <span class="hero__text-background">Hero title</span>
