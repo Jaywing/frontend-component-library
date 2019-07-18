@@ -4,7 +4,7 @@ const projectPath = require("../lib/projectPath");
 gulp.task("images", function() {
   paths = {
     src: [
-      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.images.src, "**/*{jpg,png,svg}")
+      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.images.src, "**/*{jpg,png,svg,.mp4,.webm}")
     ],
     dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.images.dest)
   };
