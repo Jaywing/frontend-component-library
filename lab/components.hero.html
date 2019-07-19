@@ -14,13 +14,67 @@
   {{LabExample(pageType, pageId)}}
   {{LabCode('html', '
   <div class="hero">
-    <div class="hero__img" style="background-image: url(\'...\');"></div>
+    <picture class="hero__image">
+      <source media="(min-width: 768px)" srcset="..."/>
+      <source srcset="..."/>
+      <img src="..." alt=""/>
+    </picture>
     <div class="hero__body">
       <div class="hero__title">
-        ...
+        <span class="hero__text-background">...</span>
       </div>
       <div class="hero__text">
-        <p>...</p>
+        <span class="hero__text-background">...</span>
+      </div>
+    </div>
+  </div>
+  ')}}
+
+  <h3>With video</h3>
+
+  {{LabExample(pageType, pageId, 'video')}}
+  {{LabCode('html', '
+  <div class="hero">
+    <div class="hero__media">
+      <picture class="hero__image">
+        <source media="(min-width: 768px)" srcset="..."/>
+        <source srcset="..."/>
+        <img src="..." alt=""/>
+      </picture>
+      <video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" class="hero__video">
+        <source src="....mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__body">
+      <div class="hero__title">
+        <span class="hero__text-background">...</span>
+      </div>
+      <div class="hero__text">
+        <span class="hero__text-background">...</span>
+      </div>
+    </div>
+  </div>
+  ')}}
+
+  <h3>With YouTube</h3>
+
+  {{LabExample(pageType, pageId, 'youtube')}}
+  {{LabCode('html', '
+  <div class="hero">
+    <div class="hero__media">
+      <picture class="hero__image">
+        <source media="(min-width: 768px)" srcset="..."/>
+        <source srcset="..."/>
+        <img src="..." alt=""/>
+      </picture>
+      <iframe class="hero__video" src="https://www.youtube.com/embed/XXX?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+    </div>
+    <div class="hero__body">
+      <div class="hero__title">
+        <span class="hero__text-background">...</span>
+      </div>
+      <div class="hero__text">
+        <span class="hero__text-background">...</span>
       </div>
     </div>
   </div>

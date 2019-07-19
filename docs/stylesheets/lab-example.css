@@ -1,0 +1,15 @@
+.lab-example .card {
+  max-width: 400px; }
+
+.lab-example .modal {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
+.lab-example .notice--modal {
+  display: flex; }

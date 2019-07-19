@@ -1,11 +1,15 @@
 <div class="hero">
-  <div class="hero__img" style="background-image: url('//placehold.it/998x490');"></div>
+  <picture class="hero__image">
+    <source media="(min-width: 768px)" srcset="//placehold.it/1000x300"/>
+    <source srcset="//placehold.it/600x300"/>
+    <img src="//placehold.it/1000x300" alt=""/>
+  </picture>
   <div class="hero__body">
     <div class="hero__title">
-      Hero title
+      <span class="hero__text-background">Hero title</span>
     </div>
     <div class="hero__text">
-      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, id venenatis accumsan condimentum platea pharetra convallis phasellus, fringilla libero ridiculus faucibus enim parturient.</p>
+      <span class="hero__text-background">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin.</span>
     </div>
   </div>
 </div>

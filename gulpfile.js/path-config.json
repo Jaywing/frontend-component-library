@@ -3,7 +3,7 @@
   "lab": "./lab",
   "site": "site",
   "buildDest": "./_build",
-  "finalDest": "./dist",
+  "finalDest": "./docs",
   "migrateDest": "./_migrated",
 
   "html": {
