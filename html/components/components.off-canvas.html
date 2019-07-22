@@ -1,4 +1,18 @@
 <div class="off-canvas">
-  <div class="off-canvas__aside" data-module="OffCanvas"></div>
-  <div class="off-canvas__content"></div>
+  <div class="off-canvas__aside off-canvas-left" data-module="OffCanvas" style="padding: 1rem; background: #ddd;">
+    <p>Aside</p>
+  </div>
+  <div class="off-canvas__aside off-canvas-right" data-module="OffCanvas" style="padding: 1rem; background: #ddd;">
+    <p>Aside</p>
+  </div>
+  <div class="off-canvas__content" style="padding: 1rem;">
+    <p>Content</p>
+  </div>
 </div>
+
+<p class="text-center">
+  <button class="button" data-module="Toggle" data-options='{"target": ".off-canvas", "activeClass": "is-open-left"}'>Toggle left canvas</button>
+</p>
+<p class="text-center">
+  <button class="button" data-module="Toggle" data-options='{"target": ".off-canvas", "activeClass": "is-open-right"}'>Toggle right canvas</button>
+</p>

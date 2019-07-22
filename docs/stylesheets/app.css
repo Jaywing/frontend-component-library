@@ -3500,15 +3500,33 @@ p {
     align-items: center;
     padding: 0 1rem; } }
 
+.off-canvas {
+  overflow: hidden; }
+
 .off-canvas__aside {
+  position: fixed;
   top: 0;
-  left: 0;
   width: 250px;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: auto; }
+
+.off-canvas-left {
+  left: 0;
   transform: translateX(-250px); }
-  .off-canvas__aside.is-open {
+  .is-open-left .off-canvas-left {
     transform: translate(0); }
+
+.off-canvas-right {
+  right: 0;
+  transform: translateX(250px); }
+  .is-open-right .off-canvas-right {
+    transform: translate(0); }
+
+.is-open-left .off-canvas__content {
+  transform: translateX(250px); }
+
+.is-open-right .off-canvas__content {
+  transform: translateX(-250px); }
 
 .slider {
   overflow: hidden;
