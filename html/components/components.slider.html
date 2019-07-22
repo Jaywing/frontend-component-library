@@ -15,9 +15,11 @@
             <img class="slider__image" src="{{item.imgSrcSm}}" alt="{{item.imgAlt}}">
           </picture>
           <div class="slider__content">
+            <h2 class="slider__title">
+              <span class="slider__text-background">{{item.title}}</span>
+            </h2>
             <div class="slider__text">
-              <h1>{{item.title}}</h1>
-              {{item.text|safe}}
+              <span class="slider__text-background">{{item.text}}</span>
             </div>
           </div>
         </div>
@@ -35,4 +37,4 @@
   </div>
 {% endmacro %}
 
-{{ Slider([{'title': 'Slide title 1', 'text': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}', 'active': true}, {'title': 'Slide title 2', 'text': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}'}])}}
+{{ Slider([{'title': 'Slide title 1', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}', 'active': true}, {'title': 'Slide title 2', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}'}])}}
