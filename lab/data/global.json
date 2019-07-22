@@ -92,10 +92,17 @@
           "title": "Pagination"
         },
         { "id": "slider", "url": "components.slider.html", "title": "Slider" },
-        { "id": "tables", "url": "components.tables.html", "title": "Tables" },
+        { "id": "tables", "url": "components.tables.html", "title": "Tables" }
+      ]
+    },
+    {
+      "id": "modules",
+      "url": "modules.toggle.html",
+      "title": "Modules",
+      "children": [
         {
           "id": "toggle",
-          "url": "components.toggle.html",
+          "url": "modules.toggle.html",
           "title": "Toggle"
         }
       ]
