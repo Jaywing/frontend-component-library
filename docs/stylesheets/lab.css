@@ -1891,7 +1891,8 @@ p {
   padding: 1rem; }
 
 .card__title {
-  margin: 0 0 1rem; }
+  margin: 0 0 1rem;
+  font-weight: 700; }
 
 .form-group {
   margin-bottom: 1rem; }
