@@ -17,4 +17,12 @@
   .notice--modal {
     display: flex;
   }
+
+  .lab-example-target {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
 }

@@ -13,3 +13,8 @@
 
 .lab-example .notice--modal {
   display: flex; }
+
+.lab-example .lab-example-target {
+  display: none; }
+  .lab-example .lab-example-target.is-active {
+    display: block; }

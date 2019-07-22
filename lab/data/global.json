@@ -92,7 +92,12 @@
           "title": "Pagination"
         },
         { "id": "slider", "url": "components.slider.html", "title": "Slider" },
-        { "id": "tables", "url": "components.tables.html", "title": "Tables" }
+        { "id": "tables", "url": "components.tables.html", "title": "Tables" },
+        {
+          "id": "toggle",
+          "url": "components.toggle.html",
+          "title": "Toggle"
+        }
       ]
     }
   ]
