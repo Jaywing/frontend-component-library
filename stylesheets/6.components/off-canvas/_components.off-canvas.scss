@@ -8,6 +8,7 @@
   width: 250px;
   height: 100%;
   overflow-y: auto;
+  transition: transform 0.25s ease-in;
 }
 
 .off-canvas-left {
@@ -29,6 +30,8 @@
 }
 
 .off-canvas__content {
+  transition: transform 0.25s ease-in;
+
   .is-open-left & {
     transform: translateX(250px);
   }
