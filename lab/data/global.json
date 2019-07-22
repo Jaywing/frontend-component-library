@@ -73,9 +73,19 @@
           "title": "Cookie Message"
         },
         { "id": "hero", "url": "components.hero.html", "title": "Hero" },
+        {
+          "id": "mega-nav",
+          "url": "components.mega-nav.html",
+          "title": "Mega Nav"
+        },
         { "id": "modal", "url": "components.modal.html", "title": "Modal" },
         { "id": "nav", "url": "components.nav.html", "title": "Nav" },
         { "id": "notice", "url": "components.notice.html", "title": "Notice" },
+        {
+          "id": "off-canvas",
+          "url": "components.off-canvas.html",
+          "title": "Off-canvas"
+        },
         {
           "id": "pagination",
           "url": "components.pagination.html",
@@ -83,23 +93,6 @@
         },
         { "id": "slider", "url": "components.slider.html", "title": "Slider" },
         { "id": "tables", "url": "components.tables.html", "title": "Tables" }
-      ]
-    },
-    {
-      "id": "contexts",
-      "url": "contexts.mega-nav.html",
-      "title": "Contexts",
-      "children": [
-        {
-          "id": "mega-nav",
-          "url": "contexts.mega-nav.html",
-          "title": "Mega Nav"
-        },
-        {
-          "id": "off-canvas",
-          "url": "contexts.off-canvas.html",
-          "title": "Off-canvas"
-        }
       ]
     }
   ]

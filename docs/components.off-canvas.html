@@ -216,6 +216,8 @@
       
 
   
+    
+  
 
   
 
@@ -227,7 +229,7 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent">
+  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
     <a class="nav__link" href="components.accordion.html">Components</a>
     
       <ul class="nav nav--vertical nav--nested">
@@ -345,6 +347,23 @@
   
 
   <li class="nav__item">
+    <a class="nav__link" href="components.mega-nav.html">Mega Nav</a>
+    
+</li>
+
+
+        
+          
+
+  
+
+  
+
+  
+
+  
+
+  <li class="nav__item">
     <a class="nav__link" href="components.modal.html">Modal</a>
     
 </li>
@@ -380,6 +399,25 @@
 
   <li class="nav__item">
     <a class="nav__link" href="components.notice.html">Notice</a>
+    
+</li>
+
+
+        
+          
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  <li class="nav__item is-active">
+    <a class="nav__link" href="components.off-canvas.html">Off-canvas</a>
     
 </li>
 
@@ -442,76 +480,13 @@
 
 
     
-      
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
-    <a class="nav__link" href="contexts.mega-nav.html">Contexts</a>
-    
-      <ul class="nav nav--vertical nav--nested">
-        
-          
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  <li class="nav__item is-active">
-    <a class="nav__link" href="contexts.mega-nav.html">Mega Nav</a>
-    
-</li>
-
-
-        
-          
-
-  
-
-  
-
-  
-
-  
-
-  <li class="nav__item">
-    <a class="nav__link" href="contexts.off-canvas.html">Off-canvas</a>
-    
-</li>
-
-
-        
-    </ul>
-  
-</li>
-
-
-    
   </ul>
 </nav>
 
     </div>
     <div class="content">
       
-  <h1>Mega Nav</h1>
+  <h1>Off-canvas</h1>
 
   <h3>Usage</h3>
 
@@ -519,63 +494,15 @@
   
     <div class="example">
       <div class="example__tabs">
-        <a class="example__tab" href="source/contexts.mega-nav.html" target="_blank">Open this example in a new window</a>
+        <a class="example__tab" href="source/components.off-canvas.html" target="_blank">Open this example in a new window</a>
       </div>
-      <iframe class="example__iframe" src="source/contexts.mega-nav.html" data-module="LabFrame"></iframe>
+      <iframe class="example__iframe" src="source/components.off-canvas.html" data-module="LabFrame"></iframe>
     </div>
   
 
   
   <div class="code" data-module="ExampleCode">
     <pre class="language-html"><code class="language-html">
-  &lt;nav class=&quot;mega-nav&quot;&gt;
-    &lt;ul class=&quot;nav nav--vertical nav--horizontal@lg nav--accordion nav--dropdown@lg position-relative&quot; data-module=&quot;Nav&quot;&gt;
-      &lt;li class=&quot;nav__item is-accordion-nav-parent is-dropdown-nav-parent position-static&quot;&gt;
-        &lt;a class=&quot;nav__link is-active&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
-        &lt;button class=&quot;button is-accordion-button&quot;&gt;
-          &lt;span class=&quot;icon icon--chevron-down&quot;&gt;
-            [icon]
-          &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div class=&quot;is-accordion-nav is-dropdown-nav&quot;&gt;
-          &lt;div class=&quot;flex-grid size-width-100&quot;&gt;
-            &lt;div class=&quot;flex-grid__cell flex-grid__cell--span-6@sm&quot;&gt;
-              &lt;ul class=&quot;nav nav--vertical&quot;&gt;
-                &lt;li class=&quot;nav__item&quot;&gt;
-                  &lt;a href=&quot;...&quot; class=&quot;nav__link&quot;&gt;...&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;nav__item&quot;&gt;
-                  &lt;a href=&quot;...&quot; class=&quot;nav__link&quot;&gt;...&lt;/a&gt;
-                  &lt;ul class=&quot;nav nav--nested&quot;&gt;
-                    &lt;li class=&quot;nav__item&quot;&gt;
-                      &lt;a class=&quot;nav__link is-active&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
-                    &lt;/li&gt;
-                    ...
-                  &lt;/ul&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;nav__item&quot;&gt;
-                  &lt;a href=&quot;...&quot; class=&quot;nav__link&quot;&gt;...&lt;/a&gt;
-                &lt;/li&gt;
-                ...
-              &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;flex-grid__cell flex-grid__cell--span-6@sm&quot;&gt;
-              &lt;ul class=&quot;nav nav--vertical&quot;&gt;
-                &lt;li class=&quot;nav__item&quot;&gt;
-                  &lt;a href=&quot;...&quot; class=&quot;nav__link&quot;&gt;...&lt;/a&gt;
-                &lt;/li&gt;
-                ...
-              &lt;/ul&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li class=&quot;nav__item&quot;&gt;
-        &lt;a class=&quot;nav__link&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
-      &lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-  &lt;/nav&gt;
   </code></pre>
   </div>
 
