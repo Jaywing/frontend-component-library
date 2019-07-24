@@ -97,9 +97,14 @@
     },
     {
       "id": "modules",
-      "url": "modules.toggle.html",
+      "url": "modules.sticky.html",
       "title": "Modules",
       "children": [
+        {
+          "id": "sticky",
+          "url": "modules.sticky.html",
+          "title": "Sticky"
+        },
         {
           "id": "toggle",
           "url": "modules.toggle.html",
