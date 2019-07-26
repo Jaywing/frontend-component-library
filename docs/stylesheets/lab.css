@@ -2,7 +2,7 @@
  * GHColors theme by Avi Aryan (http://aviaryan.in)
  * Inspired by Github syntax coloring
  */
-@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
 code[class*='language-'],
 pre[class*='language-'] {
   color: #393a34;
@@ -404,12 +404,12 @@ body {
 
 html {
   background-color: #fff;
-  color: #000;
-  font-family: "Ubuntu", sans-serif;
+  color: #24292e;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400; }
   html.fonts-loaded {
-    font-family: "Ubuntu", sans-serif; }
+    font-family: "Roboto", sans-serif; }
 
 blockquote {
   margin: 1rem 0; }
@@ -422,7 +422,7 @@ h5,
 h6 {
   margin: 2rem 0 1rem;
   color: inherit;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700; }
   h1 small,
   h2 small,
@@ -3459,6 +3459,7 @@ p {
 @media (min-width: 768px) {
   .content {
     flex: 1;
+    padding: 1rem 4rem;
     overflow-x: hidden; } }
 
 .docs-nav {
@@ -3479,18 +3480,17 @@ p {
         line-height: 20px;
         line-height: 1.25rem; } }
   .docs-nav .nav__link {
-    color: #007bff;
+    color: #7a7a7a;
     transition-duration: 200;
     transition-property: color;
     font-size: 15px;
     font-size: 0.9375rem;
     line-height: 18px;
     line-height: 1.125rem;
-    padding: 0.5rem 1rem;
+    padding: 0.33333rem 1rem;
     border-left: 3px solid transparent; }
     .docs-nav .nav__link:hover, .docs-nav .nav__link:focus {
-      background-color: #f0f0f0;
-      color: #007bff; }
+      color: #322e2d; }
     @media (min-width: 960px) {
       .docs-nav .nav__link {
         font-size: 15px;
@@ -3498,23 +3498,43 @@ p {
         line-height: 20px;
         line-height: 1.25rem; } }
     .docs-nav .nav__link:hover, .docs-nav .nav__link:focus {
-      border-color: #007bff; }
+      border-color: #322e2d; }
   .docs-nav .nav__item.is-active > .nav__link {
-    border-color: #007bff; }
+    border-color: #322e2d;
+    color: #322e2d;
+    transition-duration: 200;
+    transition-property: color; }
+    .docs-nav .nav__item.is-active > .nav__link:hover, .docs-nav .nav__item.is-active > .nav__link:focus {
+      color: #322e2d; }
   .docs-nav .nav__item-level-1 > .nav {
     display: none; }
-  .docs-nav .nav__item-level-1.is-active > .nav__link {
-    border-color: transparent; }
   .docs-nav .nav__item-level-1.is-active > .nav {
     display: block; }
   .docs-nav .nav__item-level-1 > .nav__link {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 20px;
+    line-height: 1.25rem;
     background-color: transparent;
-    color: #000;
+    color: #393939;
     transition-duration: 200;
-    transition-property: background-color, color; }
+    transition-property: background-color, color;
+    font-weight: 600; }
+    @media (min-width: 768px) {
+      .docs-nav .nav__item-level-1 > .nav__link {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 20px;
+        line-height: 1.25rem; } }
+    @media (min-width: 960px) {
+      .docs-nav .nav__item-level-1 > .nav__link {
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 22px;
+        line-height: 1.375rem; } }
     .docs-nav .nav__item-level-1 > .nav__link:hover, .docs-nav .nav__item-level-1 > .nav__link:focus {
       background-color: transparent;
-      color: #000; }
+      color: #393939; }
   .docs-nav .nav--nested {
     margin-left: 0; }
     .docs-nav .nav--nested > .nav__item > .nav__link {
@@ -3522,7 +3542,7 @@ p {
 
 @media (min-width: 768px) {
   .docs-nav {
-    padding-top: 4rem; } }
+    border-right: 1px solid #f0f0f0; } }
 
 .example {
   position: relative;
@@ -3553,9 +3573,9 @@ p {
   display: inline-flex;
   padding: 0.5rem;
   background-color: #f0f0f0;
-  color: #666;
+  color: #24292e;
   text-decoration: none;
-  color: #666;
+  color: #24292e;
   transition-duration: 200;
   transition-property: color; }
   @media (min-width: 960px) {
@@ -3565,13 +3585,13 @@ p {
       line-height: 16px;
       line-height: 1rem; } }
   .example__tab:hover, .example__tab:focus {
-    color: #666; }
+    color: #24292e; }
   .example__tab:visited {
-    color: #666;
+    color: #24292e;
     transition-duration: 200;
     transition-property: color; }
     .example__tab:visited:hover, .example__tab:visited:focus {
-      color: #666; }
+      color: #24292e; }
 
 .example__iframe {
   width: 100%;
@@ -3630,8 +3650,7 @@ p {
     top: 0;
     display: block;
     flex: 0 0 200px;
-    padding: 0;
-    border-right: 1px solid #f0f0f0;
+    padding: 2rem 0 0;
     box-shadow: none; }
     .sidebar > .button {
       display: none; } }
