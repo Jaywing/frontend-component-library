@@ -1,29 +1,41 @@
 {% from 'macros/icon.html' import Icon %}
 
-<ul class="nav nav--dropdown" data-module="Nav">
-  <li class="nav__item is-dropdown-nav-parent">
-    <a href="#" class="nav__link">Item 1</a>
-    <button class="button is-dropdown-button">
-      <span class="icon icon--chevron-down">
-        {{Icon('chevron-down')}}
-      </span>
-    </button>
-    <ul class="nav is-dropdown-nav nav--vertical">
-      <li class="nav__item">
-        <a href="#" class="nav__link">Item 1 - 1</a>
-      </li>
-      <li class="nav__item">
-        <a href="#" class="nav__link">Item 1 - 2</a>
-      </li>
-      <li class="nav__item">
-        <a href="#" class="nav__link">Item 1 - 3</a>
-      </li>
-    </ul>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Item 2</a>
-  </li>
-  <li class="nav__item">
-    <a href="#" class="nav__link">Item 3</a>
-  </li>
-</ul>
+{% macro NavDropdown(modal) %}
+  <ul class="nav nav--dropdown" data-module="Nav">
+    <li class="nav__item is-dropdown-nav-parent">
+      <a href="#" class="nav__link">Item 1</a>
+      <button class="button is-dropdown-button">
+        <span class="icon icon--chevron-down">
+          {{Icon('chevron-down')}}
+        </span>
+      </button>
+      <ul class="nav is-dropdown-nav nav--vertical">
+        <li class="nav__item">
+          <a href="#" class="nav__link">Item 1 - 1</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Item 1 - 2</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Item 1 - 3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav__item">
+      <a href="#" class="nav__link">Item 2</a>
+    </li>
+    <li class="nav__item">
+      <a href="#" class="nav__link">Item 3</a>
+    </li>
+  </ul>
+{% endmacro %}
+
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ NavDropdown() }}
+
+{% endblock %}

@@ -1,3 +1,4 @@
+{% macro Breadcrumb(modal) %}
 <ol class="breadcrumb">
   <li class="breadcrumb__item" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
     <a class="breadcrumb__link" href="https://example.com/" itemprop="url">
@@ -15,3 +16,15 @@
     </a>
   </li>
 </ol>
+{% endmacro %}
+
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Breadcrumb() }}
+
+{% endblock %}
+

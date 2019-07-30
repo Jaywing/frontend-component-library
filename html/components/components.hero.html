@@ -1,15 +1,27 @@
-<div class="hero">
-  <picture class="hero__image">
-    <source media="(min-width: 768px)" srcset="//placehold.it/1000x300"/>
-    <source srcset="//placehold.it/600x300"/>
-    <img src="//placehold.it/1000x300" alt=""/>
-  </picture>
-  <div class="hero__body">
-    <div class="hero__title">
-      <span class="hero__text-background">Hero title</span>
-    </div>
-    <div class="hero__text">
-      <span class="hero__text-background">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin.</span>
+{% macro Hero(modal) %}
+  <div class="hero">
+    <picture class="hero__image">
+      <source media="(min-width: 768px)" srcset="//placehold.it/1000x300"/>
+      <source srcset="//placehold.it/600x300"/>
+      <img src="//placehold.it/1000x300" alt=""/>
+    </picture>
+    <div class="hero__body">
+      <div class="hero__title">
+        <span class="hero__text-background">Hero title</span>
+      </div>
+      <div class="hero__text">
+        <span class="hero__text-background">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin.</span>
+      </div>
     </div>
   </div>
-</div>
+{% endmacro %}
+
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Hero() }}
+
+{% endblock %}

@@ -37,4 +37,12 @@
   </div>
 {% endmacro %}
 
-{{ Slider([{'title': 'Slide title 1', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}', 'active': true}, {'title': 'Slide title 2', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}'}])}}
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Slider([{'title': 'Slide title 1', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}', 'active': true}, {'title': 'Slide title 2', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}'}]) }}
+
+{% endblock %}

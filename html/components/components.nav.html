@@ -1,14 +1,26 @@
-<ul class="nav">
-  <li class="nav__item">
-    <a class="nav__link is-active" href="#">Active</a>
-  </li>
-  <li class="nav__item">
-    <a class="nav__link" href="#">Link</a>
-  </li>
-  <li class="nav__item">
-    <a class="nav__link" href="#">Link</a>
-  </li>
-  <li class="nav__item">
-    <a class="nav__link is-disabled" href="#">Disabled</a>
-  </li>
-</ul>
+{% macro Nav(modal) %}
+  <ul class="nav">
+    <li class="nav__item">
+      <a class="nav__link is-active" href="#">Active</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Link</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Link</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link is-disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+{% endmacro %}
+
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Nav() }}
+
+{% endblock %}

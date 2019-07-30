@@ -1,9 +1,30 @@
+{% macro Breadcrumb(modal) %}
+<ol class="breadcrumb">
+  <li class="breadcrumb__item" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <a class="breadcrumb__link" href="https://example.com/" itemprop="url">
+      <span itemprop="title">Home</span>
+    </a>
+  </li>
+  <li class="breadcrumb__item" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <a class="breadcrumb__link" href="https://example.com/furniture/" itemprop="url">
+      <span itemprop="title">Furniture</span>
+    </a>
+  </li>
+  <li class="breadcrumb__item is-active" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <a class="breadcrumb__link" href="https://example.com/arts/furniture/kitchen/" itemprop="url">
+      <span itemprop="title">Kitchen</span>
+    </a>
+  </li>
+</ol>
+{% endmacro %}
+
 {% extends 'layouts/lab-source.html' %}
 
 {% from 'macros/lab-source.html' import LabIframe %}
 
 {% block body %}
 
-  {{LabIframe('components', 'breadcrumb')}}
+  {{ Breadcrumb()}}
 
 {% endblock %}
+

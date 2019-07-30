@@ -12,4 +12,12 @@
   </div>
 {% endmacro %}
 
-{{ Modal('Modal header', '<p>Modal text.</p>', 'Close')}}
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Modal('Modal header', '<p>Modal text.</p>', 'Close') }}
+
+{% endblock %}

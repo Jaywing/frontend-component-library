@@ -15,4 +15,12 @@
   </div>
 {% endmacro %}
 
-{{ Notice('Notice title', '//via.placeholder.com/350x200', '', '<p>Lorem ipsum dolor sit met, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a liqua. Ut enim ad minim venom, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comido consequat.</p>', 'Notice Button', '#')}}
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Notice('Notice title', '//via.placeholder.com/350x200', '', '<p>Lorem ipsum dolor sit met, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a liqua. Ut enim ad minim venom, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comido consequat.</p>', 'Notice Button', '#') }}
+
+{% endblock %}

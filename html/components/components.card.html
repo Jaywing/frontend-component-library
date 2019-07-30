@@ -9,4 +9,12 @@
   </div>
 {% endmacro %}
 
-{{ Card('Card header', '//via.placeholder.com/350x150', '', 'Card title', '<p>Card text.</p>')}}
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Card('Card header', '//via.placeholder.com/350x150', '', 'Card title', '<p>Card text.</p>') }}
+
+{% endblock %}

@@ -20,4 +20,12 @@
   </ul>
 {% endmacro %}
 
-{{ Accordion([{'title': 'Accordion 1', 'content': '<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, id venenatis accumsan condimentum platea pharetra convallis phasellus, fringilla libero ridiculus faucibus enim parturient.</p>', 'active': true}, {'title': 'Accordion 2', 'content': '<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, id venenatis accumsan condimentum platea pharetra convallis phasellus, fringilla libero ridiculus faucibus enim parturient.</p>'}, {'title': 'Accordion 3', 'content': '<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, id venenatis accumsan condimentum platea pharetra convallis phasellus, fringilla libero ridiculus faucibus enim parturient.</p>'}])}}
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Accordion([{'title': 'Accordion 1', 'content': '<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, id venenatis accumsan condimentum platea pharetra convallis phasellus, fringilla libero ridiculus faucibus enim parturient.</p>', 'active': true}, {'title': 'Accordion 2', 'content': '<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, id venenatis accumsan condimentum platea pharetra convallis phasellus, fringilla libero ridiculus faucibus enim parturient.</p>'}, {'title': 'Accordion 3', 'content': '<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, id venenatis accumsan condimentum platea pharetra convallis phasellus, fringilla libero ridiculus faucibus enim parturient.</p>'}]) }}
+
+{% endblock %}
