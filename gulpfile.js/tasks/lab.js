@@ -1,10 +1,12 @@
 const gulp = require("gulp");
+const gulpif = require("gulp-if");
 const data = require("gulp-data");
 const path = require("path");
 const fs = require("fs");
 const nunjucksRender = require("gulp-nunjucks-render");
 const sass = require("gulp-sass");
 const plumber = require("gulp-plumber");
+const sourcemaps = require("gulp-sourcemaps");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const projectPath = require("../lib/projectPath");
@@ -25,7 +27,7 @@ gulp.task("lab:html", function() {
       projectPath(PATH_CONFIG.lab),
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)
     ],
-    dest: projectPath(PATH_CONFIG.buildDest)
+    dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.buildLab)
   };
 
   const dataFunction = function() {
@@ -47,11 +49,16 @@ gulp.task("lab:html", function() {
 gulp.task("lab:stylesheets", function() {
   paths = {
     src: projectPath(PATH_CONFIG.lab, PATH_CONFIG.stylesheets.src, "**/*.scss"),
-    dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.stylesheets.dest)
+    dest: projectPath(
+      PATH_CONFIG.buildDest,
+      PATH_CONFIG.buildLab,
+      PATH_CONFIG.stylesheets.dest
+    )
   };
 
   return gulp
     .src(paths.src)
+    .pipe(gulpif(!production, sourcemaps.init()))
     .pipe(plumber())
     .pipe(
       sass({
@@ -65,13 +72,19 @@ gulp.task("lab:stylesheets", function() {
         })
       ])
     )
+    .pipe(gulpif(production, sass({ outputStyle: "compressed" })))
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(paths.dest));
 });
 
 gulp.task("lab:javascripts", function() {
   paths = {
     src: `./node_modules/giza-lab/dist/javascripts/lab.js`,
-    dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.javascripts.dest)
+    dest: projectPath(
+      PATH_CONFIG.buildDest,
+      PATH_CONFIG.buildLab,
+      PATH_CONFIG.javascripts.dest
+    )
   };
   return gulp.src(paths.src).pipe(gulp.dest(paths.dest));
 });

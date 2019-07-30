@@ -13,5 +13,22 @@
 
   {{LabExample(pageType, pageId)}}
   {{LabCode('html', '
+  <div class="off-canvas">
+    <div class="off-canvas__aside off-canvas-left">
+      ....
+    </div>
+    <div class="off-canvas__aside off-canvas-right">
+      ...
+    </div>
+    <div class="off-canvas__content">
+      ...
+    </div>
+  </div>
+  ')}}
+
+  {{LabCode('html', '
+  data-module="Toggle" data-options="{"target": ".off-canvas", "activeClass": "is-open-left"}"
+
+  data-module="Toggle" data-options="{"target": ".off-canvas", "activeClass": "is-open-right"}"
   ')}}
 {% endblock %}

@@ -1,10 +1,11 @@
 {
   "BASE": "./",
   "lab": "./lab",
-  "site": "site",
+  "buildSite": "",
+  "buildLab": "lab",
   "buildDest": "./_build",
-  "finalDest": "./docs",
-  "migrateDest": "./_migrated",
+  "finalDest": "./dist",
+  "migrateDest": "./docs",
 
   "html": {
     "src": "html"
