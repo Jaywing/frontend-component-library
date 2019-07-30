@@ -47,7 +47,8 @@ const webpackConfig_production = {
   output: {
     path: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
     filename: "app.js",
-    publicPath: "javascripts/"
+    publicPath:
+      "https://jaywing.github.io/frontend-component-library/javascripts/"
   },
   plugins: [],
   resolve: {
