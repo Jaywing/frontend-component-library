@@ -1,0 +1,28 @@
+{% from 'macros/icon.html' import Icon %}
+
+{% macro Button(modal) %}
+  <div class="flex-grid">
+    <div class="flex-grid__cell">
+      <p>
+        <button class="button">Button</button>
+
+        <a class="button" href="#">Link Button</a>
+
+        <button class="button has-icon">
+          {{Icon('plus')}}
+          <span class="button__text">Button</span>
+        </button>
+      </p>
+    </div>
+  </div>
+{% endmacro %}
+
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Button() }}
+
+{% endblock %}

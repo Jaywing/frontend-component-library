@@ -1,0 +1,40 @@
+{% from 'macros/icon.html' import Icon %}
+
+{% macro Table(modal) %}
+  <div class="flex-grid">
+    <div class="flex-grid__cell">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Col 1</th>
+            <th>Col 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Col 1</td>
+            <td>Col 2</td>
+          </tr>
+          <tr>
+            <td>Col 1</td>
+            <td>Col 2</td>
+          </tr>
+          <tr>
+            <td>Col 1</td>
+            <td>Col 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endmacro %}
+
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Table() }}
+
+{% endblock %}
