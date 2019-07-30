@@ -133,7 +133,7 @@ const webpackConfig_production = {
   output: {
     path: path.resolve("./node_modules/giza-lab/javascripts"),
     filename: "lab.js",
-    publicPath: "lab/javascripts/"
+    publicPath: "javascripts/"
   },
   plugins: [],
   resolve: {
