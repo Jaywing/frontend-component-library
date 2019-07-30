@@ -167,7 +167,11 @@ const webpackConfig_production = {
 gulp.task("lab:javascripts", function() {
   paths = {
     src: projectPath("./node_modules/giza-lab/javascripts/**/{*,*.*}.js"),
-    dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.javascripts.dest)
+    dest: projectPath(
+      PATH_CONFIG.buildDest,
+      PATH_CONFIG.buildLab,
+      PATH_CONFIG.javascripts.dest
+    )
   };
 
   return gulp
