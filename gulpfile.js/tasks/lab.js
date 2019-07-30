@@ -79,7 +79,7 @@ gulp.task("lab:stylesheets", function() {
 
 gulp.task("lab:javascripts", function() {
   paths = {
-    src: `./node_modules/giza-lab/dist/javascripts/lab.js`,
+    src: `./node_modules/giza-lab/dist/javascripts/{*,*.*}.js`,
     dest: projectPath(
       PATH_CONFIG.buildDest,
       PATH_CONFIG.buildLab,

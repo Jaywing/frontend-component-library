@@ -1,15 +1,1 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
-
-/***/ "./modules/OffCanvas.js":
-/*!******************************!*\
-  !*** ./modules/OffCanvas.js ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar OffCanvas = function () {\n  function OffCanvas(el, options) {\n    _classCallCheck(this, OffCanvas);\n\n    var defaults = {};\n    this.el = el;\n    this.settings = Object.assign(defaults, options);\n    this.init();\n  }\n\n  _createClass(OffCanvas, [{\n    key: \"init\",\n    value: function init() {}\n  }]);\n\n  return OffCanvas;\n}();\n\nexports.default = OffCanvas;\n\n//# sourceURL=webpack:///./modules/OffCanvas.js?");
-
-/***/ })
-
-}]);
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{134:function(n,e,t){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var i=function(){function n(n,e){for(var t=0;t<e.length;t++){var i=e[t];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(n,i.key,i)}}return function(e,t,i){return t&&n(e.prototype,t),i&&n(e,i),e}}();var r=function(){function n(e,t){!function(n,e){if(!(n instanceof e))throw new TypeError("Cannot call a class as a function")}(this,n);this.el=e,this.settings=Object.assign({},t),this.init()}return i(n,[{key:"init",value:function(){}}]),n}();e.default=r}}]);
