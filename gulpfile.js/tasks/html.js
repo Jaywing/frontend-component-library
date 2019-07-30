@@ -15,7 +15,7 @@ gulp.task("html", function() {
         )
     ],
     src_render: [projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)],
-    dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.site)
+    dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.buildSite)
   };
 
   return gulp
