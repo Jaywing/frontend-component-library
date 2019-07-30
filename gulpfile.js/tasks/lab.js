@@ -1,10 +1,12 @@
 const gulp = require("gulp");
+const gulpif = require("gulp-if");
 const data = require("gulp-data");
 const path = require("path");
 const fs = require("fs");
 const nunjucksRender = require("gulp-nunjucks-render");
 const sass = require("gulp-sass");
 const plumber = require("gulp-plumber");
+const sourcemaps = require("gulp-sourcemaps");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const projectPath = require("../lib/projectPath");
@@ -52,6 +54,7 @@ gulp.task("lab:stylesheets", function() {
 
   return gulp
     .src(paths.src)
+    .pipe(gulpif(!production, sourcemaps.init()))
     .pipe(plumber())
     .pipe(
       sass({
@@ -65,6 +68,8 @@ gulp.task("lab:stylesheets", function() {
         })
       ])
     )
+    .pipe(gulpif(production, sass({ outputStyle: "compressed" })))
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(paths.dest));
 });
 

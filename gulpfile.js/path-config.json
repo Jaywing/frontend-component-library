@@ -3,8 +3,8 @@
   "lab": "./lab",
   "site": "site",
   "buildDest": "./_build",
-  "finalDest": "./docs",
-  "migrateDest": "./_migrated",
+  "finalDest": "./dist",
+  "migrateDest": "./docs",
 
   "html": {
     "src": "html"
