@@ -47,7 +47,7 @@ const webpackConfig_production = {
   output: {
     path: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
     filename: "app.js",
-    publicPath: "/assets/javascripts/"
+    publicPath: "javascripts/"
   },
   plugins: [],
   resolve: {
