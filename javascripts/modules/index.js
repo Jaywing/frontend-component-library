@@ -13,6 +13,7 @@ for (var i = 0; i < moduleElements.length; i++) {
   if (dataOptions) {
     options = JSON.parse(dataOptions);
   }
+
   import(`./${name}`).then(Module => {
     new Module.default(el, options);
   });
