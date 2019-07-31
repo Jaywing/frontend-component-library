@@ -1,18 +1,26 @@
 {% macro CookieMessage(title, imgSrc, imgAlt, text, buttonText, buttonUrl) %}
-  <div class="c-notice c-notice--modal is-active" data-module="CookieMessage">
-    <div class="c-notice__media">
-      <img class="c-notice__img" src="{{imgSrc}}" alt="{{imgAlt}}">
+  <div class="notice notice--modal is-active" data-module="CookieMessage">
+    <div class="notice__media">
+      <img class="notice__img" src="{{imgSrc}}" alt="{{imgAlt}}">
     </div>
-    <div class="c-notice__body">
-      <div class="c-notice__title">{{title}}</div>
-      <div class="c-notice__text">
+    <div class="notice__body">
+      <div class="notice__title">{{title}}</div>
+      <div class="notice__text">
         {{text|safe}}
       </div>
     </div>
-    <div class="c-notice__footer">
-      <a class="c-button js-cookie-message-close" href="{{buttonUrl}}">{{buttonText}}</a>
+    <div class="notice__footer">
+      <a class="button js-cookie-message-close" href="{{buttonUrl}}">{{buttonText}}</a>
     </div>
   </div>
 {% endmacro %}
 
-{{ CookieMessage('Cookie message title', '//via.placeholder.com/350x200', '', '<p>Lorem ipsum dolor sit met, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a liqua. Ut enim ad minim venom, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comido consequat.</p>', 'Accept', '#')}}
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ CookieMessage('Cookie message title', '//via.placeholder.com/350x200', '', '<p>Lorem ipsum dolor sit met, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a liqua. Ut enim ad minim venom, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comido consequat.</p>', 'Accept', '#') }}
+
+{% endblock %}

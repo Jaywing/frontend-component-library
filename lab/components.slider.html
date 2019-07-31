@@ -13,28 +13,30 @@
 
   {{LabExample(pageType, pageId)}}
   {{LabCode('html', '
-  <div class="c-slider" data-module="Slider">
-    <div class="c-slider__slides">
-      <div class="c-slider__slide is-active">
-        <picture class="c-slider__picture">
+  <div class="slider" data-module="Slider">
+    <div class="slider__slides">
+      <div class="slider__slide is-active">
+        <picture class="slider__picture">
           <source srcset="..." media="(min-width: 768px)">
-          <img class="c-slider__image" src="..." alt="">
+          <img class="slider__image" src="..." alt="">
         </picture>
-        <div class="c-slider__content">
-          <div class="c-slider__text">
-            <h1>...</h1>
-            <p>...</p>
+        <div class="slider__content">
+          <h2 class="slider__title">
+            <span class="slider__text-background">...</span>
+          </h2>
+          <div class="slider__text">
+            <span class="slider__text-background">...</span>
           </div>
         </div>
       </div>
       ...
     </div>
-    <div class="c-slider__controls">
-      <div class="c-slider__previous">
+    <div class="slider__controls">
+      <div class="slider__previous">
         ...
       </div>
-      <div class="c-slider__pips"></div>
-      <div class="c-slider__next">
+      <div class="slider__pips"></div>
+      <div class="slider__next">
         ...
       </div>
     </div>

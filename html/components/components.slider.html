@@ -1,38 +1,48 @@
 {% from 'macros/icon.html' import Icon %}
 
 {% macro Slider(modal) %}
-  <div class="c-slider" data-module="Slider">
-    <div class="c-slider__slides">
+  <div class="slider" data-module="Slider">
+    <div class="slider__slides">
       {% for item in modal %}
         {% set activeClass = "" %}
         {% if item.active %}
           {% set activeClass = " is-active" %}
         {% endif %}
 
-        <div class="c-slider__slide{{activeClass}}">
-          <picture class="c-slider__picture">
+        <div class="slider__slide{{activeClass}}">
+          <picture class="slider__picture">
             <source srcset="{{item.imgSrcLg}}" media="(min-width: 768px)">
-            <img class="c-slider__image" src="{{item.imgSrcSm}}" alt="{{item.imgAlt}}">
+            <img class="slider__image" src="{{item.imgSrcSm}}" alt="{{item.imgAlt}}">
           </picture>
-          <div class="c-slider__content">
-            <div class="c-slider__text">
-              <h1>{{item.title}}</h1>
-              {{item.text|safe}}
+          <div class="slider__content">
+            <h2 class="slider__title">
+              <span class="slider__text-background">{{item.title}}</span>
+            </h2>
+            <div class="slider__text">
+              <span class="slider__text-background">{{item.text}}</span>
             </div>
           </div>
         </div>
       {% endfor %}
     </div>
-    <div class="c-slider__controls">
-      <div class="c-slider__previous">
+    <div class="slider__controls">
+      <div class="slider__previous">
         {{ Icon('chevron-left') }}
       </div>
-      <div class="c-slider__pips"></div>
-      <div class="c-slider__next">
+      <div class="slider__pips"></div>
+      <div class="slider__next">
         {{ Icon('chevron-right') }}
       </div>
     </div>
   </div>
 {% endmacro %}
 
-{{ Slider([{'title': 'Slide title 1', 'text': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}', 'active': true}, {'title': 'Slide title 2', 'text': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}'}])}}
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Slider([{'title': 'Slide title 1', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}', 'active': true}, {'title': 'Slide title 2', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}'}]) }}
+
+{% endblock %}

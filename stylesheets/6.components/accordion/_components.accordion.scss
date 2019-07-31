@@ -1,11 +1,13 @@
 // Components: Accordion
 
 $accordion-border: 1px solid $bonjour !default;
+$accordion-title-background: $medium !default;
 
-.c-accordion {
+.accordion {
   border: $accordion-border;
 }
 
-.c-accordion__toggle {
+.accordion__header {
+  background-color: $accordion-title-background;
   text-decoration: none;
 }

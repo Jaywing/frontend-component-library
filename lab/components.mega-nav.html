@@ -1,0 +1,65 @@
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% set pageType = "components" %}
+{% set pageId = "mega-nav" %}
+
+{% block content %}
+  <h1>Mega Nav</h1>
+
+  <h3>Usage</h3>
+
+  {{LabExample(pageType, pageId)}}
+  {{LabCode('html', '
+  <nav class="mega-nav">
+    <ul class="nav nav--vertical nav--horizontal@lg nav--accordion nav--dropdown@lg position-relative" data-module="Nav">
+      <li class="nav__item is-accordion-nav-parent is-dropdown-nav-parent position-static">
+        <a class="nav__link is-active" href="...">...</a>
+        <button class="button is-accordion-button">
+          <span class="icon icon--chevron-down">
+            [icon]
+          </span>
+        </button>
+        <div class="is-accordion-nav is-dropdown-nav">
+          <div class="flex-grid size-width-100">
+            <div class="flex-grid__cell flex-grid__cell--span-6@sm">
+              <ul class="nav nav--vertical">
+                <li class="nav__item">
+                  <a href="..." class="nav__link">...</a>
+                </li>
+                <li class="nav__item">
+                  <a href="..." class="nav__link">...</a>
+                  <ul class="nav nav--nested">
+                    <li class="nav__item">
+                      <a class="nav__link is-active" href="...">...</a>
+                    </li>
+                    ...
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a href="..." class="nav__link">...</a>
+                </li>
+                ...
+              </ul>
+            </div>
+            <div class="flex-grid__cell flex-grid__cell--span-6@sm">
+              <ul class="nav nav--vertical">
+                <li class="nav__item">
+                  <a href="..." class="nav__link">...</a>
+                </li>
+                ...
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="...">...</a>
+      </li>
+      ...
+    </ul>
+  </nav>
+  ')}}
+{% endblock %}

@@ -24,12 +24,12 @@ export default class Slider {
 
   cacheDom() {
     return {
-      slides: this.el.querySelector(".c-slider__slides"),
-      slide: this.el.querySelectorAll(".c-slider__slide"),
-      controls: this.el.querySelector(".c-slider__controls"),
-      nextButton: this.el.querySelector(".c-slider__next"),
-      previousButton: this.el.querySelector(".c-slider__previous"),
-      pips: this.el.querySelector(".c-slider__pips")
+      slides: this.el.querySelector(".slider__slides"),
+      slide: this.el.querySelectorAll(".slider__slide"),
+      controls: this.el.querySelector(".slider__controls"),
+      nextButton: this.el.querySelector(".slider__next"),
+      previousButton: this.el.querySelector(".slider__previous"),
+      pips: this.el.querySelector(".slider__pips")
     };
   }
 
@@ -70,9 +70,9 @@ export default class Slider {
       // Create pips
       if (slidesTotal > 1) {
         if (i == 0) {
-          this.dom.pips.innerHTML += `<div class="c-slider__pip is-active"></div>`;
+          this.dom.pips.innerHTML += `<div class="slider__pip is-active"></div>`;
         } else {
-          this.dom.pips.innerHTML += `<div class="c-slider__pip"></div>`;
+          this.dom.pips.innerHTML += `<div class="slider__pip"></div>`;
         }
       }
     }
@@ -101,7 +101,7 @@ export default class Slider {
       this.dom.controls.style.display = "none";
     }
 
-    let slides = Array.from(this.el.querySelector(".c-slider__pips").children);
+    let slides = Array.from(this.el.querySelector(".slider__pips").children);
 
     const slideForward = () => {
       direction = 1;
@@ -119,7 +119,7 @@ export default class Slider {
 
     const setSlide = event => {
       direction = 1;
-      if (!event.target.matches("div.c-slider__pip")) return;
+      if (!event.target.matches("div.slider__pip")) return;
       let slide = event.target;
       let prevSlide = sliderNum;
       sliderNum = slides.indexOf(slide);
@@ -133,7 +133,7 @@ export default class Slider {
     this.dom.nextButton.addEventListener("click", slideForward);
     this.dom.previousButton.addEventListener("click", slideBackward);
     this.el
-      .querySelector(".c-slider__pips")
+      .querySelector(".slider__pips")
       .addEventListener("click", setSlide);
   }
 
@@ -179,10 +179,10 @@ export default class Slider {
 
     // Set pip
     this.el
-      .querySelector(".c-slider__pip.is-active")
+      .querySelector(".slider__pip.is-active")
       .classList.remove("is-active");
     this.el
-      .querySelectorAll(".c-slider__pip")
+      .querySelectorAll(".slider__pip")
       [sliderNum].classList.add("is-active");
   }
 }

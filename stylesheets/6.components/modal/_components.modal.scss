@@ -5,7 +5,7 @@ $modal-content-padding: $spacer !default;
 $modal-header-background-color: $alto !default;
 $modal-footer-border: 1px solid $alto !default;
 
-.c-modal {
+.modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -21,30 +21,30 @@ $modal-footer-border: 1px solid $alto !default;
   }
 }
 
-.c-modal__content {
+.modal__content {
   max-width: 500px;
   flex: 1;
   border: $modal-content-border;
   background: $modal-content-background-color;
 }
 
-.c-modal__header {
+.modal__header {
   padding: $modal-content-padding;
   background-color: $modal-header-background-color;
 }
 
-.c-modal__body {
+.modal__body {
   padding: $modal-content-padding;
 }
 
-.c-modal__footer {
+.modal__footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: $modal-content-padding;
   border-top: $modal-footer-border;
 
-  .c-button {
+  .button {
     flex: none;
   }
 }

@@ -1,4 +1,4 @@
-.c-breadcrumb {
+.breadcrumb {
   display: flex;
   width: 100%;
   max-width: 100%;
@@ -6,7 +6,7 @@
   list-style: none;
 }
 
-.c-breadcrumb__item {
+.breadcrumb__item {
   display: flex;
   flex-wrap: nowrap;
 
@@ -17,7 +17,7 @@
   }
 
   &.is-active {
-    .c-breadcrumb__link {
+    .breadcrumb__link {
       font-weight: $font-weight-bold;
     }
   }

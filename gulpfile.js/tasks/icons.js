@@ -3,13 +3,13 @@ const svgstore = require("gulp-svgstore");
 const projectPath = require("../lib/projectPath");
 
 gulp.task("icons", function() {
-  paths = {
+  icons = {
     src: [projectPath(PATH_CONFIG.BASE, PATH_CONFIG.icons.src, "*.svg")],
     dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.icons.dest)
   };
 
   return gulp
-    .src(paths.src)
+    .src(icons.src)
     .pipe(svgstore())
-    .pipe(gulp.dest(paths.dest));
+    .pipe(gulp.dest(icons.dest));
 });

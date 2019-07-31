@@ -2,14 +2,14 @@ $slider-max-width: $site-max-width !default;
 $slider-background-color: $dune !default;
 $slider-text-color: $light !default;
 
-.c-slider {
+.slider {
   overflow: hidden;
   max-width: $slider-max-width;
   background: $slider-background-color;
   color: $slider-text-color;
 }
 
-.c-slider__picture {
+.slider__picture {
   position: absolute;
   top: 0;
   right: 0;
@@ -17,7 +17,7 @@ $slider-text-color: $light !default;
   left: 0;
   overflow: hidden;
 
-  .c-slider__image {
+  .slider__image {
     position: absolute;
     top: 50%;
     right: 0;
@@ -27,13 +27,13 @@ $slider-text-color: $light !default;
   }
 }
 
-.c-slider__content {
-  position: relative;
-  z-index: 1;
-  height: 10rem;
-}
+// .slider__content {
+//   position: relative;
+//   z-index: 1;
+//   height: 10rem;
+// }
 
-.c-slider__text {
+.slider__content {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -42,7 +42,18 @@ $slider-text-color: $light !default;
   color: $light;
 }
 
-.c-slider__slide {
+.slider__title {
+  margin: 0;
+}
+
+.slider__text-background {
+  display: inline-block;
+  padding: ($spacer / 2);
+  background: $dark;
+  color: $light;
+}
+
+.slider__slide {
   position: relative;
   display: none;
   height: 100%;
@@ -59,52 +70,52 @@ $slider-text-color: $light !default;
   }
 
   &.is-active--next {
-    .c-slider__picture {
-      .c-slider__image {
+    .slider__picture {
+      .slider__image {
         animation: slider-background-next 0.5s;
       }
     }
 
-    .c-slider__text {
+    .slider__content {
       animation: slider-content-next 0.5s;
     }
   }
 
   &.is-active--previous {
-    .c-slider__picture {
-      .c-slider__image {
+    .slider__picture {
+      .slider__image {
         animation: slider-background-previous 0.5s;
       }
     }
 
-    .c-slider__text {
+    .slider__content {
       animation: slider-content-previous 0.5s;
     }
   }
 }
 
-.c-slider__controls {
+.slider__controls {
   display: flex;
   padding: ($spacer / 2);
   color: $slider-text-color;
 }
 
-.c-slider__previous,
-.c-slider__next {
+.slider__previous,
+.slider__next {
   cursor: pointer;
 
-  .o-icon {
+  .icon {
     fill: $slider-text-color;
   }
 }
 
-.c-slider__pips {
+.slider__pips {
   display: flex;
   align-content: center;
   justify-content: center;
 }
 
-.c-slider__pip {
+.slider__pip {
   position: relative;
   top: 50%;
   width: 10px;
@@ -120,28 +131,28 @@ $slider-text-color: $light !default;
   }
 }
 
-.c-slider--scroll {
+.slider--scroll {
   overflow: hidden;
 
-  .c-slider__slides {
+  .slider__slides {
     display: flex;
     flex-wrap: nowrap;
   }
 
-  .c-slider__slide {
+  .slider__slide {
     display: block;
     height: auto;
     padding: 0 $spacer;
   }
 }
 
-@include md {
-  .c-slider__content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-  }
-}
+// @include md {
+//   .slider__content {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     height: 100%;
+//   }
+// }

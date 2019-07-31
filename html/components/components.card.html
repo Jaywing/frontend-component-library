@@ -1,12 +1,20 @@
 {% macro Card(header, imgSrc, imgAlt, title, text) %}
-  <div class="c-card">
-    <div class="c-card__header">{{header}}</div>
-    <img class="c-card__img" src="{{imgSrc}}" alt="{{imgAlt}}">
-    <div class="c-card__body">
-      <div class="c-card__title">{{title}}</div>
-      <div class="c-card__text">{{Text}}</div>
+  <div class="card">
+    <div class="card__header">{{header}}</div>
+    <img class="card__img" src="{{imgSrc}}" alt="{{imgAlt}}">
+    <div class="card__body">
+      <div class="card__title">{{title}}</div>
+      <div class="card__text">{{Text}}</div>
     </div>
   </div>
 {% endmacro %}
 
-{{ Card('Card header', '//via.placeholder.com/350x150', '', 'Card title', '<p>Card text.</p>')}}
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Card('Card header', '//via.placeholder.com/350x150', '', 'Card title', '<p>Card text.</p>') }}
+
+{% endblock %}

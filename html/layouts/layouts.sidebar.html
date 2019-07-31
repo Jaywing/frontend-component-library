@@ -1,18 +1,18 @@
 {% extends 'layouts/layouts.site.html' %}
 
 {% block body %}
-  <div class="o-site__header">Site header</div>
-  <main class="o-site__content">
-    <div class="o-container o-container--collapse">
-      <div class="o-container__sidebar u-size-width-25@md">
+  <div class="site__header">Site header</div>
+  <main class="site__content">
+    <div class="container container--collapse">
+      <div class="container__sidebar size-width-25@md">
         sidebar
       </div>
-      <div class="o-container__body u-size-width-75@md">
+      <div class="container__body size-width-75@md">
         {% block content %}
           Site Content
         {% endblock %}
       </div>
     </div>
   </main>
-  <div class="o-site__footer">Site footer</div>
+  <div class="site__footer">Site footer</div>
 {% endblock %}

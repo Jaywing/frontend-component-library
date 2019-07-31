@@ -1,7 +1,7 @@
 {
   "meta_title": "Jaywing Frontend Lab",
   "lab_title": "Jaywing Frontend Lab",
-  "version": "0.0.34",
+  "version": "0.1.5",
   "nav": [
     {
       "id": "getting-started",
@@ -78,9 +78,19 @@
           "title": "Forms"
         },
         { "id": "hero", "url": "components.hero.html", "title": "Hero" },
+        {
+          "id": "mega-nav",
+          "url": "components.mega-nav.html",
+          "title": "Mega Nav"
+        },
         { "id": "modal", "url": "components.modal.html", "title": "Modal" },
         { "id": "nav", "url": "components.nav.html", "title": "Nav" },
         { "id": "notice", "url": "components.notice.html", "title": "Notice" },
+        {
+          "id": "off-canvas",
+          "url": "components.off-canvas.html",
+          "title": "Off-canvas"
+        },
         {
           "id": "pagination",
           "url": "components.pagination.html",
@@ -91,14 +101,19 @@
       ]
     },
     {
-      "id": "contexts",
-      "url": "contexts.mega-nav.html",
-      "title": "Contexts",
+      "id": "modules",
+      "url": "modules.sticky.html",
+      "title": "Modules",
       "children": [
         {
-          "id": "mega-nav",
-          "url": "contexts.mega-nav.html",
-          "title": "Mega Nav"
+          "id": "sticky",
+          "url": "modules.sticky.html",
+          "title": "Sticky"
+        },
+        {
+          "id": "toggle",
+          "url": "modules.toggle.html",
+          "title": "Toggle"
         }
       ]
     }
