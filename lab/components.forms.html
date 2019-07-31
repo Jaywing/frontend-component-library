@@ -1,0 +1,29 @@
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% set pageType = "components" %}
+{% set pageId = "forms" %}
+
+{% block content %}
+
+  <h1>Forms</h1>
+
+  <h3>Text Input</h3>
+
+  {{LabExample(pageType, pageId, 'text-input')}}
+
+  {{LabCode('html', '
+  <ul class="c-accordion" data-module="Accordion">
+    <li class="c-accordion__item is-active">
+      <a href="#" class="c-accordion__toggle">...</a>
+      <div class="c-accordion__content">
+        <p>...</p>
+      </div>
+    </li>
+    ...
+  </ul>
+  ')}}
+
+{% endblock %}
