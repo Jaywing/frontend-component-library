@@ -26,7 +26,7 @@ gulp.task("lab:html", function() {
     ],
     src_render: [
       projectPath(PATH_CONFIG.lab),
-      `./node_modules/giza-lab/html`,
+      `./node_modules/giza-framework/lab/html`,
       projectPath(PATH_CONFIG.lab),
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)
     ],
@@ -80,34 +80,22 @@ gulp.task("lab:stylesheets", function() {
     .pipe(gulp.dest(paths.dest));
 });
 
-// gulp.task("lab:javascripts", function() {
-//   paths = {
-//     src: `./node_modules/giza-lab/dist/javascripts/{*,*.*}.js`,
-//     dest: projectPath(
-//       PATH_CONFIG.buildDest,
-//       PATH_CONFIG.buildLab,
-//       PATH_CONFIG.javascripts.dest
-//     )
-//   };
-//   return gulp.src(paths.src).pipe(gulp.dest(paths.dest));
-// });
-
 const webpackConfig = {
-  context: path.resolve("./node_modules/giza-lab/javascripts"),
+  context: path.resolve("./node_modules/giza-framework/lab/javascripts"),
   entry: {
-    app: ["babel-polyfill", "./lab.js"]
+    app: ["babel-polyfill", "./giza-lab.js"]
   },
   mode: "development",
   output: {
-    path: path.resolve("./node_modules/giza-lab/javascripts"),
-    filename: "lab.js",
+    path: path.resolve("./node_modules/giza-framework/lab/javascripts"),
+    filename: "giza-lab.js",
     publicPath: "/lab/javascripts/"
   },
   plugins: [],
   resolve: {
     extensions: [".js", ".jsx"],
     modules: [
-      path.resolve("./node_modules/giza-lab/javascripts"),
+      path.resolve("./node_modules/giza-framework/lab/javascripts"),
       path.resolve(PATH_CONFIG.BASE, "node_modules")
     ]
   },
@@ -125,21 +113,21 @@ const webpackConfig = {
 };
 
 const webpackConfig_production = {
-  context: path.resolve("./node_modules/giza-lab/javascripts"),
+  context: path.resolve("./node_modules/giza-framework/lab/javascripts"),
   entry: {
-    app: ["babel-polyfill", "./lab.js"]
+    app: ["babel-polyfill", "./giza-lab.js"]
   },
   mode: "production",
   output: {
-    path: path.resolve("./node_modules/giza-lab/javascripts"),
-    filename: "lab.js",
+    path: path.resolve("./node_modules/giza-framework/lab/javascripts"),
+    filename: "giza-lab.js",
     publicPath: "javascripts/"
   },
   plugins: [],
   resolve: {
     extensions: [".js", ".jsx"],
     modules: [
-      path.resolve("./node_modules/giza-lab/javascripts"),
+      path.resolve("./node_modules/giza-framework/lab/javascripts"),
       path.resolve(PATH_CONFIG.BASE, "node_modules")
     ]
   },
@@ -166,7 +154,9 @@ const webpackConfig_production = {
 
 gulp.task("lab:javascripts", function() {
   paths = {
-    src: projectPath("./node_modules/giza-lab/javascripts/**/{*,*.*}.js"),
+    src: projectPath(
+      "./node_modules/giza-framework/lab/javascripts/**/{*,*.*}.js"
+    ),
     dest: projectPath(
       PATH_CONFIG.buildDest,
       PATH_CONFIG.buildLab,

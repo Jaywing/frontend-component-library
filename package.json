@@ -17,7 +17,6 @@
   "prettier": {},
   "dependencies": {
     "giza-framework": "*",
-    "giza-lab": "*",
     "sticky-js": "^1.2.0"
   },
   "devDependencies": {
