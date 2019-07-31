@@ -72,6 +72,11 @@
           "url": "components.cookie-message.html",
           "title": "Cookie Message"
         },
+        {
+          "id": "forms",
+          "url": "components.forms.html",
+          "title": "Forms"
+        },
         { "id": "hero", "url": "components.hero.html", "title": "Hero" },
         { "id": "modal", "url": "components.modal.html", "title": "Modal" },
         { "id": "nav", "url": "components.nav.html", "title": "Nav" },
