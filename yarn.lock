@@ -3805,9 +3805,9 @@ giza-framework@*:
     webpack-stream "^5.1.1"
 
 giza-lab@*:
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.1.10.tgz#5ad015cec7eb65aecbf90201f98c9af2751bdf30"
-  integrity sha512-bd3lTctft7bccZ46eWQUDLMDX1DZ+7UD1hfB7FPGUsQjvjpniz1K2FZIA/eKkgrOmkLkWgBMdrqxKw1Ps44l2g==
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.1.11.tgz#165e23c10e0ea8b49ec9eee4cc793ad95b67cc79"
+  integrity sha512-LAsBtmJrzSUuf/Rbpink3vndl7M1XBE9plCNgpDvY6yF9JSFmUDxqKLLZjI7wYRF8ob6ZDqUlUFle1dqpFie8w==
   dependencies:
     giza-framework "*"
     gulp-data "^1.2.1"
@@ -7053,9 +7053,9 @@ pseudomap@^1.0.2:
   integrity sha1-8FKijacOYYkX7wqKw0wa5aaChrM=
 
 psl@^1.1.24:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/psl/-/psl-1.2.0.tgz#df12b5b1b3a30f51c329eacbdef98f3a6e136dc6"
-  integrity sha512-GEn74ZffufCmkDDLNcl3uuyF/aSD6exEyh1v/ZSdAomB82t6G9hzJVRx0jBmLDW+VfZqks3aScmMw9DszwUalA==
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/psl/-/psl-1.3.0.tgz#e1ebf6a3b5564fa8376f3da2275da76d875ca1bd"
+  integrity sha512-avHdspHO+9rQTLbv1RO+MPYeP/SzsCoxofjVnHanETfQhTJrmB0HlDoW+EiN/R+C0BZ+gERab9NY0lPN2TxNag==
 
 public-encrypt@^4.0.0:
   version "4.0.3"
