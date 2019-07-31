@@ -3805,9 +3805,9 @@ giza-framework@*:
     webpack-stream "^5.1.1"
 
 giza-lab@*:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.1.7.tgz#6b2fcaef1b4b9289f4dfd2b68d6438cfa755d295"
-  integrity sha512-uLrOSOKBUrSJkRJ7RngJ3om+F9OdjajxqxtAjSdN/TyiFNkq1JD4uHDKL9WmuelkXyGZiHz87yVOzYqZVt7ySQ==
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.1.8.tgz#a80f00f4de95f6598bdcbea988f43df3fdedc55c"
+  integrity sha512-AV/NFfN/g8x4o0kdnzKSmkYodQcZEPkNvvw9N7+oEF0NiGZ+c8KylhqYwTgrjzYgeyPxuy86w5XgSqSlnMFGsg==
   dependencies:
     giza-framework "*"
     gulp-data "^1.2.1"
@@ -8629,9 +8629,9 @@ table@^4.0.1:
     string-width "^2.1.1"
 
 table@^5.0.0:
-  version "5.4.4"
-  resolved "https://registry.yarnpkg.com/table/-/table-5.4.4.tgz#6e0f88fdae3692793d1077fd172a4667afe986a6"
-  integrity sha512-IIfEAUx5QlODLblLrGTTLJA7Tk0iLSGBvgY8essPRVNGHAzThujww1YqHLs6h3HfTg55h++RzLHH5Xw/rfv+mg==
+  version "5.4.5"
+  resolved "https://registry.yarnpkg.com/table/-/table-5.4.5.tgz#c8f4ea2d8fee08c0027fac27b0ec0a4fe01dfa42"
+  integrity sha512-oGa2Hl7CQjfoaogtrOHEJroOcYILTx7BZWLGsJIlzoWmB2zmguhNfPJZsWPKYek/MgCxfco54gEi31d1uN2hFA==
   dependencies:
     ajv "^6.10.2"
     lodash "^4.17.14"

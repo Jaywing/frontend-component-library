@@ -16,10 +16,10 @@
     </script>
   </head>
   <body class="site">
-    <header class="site__header site-header">
+    <header class="site-header">
       <a class="lab-logo" href="index.html">Jaywing Frontend Lab</a>
-<span class="lab-version">v0.1.5</span>
-<button class="button sidebar-toggle" data-module="Toggle" data-options='{"target": ".sidebar"}'>
+<span class="lab-version">v0.1.6</span>
+<button class="button sidebar-toggle" data-module="Toggle" data-options='{"target": ".main__sidebar"}'>
   <div class="hamburger">
     <div class="hamburger__inner"></div>
     <div class="sr-only">Menu</div>
@@ -27,11 +27,10 @@
 </button>
 
     </header>
-    <main class="site__content">
+    <div class="main">
       
-  <div class="main">
-    <div class="sidebar">
-      
+  <div class="main__sidebar">
+    
 
 <nav class="docs-nav">
   <ul class="nav nav--vertical">
@@ -330,6 +329,23 @@
   
 
   <li class="nav__item">
+    <a class="nav__link" href="components.forms.html">Forms</a>
+    
+</li>
+
+
+        
+          
+
+  
+
+  
+
+  
+
+  
+
+  <li class="nav__item">
     <a class="nav__link" href="components.hero.html">Hero</a>
     
 </li>
@@ -542,9 +558,9 @@
   </ul>
 </nav>
 
-    </div>
-    <div class="content">
-      
+  </div>
+  <main class="main__content">
+    
   <h1>Modal</h1>
 
   <h3>Usage</h3>
@@ -577,10 +593,9 @@
   </div>
 
 
-    </div>
-  </div>
+  </main>
 
-    </main>
+    </div>
     <script src="javascripts/lab.js"></script>
   </body>
 </html>
