@@ -10,20 +10,52 @@
 
   <h1>Forms</h1>
 
-  <h3>Text Input</h3>
+  <h3>Form group</h3>
+  <p>The form-group class applies spacing below
+  </p>
 
-  {{LabExample(pageType, pageId, 'text-input')}}
+  {# {{LabExample(pageType, pageId, 'text-input')}} #}
 
   {{LabCode('html', '
-  <ul class="c-accordion" data-module="Accordion">
-    <li class="c-accordion__item is-active">
-      <a href="#" class="c-accordion__toggle">...</a>
-      <div class="c-accordion__content">
-        <p>...</p>
-      </div>
-    </li>
-    ...
-  </ul>
+    <div class="form-group">
+      ...
+    </div>
+  ')}}
+
+  <h3>Form label</h3>
+
+  {# {{LabExample(pageType, pageId, 'text-input')}} #}
+
+  {{LabCode('html', '
+    <label class="form-label">...</label>
+  ')}}
+
+  <h3>Form control</h3>
+
+  {# {{LabExample(pageType, pageId, 'text-input')}} #}
+
+  {{LabCode('html', '
+    <input type="text" class="form-control">
+
+
+    <select class="form-control">
+      <option value="...">..</option>
+      ...
+    </select>
+
+
+    <textarea class="form-control">
+      ...
+    </textarea>
+  ')}}
+
+  <h3>Example combination</h3>
+
+  {{LabCode('html', '
+    <div class="form-group">
+      <label class="form-label">...</label>
+      <input type="text" class="form-control">
+    </div>
   ')}}
 
 {% endblock %}
