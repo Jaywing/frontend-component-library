@@ -1,5 +1,9 @@
-body {
-  padding-top: 95px + 46px;
+$header-offset-sm: 110px + 46px;
+$header-offset-md: 66px;
+
+body,
+.app-sidebar {
+  padding-top: $header-offset-sm;
 }
 
 .app-header {
@@ -8,14 +12,16 @@ body {
 }
 
 .app-logo {
-  @include pica;
+  @include great-primer;
 
   display: flex;
   flex-direction: column;
+  padding: ($spacer / 2) 0;
+  font-weight: normal;
   text-transform: none;
 
   img {
-    width: 180px;
+    width: 160px;
     margin-bottom: ($spacer / 2);
   }
 }
@@ -26,7 +32,11 @@ body {
 
 @include md {
   body {
-    padding-top: 68px;
+    padding-top: $header-offset-md;
+  }
+
+  .app-sidebar {
+    padding: ($spacer * 2) 0 0;
   }
 
   .app-header {
