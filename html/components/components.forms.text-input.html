@@ -38,7 +38,7 @@
     {% set type = 'text' %}
   {% endif %}
 
-  {% if data.type === "number" %}
+  {% if data.type === "number" or data.type === "date" %}
     {% if data.min %}
       {% set min = 'min="' + data.min + '"'%}
     {% else %}
@@ -69,7 +69,7 @@
       <span class="form-required"></span>
     {%- endif %}
 
-    {# {% if data.tooltip %}
+    {% if data.tooltip %}
       <div class="tooltip-icon" data-module="Toggle" data-options='[{"target": "#tooltip-{{ data.name }}", "disablePageScroll": true}]'></div>
 
       <div class="tooltip {{ data.modifiers }}" id="tooltip-{{ data.field_name }}">
@@ -79,7 +79,7 @@
           {{ data.tooltip|safe }}
         </div>
       </div>
-    {% endif %} #}
+    {% endif %}
 
     <span class="form-message" data-field-name="{{ data.name }}"></span>
   </label>
@@ -92,21 +92,29 @@
 
 {%- endmacro %}
 
-<div class="form-group">
-  {{ TextInput({
-    "label": "Default (Primary)",
-    "name": "text-input_name",
-    "id": "text-input_1",
-    "type": "",
-    "classes": "",
-    "tooltip": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quaerat?",
-    "required": true,
-    "validation_message": "Lorem ipsum dolor sit amet.",
-    "disabled": false,
-    "readonly": false,
-    "pattern": "",
-    "maxlength": "",
-    "min": "",
-    "max": ""
-  }) }}
-</div>
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  <div class="form-group">
+    {{ TextInput({
+      "label": "Default (Primary)",
+      "name": "text-input_name",
+      "id": "text-input_1",
+      "type": "",
+      "classes": "",
+      "tooltip": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quaerat?",
+      "required": true,
+      "validation_message": "Lorem ipsum dolor sit amet.",
+      "disabled": false,
+      "readonly": false,
+      "pattern": "",
+      "maxlength": 20,
+      "min": 2,
+      "max": 10
+    }) }}
+  </div>
+
+{% endblock %}
