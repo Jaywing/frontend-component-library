@@ -1,28 +1,5 @@
-.lab-example {
-  .card {
-    max-width: 400px;
-  }
+@import 'giza-framework/lab/stylesheets/giza-lab-example';
 
-  .modal {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    display: flex;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .notice--modal {
-    display: flex;
-  }
-
-  .lab-example-target {
-    display: none;
-
-    &.is-active {
-      display: block;
-    }
-  }
+.app-example {
+  // Add your overrides here
 }

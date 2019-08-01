@@ -15,6 +15,10 @@
 
 {% block body %}
 
-  {{ Card('Card header', '//via.placeholder.com/350x150', '', 'Card title', '<p>Card text.</p>') }}
+  <div class="flex-grid">
+    <div class="flex-grid__cell--span-6@md">
+      {{ Card('Card header', '//via.placeholder.com/350x150', '', 'Card title', '<p>Card text.</p>') }}
+    </div>
+  </div>
 
 {% endblock %}
