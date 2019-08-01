@@ -5,5 +5,11 @@
 // for colour variable names
 $bright-sun: #ffdb00;
 
+// Fonts
+$font: 'Fira Sans', sans-serif !default;
+$font-loaded: 'Fira Sans', sans-serif !default;
+$font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono',
+  'Courier', monospace !default;
+
 // App Header
 $app-header-bottom-border: 10px solid $bright-sun;
