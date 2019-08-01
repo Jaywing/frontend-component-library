@@ -69,16 +69,10 @@
       <span class="form-required"></span>
     {%- endif %}
 
-    {% if data.tooltip %}
-      <div class="tooltip-icon" data-module="Toggle" data-options='[{"target": "#tooltip-{{ data.name }}", "disablePageScroll": true}]'></div>
-
-      <div class="tooltip {{ data.modifiers }}" id="tooltip-{{ data.field_name }}">
-        <div class="tooltip__close" data-module="Toggle" data-options='[{"target": "#tooltip-{{ data.name }}"}]'>{{ Icon('close') }}</div>
-
-        <div class="tooltip__body">
-          {{ data.tooltip|safe }}
-        </div>
-      </div>
+    {% if data.hint %}
+      <span class="form-hint">
+        {{ data.hint|safe }}
+      </span>
     {% endif %}
 
     <span class="form-message" data-field-name="{{ data.name }}"></span>
@@ -105,7 +99,7 @@
       "id": "text-input_1",
       "type": "",
       "classes": "",
-      "tooltip": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quaerat?",
+      "hint": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quaerat?",
       "required": true,
       "validation_message": "Lorem ipsum dolor sit amet.",
       "disabled": false,
