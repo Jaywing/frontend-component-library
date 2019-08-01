@@ -1,6 +1,6 @@
 {
   "name": "jaywing-frontend-component-library",
-  "version": "0.1.10",
+  "version": "0.1.13",
   "description": "Jaywing Frontend Component Library",
   "license": "MIT",
   "engines": {
@@ -17,6 +17,8 @@
   "prettier": {},
   "dependencies": {
     "giza-framework": "*",
+    "imagesloaded": "^4.1.4",
+    "masonry-layout": "^4.2.2",
     "sticky-js": "^1.2.0"
   },
   "devDependencies": {

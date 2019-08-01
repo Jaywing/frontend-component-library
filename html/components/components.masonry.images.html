@@ -1,0 +1,27 @@
+{% macro MasonryImages(modal) %}
+  <div class="masonry" data-module="Masonry">
+    <div class="masonry__sizer"></div>
+    {% for item in modal %}
+      <div class="masonry__item">
+        <img class="size-width-100" src="{{item.imgSrc}}" alt="{{item.imgAlt}}">
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endmacro %}
+
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+{{ MasonryImages([
+  {'imgSrc': 'https://picsum.photos/600/400'},
+  {'imgSrc': 'https://picsum.photos/300/200'},
+  {'imgSrc': 'https://picsum.photos/300/200'},
+  {'imgSrc': 'https://picsum.photos/300/200'},
+  {'imgSrc': 'https://picsum.photos/300/200'}
+]) }}
+
+{% endblock %}

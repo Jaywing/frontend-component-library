@@ -1,0 +1,19 @@
+.masonry,
+.masonry__sizer,
+.masonry__item {
+  width: 100%;
+}
+
+@include md {
+  .masonry__sizer {
+    width: 25%;
+  }
+
+  .masonry__item {
+    width: 25%;
+
+    &:nth-child(2) {
+      width: 50%;
+    }
+  }
+}

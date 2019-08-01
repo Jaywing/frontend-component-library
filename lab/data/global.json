@@ -1,7 +1,7 @@
 {
   "meta_title": "Jaywing Lab",
   "lab_title": "Jaywing Lab",
-  "version": "0.1.10",
+  "version": "0.1.13",
   "nav": [
     {
       "id": "getting-started",
@@ -78,6 +78,11 @@
           "title": "Forms"
         },
         { "id": "hero", "url": "components.hero.html", "title": "Hero" },
+        {
+          "id": "masonry",
+          "url": "components.masonry.html",
+          "title": "Masonry"
+        },
         {
           "id": "mega-nav",
           "url": "components.mega-nav.html",
