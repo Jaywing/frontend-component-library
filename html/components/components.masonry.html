@@ -1,10 +1,9 @@
 {% macro Masonry(modal) %}
   <div class="masonry" data-module="Masonry">
+    <div class="masonry__sizer"></div>
     {% for item in modal %}
-      <div class="masonry__brick">
-        <div class="masonry__content">
-          Masonry
-        </div>
+      <div class="masonry__item">
+        Masonry
       </div>
     {% endfor %}
   </div>
