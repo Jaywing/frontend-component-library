@@ -1,0 +1,50 @@
+body {
+  padding-top: 80px + 46px;
+}
+
+.app-header {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.app-logo {
+  @include pica;
+
+  display: flex;
+  flex-direction: column;
+  text-transform: none;
+
+  img {
+    width: 180px;
+    margin-bottom: ($spacer / 2);
+  }
+}
+
+.lab-version {
+  padding: 0;
+}
+
+@include md {
+  body {
+    padding-top: 68px;
+  }
+
+  .app-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .app-logo {
+    flex-direction: row;
+    align-items: center;
+    padding: ($spacer / 2) 0;
+
+    img {
+      margin: 0 $spacer 0 0;
+    }
+  }
+
+  .lab-version {
+    padding: 0 ($spacer / 2);
+  }
+}
