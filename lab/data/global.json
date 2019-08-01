@@ -1,7 +1,7 @@
 {
-  "meta_title": "Jaywing Frontend Lab",
-  "lab_title": "Jaywing Frontend Lab",
-  "version": "0.1.8",
+  "meta_title": "Jaywing Lab",
+  "lab_title": "Jaywing Lab",
+  "version": "0.1.9",
   "nav": [
     {
       "id": "getting-started",
