@@ -8,11 +8,10 @@ gulp.task("watch", function() {
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "**/*.html"),
       projectPath(PATH_CONFIG.lab, "**/*.html")
     ],
-    stylesheetsSrc: projectPath(
-      PATH_CONFIG.BASE,
-      PATH_CONFIG.stylesheets.src,
-      "**/*.scss"
-    ),
+    stylesheetsSrc: [
+      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.stylesheets.src, "**/*.scss"),
+      projectPath(PATH_CONFIG.lab, PATH_CONFIG.stylesheets.src, "**/*.scss")
+    ],
     javascriptsSrc: projectPath(
       PATH_CONFIG.BASE,
       PATH_CONFIG.javascripts.src,
@@ -21,6 +20,10 @@ gulp.task("watch", function() {
   };
 
   gulp.watch(paths.htmlSrc, ["html", "lab:html", browser.reload]);
-  gulp.watch(paths.stylesheetsSrc, ["stylesheets", browser.reload]);
+  gulp.watch(paths.stylesheetsSrc, [
+    "stylesheets",
+    "lab:stylesheets",
+    browser.reload
+  ]);
   gulp.watch(paths.javascriptsSrc, ["webpack", browser.reload]);
 });
