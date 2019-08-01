@@ -75,7 +75,14 @@
         {
           "id": "forms",
           "url": "components.forms.html",
-          "title": "Forms"
+          "title": "Forms",
+          "children": [
+            {
+              "id": "text-input",
+              "url": "components.forms.text-input.html",
+              "title": "Text Input"
+            }
+          ]
         },
         { "id": "hero", "url": "components.hero.html", "title": "Hero" },
         {
