@@ -86,6 +86,11 @@
         },
         { "id": "hero", "url": "components.hero.html", "title": "Hero" },
         {
+          "id": "masonry",
+          "url": "components.masonry.html",
+          "title": "Masonry"
+        },
+        {
           "id": "mega-nav",
           "url": "components.mega-nav.html",
           "title": "Mega Nav"

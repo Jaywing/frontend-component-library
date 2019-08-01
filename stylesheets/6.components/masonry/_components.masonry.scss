@@ -1,0 +1,13 @@
+.masonry {
+  display: grid;
+  grid-gap: 0;
+}
+
+@include md {
+  .masonry {
+    display: grid;
+    grid-auto-rows: 0;
+    grid-gap: 1px;
+    grid-template-columns: repeat(1, 2fr 1fr 1fr);
+  }
+}

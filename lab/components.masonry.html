@@ -1,0 +1,37 @@
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% set pageType = "components" %}
+{% set pageId = "masonry" %}
+
+{% block content %}
+  <h1>Masonry</h1>
+
+  <h3>Usage</h3>
+
+  {{LabExample(pageType, pageId)}}
+  {{LabCode('html', '
+  <div data-module="Masonry">
+    <div class="masonry__brick">
+      <div class="masonry__content">...</div>
+    </div>
+    ...
+  </div>
+  ')}}
+
+  <h3>Images</h3>
+
+  {{LabExample(pageType, pageId, 'images')}}
+  {{LabCode('html', '
+  <div data-module="Masonry">
+    <div class="masonry__brick">
+      <div class="masonry__content">
+        <img src="..." alt="...">
+      </div>
+    </div>
+    ...
+  </div>
+  ')}}
+{% endblock %}
