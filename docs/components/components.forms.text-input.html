@@ -1,9 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../stylesheets/app.css">
+    <link rel="stylesheet" href="../lab/stylesheets/giza-lab-example.css">
+    <script>
+      if (document.documentElement) {
+        document
+          .documentElement
+          .classList
+          .add('js');
+      }
+    </script>
+  </head>
+  <body style="margin: 0 !important;">
+    <div class="app-example">
+      
 
-
-
-
-<div class="form-group">
-  
+  <div class="form-group">
+    
     
   
 
@@ -41,11 +59,33 @@
     <span class="form-required"></span>
 
     
+      <div class="tooltip-icon" data-module="Toggle" data-options='[{"target": "#tooltip-text-input_name", "disablePageScroll": true}]'></div>
+
+      <div class="tooltip " id="tooltip-">
+        <div class="tooltip__close" data-module="Toggle" data-options='[{"target": "#tooltip-text-input_name"}]'>
+    <span class='icon icon--close'>
+        <svg viewbox="0 0 1 1">
+            <use xlink:href='../images/icons.svg#close'></use>
+        </svg>
+    </span>
+</div>
+
+        <div class="tooltip__body">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, quaerat?
+        </div>
+      </div>
+    
 
     <span class="form-message" data-field-name="text-input_name"></span>
   </label>
 
   
-    <input class="form-control " type="text" name="text-input_name" id="text-input_1" data-module="Validate"     data-validation-message="Lorem ipsum dolor sit amet."  required >
+    <input class="form-control " type="text" name="text-input_name" id="text-input_1" data-module="Validate"    maxlength=20 data-validation-message="Lorem ipsum dolor sit amet."  required >
   
-</div>
+  </div>
+
+
+    </div>
+    <script src="../javascripts/app.js"></script>
+  </body>
+</html>
