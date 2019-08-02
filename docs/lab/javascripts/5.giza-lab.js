@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{136:function(o,t,e){"use strict";e.r(t),e.d(t,"default",function(){return n});class n{constructor(o){this.el=o,console.log(o.textContent,"- From the example module")}}}}]);

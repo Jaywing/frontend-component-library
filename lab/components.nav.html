@@ -1,17 +1,17 @@
+{% set AppParentId = "components" %}
+{% set AppCurrentId = "nav" %}
+
 {% extends 'layouts/lab-side-content.html' %}
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
-
-{% set pageType = "components" %}
-{% set pageId = "nav" %}
 
 {% block content %}
   <h1>Nav</h1>
 
   <h3>Usage</h3>
 
-  {{LabExample(pageType, pageId)}}
+  {{LabExample(AppParentId, AppCurrentId)}}
   {{LabCode('html', '
   <ul class="nav">
     <li class="nav__item">
@@ -32,7 +32,7 @@
 
   <h3>Vertical</h3>
 
-  {{LabExample(pageType, pageId, 'vertical')}}
+  {{LabExample(AppParentId, AppCurrentId, 'vertical')}}
   {{LabCode('html', '
   <ul class="nav nav--vertical">
     <li class="nav__item">
@@ -44,7 +44,7 @@
 
   <h3>Nested</h3>
 
-  {{LabExample(pageType, pageId, 'nested')}}
+  {{LabExample(AppParentId, AppCurrentId, 'nested')}}
   {{LabCode('html', '
   <ul class="nav nav--vertical">
     <li class="nav__item">
@@ -62,7 +62,7 @@
 
   <h3>Dropdown</h3>
 
-  {{LabExample(pageType, pageId, 'dropdown')}}
+  {{LabExample(AppParentId, AppCurrentId, 'dropdown')}}
   {{LabCode('html', '
   <ul class="nav nav--dropdown" data-module="Nav">
     <li class="nav__item is-dropdown-nav-parent">
@@ -85,7 +85,7 @@
 
   <h3>Accordion</h3>
 
-  {{LabExample(pageType, pageId, 'accordion')}}
+  {{LabExample(AppParentId, AppCurrentId, 'accordion')}}
   {{LabCode('html', '
   <ul class="nav nav--vertical nav--accordion" data-module="Nav">
     <li class="nav__item is-accordion-nav-parent">
@@ -108,7 +108,7 @@
 
   <h3>Responsive</h3>
 
-  {{LabExample(pageType, pageId, 'responsive')}}
+  {{LabExample(AppParentId, AppCurrentId, 'responsive')}}
   {{LabCode('html', '
   <ul class="nav nav--vertical nav--horizontal@md">
     <li class="nav__item">

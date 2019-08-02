@@ -1,17 +1,17 @@
+{% set AppParentId = "components" %}
+{% set AppCurrentId = "off-canvas" %}
+
 {% extends 'layouts/lab-side-content.html' %}
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
-
-{% set pageType = "components" %}
-{% set pageId = "off-canvas" %}
 
 {% block content %}
   <h1>Off-canvas</h1>
 
   <h3>Usage</h3>
 
-  {{LabExample(pageType, pageId)}}
+  {{LabExample(AppParentId, AppCurrentId)}}
   {{LabCode('html', '
   <div class="off-canvas">
     <div class="off-canvas__aside off-canvas-left">

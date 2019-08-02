@@ -1,10 +1,10 @@
+{% set AppParentId = "components" %}
+{% set AppCurrentId = "forms" %}
+
 {% extends 'layouts/lab-side-content.html' %}
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
-
-{% set pageType = "components" %}
-{% set pageId = "forms" %}
 
 {% block content %}
 
@@ -32,7 +32,7 @@
 
   <h3>Form control</h3>
 
-  {# {{LabExample(pageType, pageId, 'text-input')}} #}
+  {# {{LabExample(AppParentId, AppCurrentId, 'text-input')}} #}
 
   {{LabCode('html', '
   <input type="text" class="form-control">
@@ -51,7 +51,7 @@
 
   <h3>Text Input</h3>
 
-  {{LabExample(pageType, pageId, 'text-input')}}
+  {{LabExample(AppParentId, AppCurrentId, 'text-input')}}
 
   {{LabCode('js', '
   {{ TextInput({

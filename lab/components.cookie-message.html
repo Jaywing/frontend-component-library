@@ -1,17 +1,17 @@
+{% set AppParentId = "components" %}
+{% set AppCurrentId = "cookie-message" %}
+
 {% extends 'layouts/lab-side-content.html' %}
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
-
-{% set pageType = "components" %}
-{% set pageId = "cookie-message" %}
 
 {% block content %}
   <h1>Cookie Message</h1>
 
   <h3>Usage</h3>
 
-  {{LabExample(pageType, pageId)}}
+  {{LabExample(AppParentId, AppCurrentId)}}
   {{LabCode('html', '
   <div class="notice notice--modal is-active" data-module="CookieMessage">
     <div class="notice__media">

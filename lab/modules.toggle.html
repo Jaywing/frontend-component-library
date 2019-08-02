@@ -1,24 +1,24 @@
+{% set AppParentId = "modules" %}
+{% set AppCurrentId = "toggle" %}
+
 {% extends 'layouts/lab-side-content.html' %}
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
-
-{% set pageType = "modules" %}
-{% set pageId = "toggle" %}
 
 {% block content %}
   <h1>Toggle</h1>
 
   <h3>Usage</h3>
 
-  {{LabExample(pageType, pageId)}}
+  {{LabExample(AppParentId, AppCurrentId)}}
   {{LabCode('html', '
   <button class="button" data-module="Toggle">Toggle</button>
   ')}}
 
   <h3>Target</h3>
 
-  {{LabExample(pageType, pageId, 'target')}}
+  {{LabExample(AppParentId, AppCurrentId, 'target')}}
   {{LabCode('html', '
   data-options="{"target": ".lab-example-target"}"
   ')}}

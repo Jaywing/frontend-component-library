@@ -1,17 +1,17 @@
+{% set AppParentId = "components" %}
+{% set AppCurrentId = "breadcrumb" %}
+
 {% extends 'layouts/lab-side-content.html' %}
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
-
-{% set pageType = "components" %}
-{% set pageId = "breadcrumb" %}
 
 {% block content %}
   <h1>Breadcrumb</h1>
 
   <h3>Usage</h3>
 
-  {{LabExample(pageType, pageId)}}
+  {{LabExample(AppParentId, AppCurrentId)}}
   {{LabCode('html', '
   <ol class="breadcrumb">
     <li class="breadcrumb__item" itemscope="itemscope" itemtype="http://data-vocabulary.org/breadcrumb">

@@ -1,17 +1,17 @@
+{% set AppParentId = "components" %}
+{% set AppCurrentId = "hero" %}
+
 {% extends 'layouts/lab-side-content.html' %}
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
-
-{% set pageType = "components" %}
-{% set pageId = "hero" %}
 
 {% block content %}
   <h1>Hero</h1>
 
   <h3>Usage</h3>
 
-  {{LabExample(pageType, pageId)}}
+  {{LabExample(AppParentId, AppCurrentId)}}
   {{LabCode('html', '
   <div class="hero">
     <picture class="hero__image">
@@ -32,7 +32,7 @@
 
   <h3>With video</h3>
 
-  {{LabExample(pageType, pageId, 'video')}}
+  {{LabExample(AppParentId, AppCurrentId, 'video')}}
   {{LabCode('html', '
   <div class="hero">
     <div class="hero__media">
@@ -58,7 +58,7 @@
 
   <h3>With YouTube</h3>
 
-  {{LabExample(pageType, pageId, 'youtube')}}
+  {{LabExample(AppParentId, AppCurrentId, 'youtube')}}
   {{LabCode('html', '
   <div class="hero">
     <div class="hero__media">

@@ -1,17 +1,17 @@
+{% set AppParentId = "components" %}
+{% set AppCurrentId = "mega-nav" %}
+
 {% extends 'layouts/lab-side-content.html' %}
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
-
-{% set pageType = "components" %}
-{% set pageId = "mega-nav" %}
 
 {% block content %}
   <h1>Mega Nav</h1>
 
   <h3>Usage</h3>
 
-  {{LabExample(pageType, pageId)}}
+  {{LabExample(AppParentId, AppCurrentId)}}
   {{LabCode('html', '
   <nav class="mega-nav">
     <ul class="nav nav--vertical nav--horizontal@lg nav--accordion nav--dropdown@lg position-relative" data-module="Nav">
