@@ -1,11 +1,3 @@
-$header-offset-sm: 110px + 46px;
-$header-offset-md: 66px;
-
-body,
-.app-sidebar {
-  padding-top: $header-offset-sm;
-}
-
 .app-header {
   flex-direction: column;
   align-items: flex-start;
@@ -31,14 +23,6 @@ body,
 }
 
 @include md {
-  body {
-    padding-top: $header-offset-md;
-  }
-
-  .app-sidebar {
-    padding: ($spacer * 2) 0 0;
-  }
-
   .app-header {
     flex-direction: row;
     align-items: center;

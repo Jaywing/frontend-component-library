@@ -12,4 +12,5 @@ $font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono',
   'Courier', monospace !default;
 
 // App Header
-$app-header-bottom-border: 10px solid $bright-sun;
+$header-offset-sm: 84px + 56px;
+$header-offset-md: 56px;
