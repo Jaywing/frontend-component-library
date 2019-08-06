@@ -2,4 +2,19 @@
   .is-dropdown-nav {
     width: 100%;
   }
+
+  .is-accordion-nav-parent,
+  .is-dropdown-nav-parent {
+    > div.position-relative {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  .is-dropdown-nav-parent {
+    > div.position-relative {
+      align-items: center;
+    }
+  }
 }
