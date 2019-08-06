@@ -3,8 +3,8 @@
     <div class="card__header">{{header}}</div>
     <img class="card__img" src="{{imgSrc}}" alt="{{imgAlt}}">
     <div class="card__body">
-      <div class="card__title">{{title}}</div>
-      <div class="card__text">{{text|safe}}</div>
+      <h5 class="card__title">{{title}}</h5>
+      <p class="card__text">{{text}}</p>
     </div>
   </div>
 {% endmacro %}
@@ -17,7 +17,7 @@
 
   <div class="flex-grid">
     <div class="flex-grid__cell--span-6@md">
-      {{ Card('Card header', '//via.placeholder.com/350x150', '', 'Card title', '<p>Some text adding to the card title and to add volume to the card\'s content.</p>') }}
+      {{ Card('Card header', '//via.placeholder.com/350x150', '', 'Card title', 'Some text adding to the card title and to add volume to the card\'s content.') }}
     </div>
   </div>
 
