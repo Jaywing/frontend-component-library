@@ -4,7 +4,7 @@
     <img class="card__img" src="{{imgSrc}}" alt="{{imgAlt}}">
     <div class="card__body">
       <div class="card__title">{{title}}</div>
-      <div class="card__text">{{Text}}</div>
+      <div class="card__text">{{text|safe}}</div>
     </div>
   </div>
 {% endmacro %}
