@@ -19,7 +19,7 @@
     "giza-framework": "*",
     "imagesloaded": "^4.1.4",
     "masonry-layout": "^4.2.2",
-    "sticky-js": "^1.2.0"
+    "stickybits": "^3.6.6"
   },
   "devDependencies": {
     "prettier": "^1.14.2",

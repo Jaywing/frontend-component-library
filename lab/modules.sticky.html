@@ -9,9 +9,16 @@
 {% block content %}
   <h1>Sticky</h1>
 
+  <p>Using
+    <a href="https://www.npmjs.com/package/stickybits" target="_blank">Stickybits</a>
+    to create sticky elements.</p>
+
   <h3>Usage</h3>
 
   {{LabExample(AppParentId, AppCurrentId)}}
   {{LabCode('html', '
+  <div class="sticky" data-module="Sticky">
+    <div class="sticky__item">...</div>
+  </div>
   ')}}
 {% endblock %}

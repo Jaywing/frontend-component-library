@@ -5,7 +5,6 @@ export default class Masonry {
   constructor(el) {
     this.el = el;
     const grid = this.el;
-    console.log(grid);
 
     imagesLoaded(grid, function() {
       const msnry = new masonryLayout(grid, {
