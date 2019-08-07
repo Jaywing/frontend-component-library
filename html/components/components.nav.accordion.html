@@ -3,14 +3,12 @@
 {% macro NavAccordion(modal) %}
   <ul class="nav nav--vertical nav--accordion" data-module="Nav" style="max-width: 200px;">
     <li class="nav__item is-accordion-nav-parent">
-      <div class="nav__item-toggle">
-        <a href="#" class="nav__link">Item 1</a>
-        <button class="button is-accordion-button">
-          <span class="icon icon--chevron-down">
-            {{Icon('chevron-down')}}
-          </span>
-        </button>
-      </div>
+      <a href="#" class="nav__link">Item 1</a>
+      <button class="button is-accordion-button">
+        <span class="icon icon--chevron-down">
+          {{Icon('chevron-down')}}
+        </span>
+      </button>
       <ul class="nav is-accordion-nav nav--vertical">
         <li class="nav__item">
           <a href="#" class="nav__link">Item 1 - 1</a>
