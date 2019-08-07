@@ -4,16 +4,29 @@
   width: 100%;
 }
 
-@include md {
-  .masonry__sizer {
-    width: 25%;
-  }
+.masonry-demo {
+  padding: $spacer;
+}
 
+@include md {
+  .masonry__sizer,
   .masonry__item {
     width: 25%;
+  }
+}
 
-    &:nth-child(2) {
-      width: 50%;
+@include md {
+  .masonry--layout-feature {
+    .masonry__sizer {
+      width: 25%;
+    }
+
+    .masonry__item {
+      width: 25%;
+
+      &:nth-child(2) {
+        width: 50%;
+      }
     }
   }
 }

@@ -11,20 +11,28 @@
 
   <h3>Usage</h3>
 
+  <p>Use the
+    <code>size-width</code>
+    utility to create your grid.</p>
+
   {{LabExample(AppParentId, AppCurrentId)}}
   {{LabCode('html', '
   <div class="masonry" data-module="Masonry">
     <div class="masonry__sizer"></div>
-    <div class="masonry__item">...</div>
+    <div class="masonry__item size-width-50">...</div>
     ...
   </div>
   ')}}
 
   <h3>Images</h3>
 
+  <p>Use the
+    <code>masonry-layout</code>
+    modifier to quickly build a grid to a specfic layout without needing modifier classes on your masonry items.</p>
+
   {{LabExample(AppParentId, AppCurrentId, 'images')}}
   {{LabCode('html', '
-  <div class="masonry" data-module="Masonry">
+  <div class="masonry masonry--layout-feature" data-module="Masonry">
     <div class="masonry__sizer"></div>
     <div class="masonry__item">
       <img src="..." alt="...">
@@ -32,4 +40,7 @@
     ...
   </div>
   ')}}
+
+  <h3>Layouts</h3>
+  <code>masonry--layout-feature</code>
 {% endblock %}
