@@ -17,6 +17,11 @@
           "id": "checklist",
           "url": "getting-started.checklist.html",
           "title": "Checklist"
+        },
+        {
+          "id": "download",
+          "url": "getting-started.download.html",
+          "title": "Download"
         }
       ]
     },
