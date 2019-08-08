@@ -3,6 +3,7 @@
 
 {% extends 'layouts/lab-side-content.html' %}
 
+{% from 'macros/lab-nav-link.html' import LabNavLink %}
 {% from 'macros/lab-code.html' import LabCode %}
 
 {% block content %}
@@ -14,14 +15,13 @@
 
   <p>Requires at least version 6 of Node. We reccomend using nvm to install and manage your Node versions.</p>
 
-  <h3>Resources</h3>
+  {% if resources %}
+    <h2>Resources</h2>
 
-  <ul>
-    <li>
-      <a href="https://github.com/Jaywing/frontend-site-starter-kit">GitHub</a>
-    </li>
-    <li>
-      <a href="https://jaywing.com/">Jaywing</a>
-    </li>
-  </ul>
+    <ul class="nav nav--vertical">
+      {% for page in resources %}
+        {{ LabNavLink(page, AppParentId, AppCurrentId, loop) }}
+      {% endfor %}
+    </ul>
+  {% endif %}
 {% endblock %}
