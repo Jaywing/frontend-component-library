@@ -27,7 +27,7 @@ $notice-text-color: $dark !default;
 }
 
 .notice__title {
-  @include great-primer;
+  @include font-size-lg;
 
   margin-bottom: ($spacer / 2);
 }

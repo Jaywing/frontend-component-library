@@ -23,13 +23,13 @@
 }
 
 .hero__title {
-  @include trafalgar;
+  @include font-size-xxl;
 
   margin-top: 0;
 }
 
 .hero__text {
-  @include great-primer;
+  @include font-size-lg;
 }
 
 @include md {
