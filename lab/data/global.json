@@ -1,6 +1,7 @@
 {
   "meta_title": "Jaywing Component Library",
-  "lab_title": "Jaywing",
+  "lab_logo": "Jaywing",
+  "lab_title": "Component Library",
   "version": "0.1.5",
   "nav": [
     {
