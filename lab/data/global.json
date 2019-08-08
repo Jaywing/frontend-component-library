@@ -128,5 +128,11 @@
         }
       ]
     }
+  ],
+  "resources": [
+    {
+      "title": "Github",
+      "url": "https://github.com/Jaywing/frontend-component-library"
+    }
   ]
 }
