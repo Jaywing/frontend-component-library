@@ -13,7 +13,7 @@
   &:not(:last-child)::after {
     display: block;
     padding: 0 $spacer;
-    content: '|';
+    content: '/';
   }
 
   &.is-active {
