@@ -1,4 +1,4 @@
-$slider-max-width: $site-max-width !default;
+$slider-max-width: 100% !default;
 $slider-background-color: $dune !default;
 $slider-text-color: $light !default;
 
@@ -9,41 +9,24 @@ $slider-text-color: $light !default;
   color: $slider-text-color;
 }
 
-.slider__picture {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-
-  .slider__image {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: translateY(-50%) scale(1.0125);
-  }
+.slider__image {
+  width: 100%;
+  transform: scale(1.0125);
 }
 
-// .slider__content {
-//   position: relative;
-//   z-index: 1;
-//   height: 10rem;
-// }
-
 .slider__content {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
   padding: $spacer;
   color: $light;
 }
 
 .slider__title {
+  @include font-size-xxl;
+
   margin: 0;
+}
+
+.slider__text {
+  @include font-size-lg;
 }
 
 .slider__text-background {
@@ -57,13 +40,6 @@ $slider-text-color: $light !default;
   position: relative;
   display: none;
   height: 100%;
-
-  &::before {
-    display: block;
-    width: 100%;
-    padding-bottom: 41.55%;
-    content: '';
-  }
 
   &.is-active {
     display: block;
@@ -94,43 +70,6 @@ $slider-text-color: $light !default;
   }
 }
 
-.slider__controls {
-  display: flex;
-  padding: ($spacer / 2);
-  color: $slider-text-color;
-}
-
-.slider__previous,
-.slider__next {
-  cursor: pointer;
-
-  .icon {
-    fill: $slider-text-color;
-  }
-}
-
-.slider__pips {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-.slider__pip {
-  position: relative;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  margin: 0 $spacer;
-  border: 2px solid $slider-text-color;
-  border-radius: 2px;
-  cursor: pointer;
-  transform: translateY(-50%);
-
-  &.is-active {
-    background: $slider-text-color;
-  }
-}
-
 .slider--scroll {
   overflow: hidden;
 
@@ -146,13 +85,13 @@ $slider-text-color: $light !default;
   }
 }
 
-// @include md {
-//   .slider__content {
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     height: 100%;
-//   }
-// }
+@include md {
+  .slider__content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: $spacer;
+    color: $light;
+  }
+}

@@ -12,6 +12,7 @@
         <div class="slider__slide{{activeClass}}">
           <picture class="slider__picture">
             <source srcset="{{item.imgSrcLg}}" media="(min-width: 768px)">
+            <source srcset="{{item.imgSrcSm}}">
             <img class="slider__image" src="{{item.imgSrcSm}}" alt="{{item.imgAlt}}">
           </picture>
           <div class="slider__content">
@@ -43,6 +44,10 @@
 
 {% block body %}
 
-  {{ Slider([{'title': 'Slide title 1', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}', 'active': true}, {'title': 'Slide title 2', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': '//placeimg.com/600/600/tech/grayscale', 'imgSrcLg': '//placeimg.com/1600/800/tech/grayscale', 'imgAlt': '{{item.imgAlt}}'}]) }}
+  {{ Slider([
+  {'title': 'Slide title 1', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': 'https://picsum.photos/600/600', 'imgSrcLg': 'https://picsum.photos/1600/800/', 'imgAlt': '{{item.imgAlt}}', 'active': true},
+  {'title': 'Slide title 2', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': 'https://picsum.photos/600/600', 'imgSrcLg': 'https://picsum.photos/1600/800/', 'imgAlt': '{{item.imgAlt}}'},
+  {'title': 'Slide title 3', 'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'imgSrcSm': 'https://picsum.photos/600/600', 'imgSrcLg': 'https://picsum.photos/1600/800/', 'imgAlt': '{{item.imgAlt}}'}
+  ]) }}
 
 {% endblock %}

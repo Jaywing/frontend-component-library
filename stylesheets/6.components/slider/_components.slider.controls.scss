@@ -1,0 +1,40 @@
+$slider-controls-text-color: $light !default;
+
+.slider__controls {
+  display: flex;
+  color: $slider-controls-text-color;
+}
+
+.slider__previous,
+.slider__next {
+  padding: $spacer;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    fill: $slider-controls-text-color;
+  }
+}
+
+.slider__pips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__pip {
+  width: 10px;
+  height: 10px;
+  margin: 0 ($spacer / 2);
+  border: 2px solid $slider-controls-text-color;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+
+  &.is-active {
+    background: $slider-controls-text-color;
+    transform: scale(1.4);
+  }
+}
