@@ -16,7 +16,16 @@ gulp.task("watch", function() {
       PATH_CONFIG.BASE,
       PATH_CONFIG.javascripts.src,
       "**/*.js"
-    )
+    ),
+    imagesSrc: [
+      projectPath(
+        PATH_CONFIG.BASE,
+        PATH_CONFIG.images.src,
+        "**/*{jpg,png,svg}"
+      ),
+      projectPath(PATH_CONFIG.lab, PATH_CONFIG.images.src, "**/*{jpg,png,svg}")
+    ],
+    iconsSrc: [projectPath(PATH_CONFIG.BASE, PATH_CONFIG.icons.src, "*.svg")]
   };
 
   gulp.watch(paths.htmlSrc, ["html", "lab:html", browser.reload]);
@@ -26,4 +35,6 @@ gulp.task("watch", function() {
     browser.reload
   ]);
   gulp.watch(paths.javascriptsSrc, ["webpack", browser.reload]);
+  gulp.watch(paths.imagesSrc, ["images, lab:images", browser.reload]);
+  gulp.watch(paths.iconsSrc, ["icons", browser.reload]);
 });
