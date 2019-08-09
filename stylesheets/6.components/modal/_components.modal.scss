@@ -24,6 +24,7 @@ $modal-footer-border: 1px solid $alto !default;
 .modal__content {
   max-width: 500px;
   flex: 1;
+  margin: 0 auto;
   border: $modal-content-border;
   background: $modal-content-background-color;
 }
