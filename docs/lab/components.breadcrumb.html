@@ -562,20 +562,23 @@
   
   <div class="app-code" data-module="ExampleCode">
     <pre class="language-html"><code class="language-html">
-  &lt;ol class=&quot;breadcrumb&quot;&gt;
-    &lt;li class=&quot;breadcrumb__item&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://data-vocabulary.org/breadcrumb&quot;&gt;
-      &lt;a class=&quot;breadcrumb__link&quot; href=&quot;...&quot; itemprop=&quot;url&quot;&gt;
-        &lt;span itemprop=&quot;title&quot;&gt;Home&lt;/span&gt;
+  &lt;ol class=&quot;breadcrumb&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/BreadcrumbList&quot;&gt;
+    &lt;li class=&quot;breadcrumb__item&quot; itemprop=&quot;itemListElement&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/ListItem&quot;&gt;
+      &lt;a itemprop=&quot;item&quot; class=&quot;breadcrumb__link&quot; href=&quot;#&quot;&gt;
+        &lt;span itemprop=&quot;name&quot;&gt;Link One&lt;/span&gt;
+        &lt;meta itemprop=&quot;position&quot; content=&quot;1&quot;/&gt;
       &lt;/a&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;breadcrumb__item&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://data-vocabulary.org/breadcrumb&quot;&gt;
-      &lt;a class=&quot;breadcrumb__link&quot; href=&quot;...&quot; itemprop=&quot;url&quot;&gt;
-        &lt;span itemprop=&quot;title&quot;&gt;Library&lt;/span&gt;
+    &lt;li class=&quot;breadcrumb__item&quot; itemprop=&quot;itemListElement&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/ListItem&quot;&gt;
+      &lt;a itemprop=&quot;item&quot; class=&quot;breadcrumb__link&quot; href=&quot;#&quot;&gt;
+        &lt;span itemprop=&quot;name&quot;&gt;Link Two&lt;/span&gt;
+        &lt;meta itemprop=&quot;position&quot; content=&quot;2&quot;/&gt;
       &lt;/a&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;breadcrumb__item is-active&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://data-vocabulary.org/breadcrumb&quot;&gt;
-      &lt;a class=&quot;breadcrumb__link&quot; href=&quot;...&quot; itemprop=&quot;url&quot;&gt;
-        &lt;span itemprop=&quot;title&quot;&gt;Data&lt;/span&gt;
+    &lt;li class=&quot;breadcrumb__item&quot; itemprop=&quot;itemListElement&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/ListItem&quot;&gt;
+      &lt;a itemprop=&quot;item&quot; class=&quot;breadcrumb__link&quot; href=&quot;#&quot;&gt;
+        &lt;span itemprop=&quot;name&quot;&gt;Link Three&lt;/span&gt;
+        &lt;meta itemprop=&quot;position&quot; content=&quot;3&quot;/&gt;
       &lt;/a&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
