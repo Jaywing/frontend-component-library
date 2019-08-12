@@ -14,14 +14,4 @@
   <h3>Requirements</h3>
 
   <p>Requires at least version 6 of Node. We reccomend using nvm to install and manage your Node versions.</p>
-
-  {% if resources %}
-    <h3>Resources</h3>
-
-    <ul class="nav nav--vertical">
-      {% for page in resources %}
-        {{ LabNavLink(page, AppParentId, AppCurrentId, loop) }}
-      {% endfor %}
-    </ul>
-  {% endif %}
 {% endblock %}
