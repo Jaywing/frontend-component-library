@@ -1,6 +1,8 @@
-{% from 'macros/icon.html' import Icon %}
+{% from 'components/components.button.html' import Button %}
 
-{% macro Button(model) %}
+{# {% from 'macros/icon.html' import Icon %} #}
+
+{# {% macro Button(model) %}
   {% if model.url %}
     <a class="button" href="{{modal.url}}">
       {% if model.icon %}
@@ -16,7 +18,7 @@
       <span class="button__text">{{model.description}}</span>
     </button>
   {% endif %}
-{% endmacro %}
+{% endmacro %} #}
 
 {% extends 'layouts/lab-source.html' %}
 
