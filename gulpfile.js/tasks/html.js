@@ -5,7 +5,8 @@ const projectPath = require("../lib/projectPath");
 gulp.task("html", function() {
   paths = {
     src: [
-      projectPath(PATH_CONFIG.lab),
+      // projectPath(PATH_CONFIG.lab),
+      `./node_modules/giza-framework/html/**/*.html`,
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "**/*.html"),
       "!" +
         projectPath(
@@ -17,8 +18,8 @@ gulp.task("html", function() {
     src_render: [
       projectPath(PATH_CONFIG.lab),
       `./node_modules/giza-framework/lab/html`,
-      `./node_modules/giza-framework/html`,
-      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)
+      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src),
+      `./node_modules/giza-framework/html`
     ],
     dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.buildSite)
   };

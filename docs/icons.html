@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="../stylesheets/app.css">
-    <link rel="stylesheet" href="../lab/stylesheets/giza-lab-example.css">
+    <title>Giza</title>
+    <link rel="stylesheet" href="stylesheets/giza.css">
     <script>
       if (document.documentElement) {
         document
@@ -15,9 +14,17 @@
           .add('js');
       }
     </script>
+    <style type="text/css">
+      .demo {
+        width: 100%;
+        background-color: #ddd;
+      }
+    </style>
   </head>
-  <body class="app-example">
-    
+  <body>
+
+    <div class="container container--centered">
+      
   
     <span class='icon icon--archive'>
         <svg viewbox="0 0 1 1">
@@ -264,6 +271,13 @@
     </span>
 
   
+    <span class='icon icon--paperclip'>
+        <svg viewbox="0 0 1 1">
+            <use xlink:href='../images/icons.svg#paperclip'></use>
+        </svg>
+    </span>
+
+  
     <span class='icon icon--pencil'>
         <svg viewbox="0 0 1 1">
             <use xlink:href='../images/icons.svg#pencil'></use>
@@ -418,6 +432,8 @@
     </span>
 
 
-    <script src="../javascripts/app.js"></script>
+    </div>
+
+    <script src="javascripts/giza.js"></script>
   </body>
 </html>
