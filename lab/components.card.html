@@ -21,9 +21,25 @@
     <div class="card__body">
       <h5 class="card__title">...</h5>
       <p class="card__text">...</p>
-    </p>
+    </div>
   </div>
   ')}}
 
   <h3>Body</h3>
+  {{LabExample(AppParentId, AppCurrentId, 'body')}}
+  {{LabCode('html', '
+  <div class="card">
+    <div class="card__body">
+      <p class="card__text">...</p>
+    </div>
+  </div>
+  ')}}
+
+  <h3>Image</h3>
+  {{LabExample(AppParentId, AppCurrentId, 'image')}}
+  {{LabCode('html', '
+  <div class="card">
+    <img class="card__img" src="..." alt="">
+  </div>
+  ')}}
 {% endblock %}

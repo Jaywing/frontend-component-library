@@ -1,0 +1,16 @@
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% from 'components/components.card.html' import Card %}
+
+{% block body %}
+
+  {{Card({
+    'img': {
+      'src': '//via.placeholder.com/350x150',
+      'description': ''
+    }
+  })}}
+
+{% endblock %}
