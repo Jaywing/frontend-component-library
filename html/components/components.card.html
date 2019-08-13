@@ -1,11 +1,21 @@
-{% macro Card(header, imgSrc, imgAlt, title, text) %}
+{% macro Card(model) %}
   <div class="card">
-    <div class="card__header">{{header}}</div>
-    <img class="card__img" src="{{imgSrc}}" alt="{{imgAlt}}">
-    <div class="card__body">
-      <h5 class="card__title">{{title}}</h5>
-      <p class="card__text">{{text}}</p>
-    </div>
+    {% if model.header %}
+      <div class="card__header">{{model.header}}</div>
+    {% endif %}
+    {% if model.img %}
+      <img class="card__img" src="{{model.img.src}}" alt="{{model.img.description}}">
+    {% endif %}
+    {% if model.title or model.description %}
+      <div class="card__body">
+        {% if model.title %}
+          <h5 class="card__title">{{model.title}}</h5>
+        {% endif %}
+        {% if model.description %}
+          <p class="card__text">{{model.description}}</p>
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
 {% endmacro %}
 
@@ -15,6 +25,14 @@
 
 {% block body %}
 
-  {{ Card('Card header', '//via.placeholder.com/350x150', '', 'Card title', 'Some text adding to the card title and to add volume to the card\'s content.') }}
+  {{Card({
+    'header': 'Card header',
+    'title': 'Card title',
+    'description': 'Some text adding to the card title and to add volume to the card\'s content.',
+    'img': {
+      'src': '//via.placeholder.com/350x150',
+      'description': ''
+    }
+  })}}
 
 {% endblock %}

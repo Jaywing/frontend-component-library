@@ -1,9 +1,9 @@
 {% from 'macros/icon.html' import Icon %}
 
-{% macro Slider(modal) %}
+{% macro Slider(model) %}
   <div class="slider" data-module="Slider">
     <div class="slider__slides">
-      {% for item in modal %}
+      {% for item in model %}
         {% set activeClass = "" %}
         {% if item.active %}
           {% set activeClass = " is-active" %}
