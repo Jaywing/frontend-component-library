@@ -1,0 +1,21 @@
+{% extends 'layouts/lab-source.html' %}
+
+{% macro Modal(header, text, close) %}
+  <div class="modal">
+    <div class="modal__content">
+      <div class="modal__header">{{header}}</div>
+      <div class="modal__body">
+        {{text|safe}}
+      </div>
+      <div class="modal__footer">
+        <a class="button" href="#">{{close}}</a>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% block body %}
+
+  {{ Modal('Modal header', '<p>Modal text.</p>', 'Close') }}
+
+{% endblock %}

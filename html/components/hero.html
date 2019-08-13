@@ -1,0 +1,25 @@
+{% extends 'layouts/lab-source.html' %}
+
+{% macro Hero(modal) %}
+  <div class="hero">
+    <picture class="hero__image">
+      <source media="(min-width: 960px)" srcset="//placehold.it/1200x600"/>
+      <source srcset="//placehold.it/600x300"/>
+      <img src="//placehold.it/1200x600" alt=""/>
+    </picture>
+    <div class="hero__body">
+      <h2 class="hero__title">
+        <span class="hero__text-background">Hero title</span>
+      </h2>
+      <div class="hero__text">
+        <span class="hero__text-background">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin.</span>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% block body %}
+
+  {{ Hero() }}
+
+{% endblock %}

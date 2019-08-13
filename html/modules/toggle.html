@@ -1,0 +1,11 @@
+{% extends 'layouts/lab-source.html' %}
+
+{% macro Toggle(modal) %}
+  <button class="button" data-module="Toggle">Toggle</button>
+{% endmacro %}
+
+{% block body %}
+
+  {{ Toggle() }}
+
+{% endblock %}

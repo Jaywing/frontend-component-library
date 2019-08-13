@@ -1,0 +1,29 @@
+{% extends 'layouts/lab-source.html' %}
+
+{% macro Masonry(modal) %}
+  <div class="masonry" data-module="Masonry">
+    <div class="masonry__sizer"></div>
+    {% for item in modal %}
+      <div class="masonry__item {{item.classes}}">
+        {{item.title}}
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}
+
+{% block body %}
+
+  {{ Masonry([
+    {'classes': 'size-width-50 masonry-demo', 'title': 'Masonry 1'},
+    {'classes': 'size-width-25 masonry-demo', 'title': 'Masonry 2'},
+    {'classes': 'size-width-50 masonry-demo', 'title': 'Masonry 3'},
+    {'classes': 'size-width-25 masonry-demo', 'title': 'Masonry 4'},
+    {'classes': 'size-width-25 masonry-demo', 'title': 'Masonry 5'},
+    {'classes': 'size-width-25 masonry-demo', 'title': 'Masonry 6'},
+    {'classes': 'size-width-25 masonry-demo', 'title': 'Masonry 7'},
+    {'classes': 'size-width-25 masonry-demo', 'title': 'Masonry 8'},
+    {'classes': 'size-width-25 masonry-demo', 'title': 'Masonry 9'},
+    {'classes': 'size-width-25 masonry-demo', 'title': 'Masonry 10'}
+  ]) }}
+
+{% endblock %}
