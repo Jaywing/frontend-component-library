@@ -1,3 +1,5 @@
+{% from 'components/components.button.html' import Button %}
+
 {% macro Card(model) %}
   <div class="card">
     {% if model.header %}
@@ -13,6 +15,9 @@
         {% endif %}
         {% if model.description %}
           <p class="card__text">{{model.description}}</p>
+        {% endif %}
+        {% if model.button %}
+          {{ Button(model.button) }}
         {% endif %}
       </div>
     {% endif %}
@@ -32,6 +37,10 @@
     'img': {
       'src': '//via.placeholder.com/350x150',
       'description': ''
+    },
+    'button': {
+      'url': '#',
+      'description': 'Go somewhere'
     }
   })}}
 

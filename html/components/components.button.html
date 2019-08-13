@@ -1,7 +1,21 @@
 {% from 'macros/icon.html' import Icon %}
 
-{% macro Button(modal) %}
-  <button class="button">Button</button>
+{% macro Button(model) %}
+  {% if model.url %}
+    <a class="button" href="{{modal.url}}">
+      {% if model.icon %}
+        {{Icon(model.icon)}}
+      {% endif %}
+      {{model.description}}
+    </a>
+  {% else %}
+    <button class="button">
+      {% if model.icon %}
+        {{Icon(model.icon)}}
+      {% endif %}
+      {{model.description}}
+    </button>
+  {% endif %}
 {% endmacro %}
 
 {% extends 'layouts/lab-source.html' %}
@@ -10,6 +24,8 @@
 
 {% block body %}
 
-  {{ Button() }}
+  {{ Button({
+    'description': 'Primary'
+  }) }}
 
 {% endblock %}
