@@ -15,7 +15,7 @@ gulp.task("html", function() {
         )
     ],
     src_render: [
-      projectPath(PATH_CONFIG.lab),
+      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src),
       `./node_modules/giza-framework/lab/html`,
       `./node_modules/giza-framework/html/components`,
       `./node_modules/giza-framework/html/content`,

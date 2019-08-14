@@ -18,18 +18,25 @@ gulp.task("lab:html", function() {
   paths = {
     src: [
       `./node_modules/giza-framework/lab/html/**/*.html`,
-      projectPath(PATH_CONFIG.lab, "**/*.html"),
-      "!" + projectPath(PATH_CONFIG.lab, "**/{layouts,shared,macros,data}/**")
+      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src, "**/*.html"),
+      "!" +
+        projectPath(
+          PATH_CONFIG.lab,
+          PATH_CONFIG.html.src,
+          "**/{layouts,shared,macros,data}/**"
+        )
     ],
     src_render: [
-      projectPath(PATH_CONFIG.lab),
+      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src),
       `./node_modules/giza-framework/lab/html`
     ],
     dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.buildLab)
   };
 
   const dataFunction = function() {
-    var dataPath = path.resolve(`${PATH_CONFIG.BASE}/lab/data/global.json`);
+    var dataPath = path.resolve(
+      `${PATH_CONFIG.BASE}/${PATH_CONFIG.lab}/${PATH_CONFIG.html.src}/data/global.json`
+    );
     return JSON.parse(fs.readFileSync(dataPath, "utf8"));
   };
 
