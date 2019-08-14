@@ -76,13 +76,13 @@ gulp.task("lab:stylesheets", function() {
 });
 
 const webpackConfig = {
-  context: path.resolve("./node_modules/giza-framework/lab/javascripts"),
+  context: path.resolve("./node_modules/giza-framework/lab/js"),
   entry: {
     app: ["babel-polyfill", "./giza-lab.js"]
   },
   mode: "development",
   output: {
-    path: path.resolve("./node_modules/giza-framework/lab/javascripts"),
+    path: path.resolve("./node_modules/giza-framework/lab/js"),
     filename: "giza-lab.js",
     publicPath: "/lab/javascripts/"
   },
@@ -90,7 +90,7 @@ const webpackConfig = {
   resolve: {
     extensions: [".js", ".jsx"],
     modules: [
-      path.resolve("./node_modules/giza-framework/lab/javascripts"),
+      path.resolve("./node_modules/giza-framework/lab/js"),
       path.resolve(PATH_CONFIG.BASE, "node_modules")
     ]
   },
@@ -108,13 +108,13 @@ const webpackConfig = {
 };
 
 const webpackConfig_production = {
-  context: path.resolve("./node_modules/giza-framework/lab/javascripts"),
+  context: path.resolve("./node_modules/giza-framework/lab/js"),
   entry: {
     app: ["babel-polyfill", "./giza-lab.js"]
   },
   mode: "production",
   output: {
-    path: path.resolve("./node_modules/giza-framework/lab/javascripts"),
+    path: path.resolve("./node_modules/giza-framework/lab/js"),
     filename: "giza-lab.js",
     publicPath: "javascripts/"
   },
@@ -122,7 +122,7 @@ const webpackConfig_production = {
   resolve: {
     extensions: [".js", ".jsx"],
     modules: [
-      path.resolve("./node_modules/giza-framework/lab/javascripts"),
+      path.resolve("./node_modules/giza-framework/lab/js"),
       path.resolve(PATH_CONFIG.BASE, "node_modules")
     ]
   },
@@ -149,9 +149,7 @@ const webpackConfig_production = {
 
 gulp.task("lab:javascripts", function() {
   paths = {
-    src: projectPath(
-      "./node_modules/giza-framework/lab/javascripts/**/{*,*.*}.js"
-    ),
+    src: projectPath("./node_modules/giza-framework/lab/js/**/{*,*.*}.js"),
     dest: projectPath(
       PATH_CONFIG.buildDest,
       PATH_CONFIG.buildLab,
