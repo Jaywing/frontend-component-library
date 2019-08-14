@@ -28,9 +28,14 @@
     },
     {
       "id": "layouts",
-      "url": "layouts.container.html",
+      "url": "layouts.breakpoints.html",
       "title": "Layout",
       "children": [
+        {
+          "id": "breakpoints",
+          "url": "layouts.breakpoints.html",
+          "title": "Breakpoints"
+        },
         {
           "id": "container",
           "url": "layouts.container.html",
@@ -109,6 +114,33 @@
         },
         { "id": "slider", "url": "components.slider.html", "title": "Slider" },
         { "id": "table", "url": "components.table.html", "title": "Table" }
+      ]
+    },
+    {
+      "id": "utilities",
+      "url": "utilities.display.html",
+      "title": "Utilities",
+      "children": [
+        {
+          "id": "display",
+          "url": "utilities.display.html",
+          "title": "Display"
+        },
+        {
+          "id": "position",
+          "url": "utilities.position.html",
+          "title": "Position"
+        },
+        {
+          "id": "size",
+          "url": "utilities.size.html",
+          "title": "Size"
+        },
+        {
+          "id": "text",
+          "url": "utilities.text.html",
+          "title": "Text"
+        }
       ]
     },
     {

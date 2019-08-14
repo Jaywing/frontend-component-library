@@ -17,13 +17,13 @@ const projectPath = require("../lib/projectPath");
 gulp.task("lab:html", function() {
   paths = {
     src: [
+      `./node_modules/giza-framework/lab/html/**/*.html`,
       projectPath(PATH_CONFIG.lab, "**/*.html"),
       "!" + projectPath(PATH_CONFIG.lab, "**/{layouts,shared,macros,data}/**")
     ],
     src_render: [
       projectPath(PATH_CONFIG.lab),
-      `./node_modules/giza-framework/lab/html`,
-      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)
+      `./node_modules/giza-framework/lab/html`
     ],
     dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.buildLab)
   };
