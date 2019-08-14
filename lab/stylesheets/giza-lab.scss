@@ -4,16 +4,16 @@
 
 // Giza framework
 // Loads local settings allowing overrides first
-@import '1.settings/settings';
+@import 'settings/settings';
 @import 'giza-framework/lab/stylesheets/giza-lab';
 
 // Tools
 
 // Generic
-@import '3.generic/generic.fonts';
+@import 'generic/fonts';
 
 // Elements
-@import '4.elements/elements.lists';
+@import 'elements/lists';
 
 // Objects
 

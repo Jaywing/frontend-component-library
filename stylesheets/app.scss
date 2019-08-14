@@ -4,29 +4,28 @@
 
 // Giza framework
 // Loads local settings allowing overrides first
-@import '1.settings/settings';
+@import 'settings/settings';
 @import 'giza-framework/stylesheets/giza';
 
 // Tools
 
 // Generic
-@import '3.generic/generic.fonts';
+@import 'generic/fonts';
 
 // Elements
 
 // Objects
 
 // Components
-@import '6.components/accordion/components.accordion';
-@import '6.components/breadcrumb/components.breadcrumb';
-@import '6.components/card/components.card';
-@import '6.components/cookie-message/components.cookie-message';
-@import '6.components/hero/components.hero';
-@import '6.components/masonry/components.masonry';
-@import '6.components/mega-nav/components.mega-nav';
-@import '6.components/modal/components.modal';
-@import '6.components/notice/components.notice';
-@import '6.components/off-canvas/components.off-canvas';
-@import '6.components/slider/components.slider';
+@import 'components/accordion';
+@import 'components/breadcrumb';
+@import 'components/card';
+@import 'components/hero';
+@import 'components/masonry';
+@import 'components/mega-nav';
+@import 'components/modal';
+@import 'components/notice';
+@import 'components/off-canvas';
+@import 'components/slider';
 
 // Utilities
