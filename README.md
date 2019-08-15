@@ -1,4 +1,4 @@
-# Jaywing Frontend Starter Kit
+# Jaywing Frontend Component Library
 
 ## Usage
 
