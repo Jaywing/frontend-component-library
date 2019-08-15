@@ -82,22 +82,22 @@ gulp.task("lab:stylesheets", function() {
     .pipe(gulp.dest(paths.dest));
 });
 
-const webpackConfig = {
-  context: path.resolve("./node_modules/giza-framework/lab/js"),
+const labWebpackConfig = {
+  context: path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
   entry: {
-    app: ["babel-polyfill", "./giza-lab.js"]
+    app: ["babel-polyfill", "./jaywing-lab.js"]
   },
   mode: "development",
   output: {
-    path: path.resolve("./node_modules/giza-framework/lab/js"),
-    filename: "giza-lab.js",
+    path: path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
+    filename: "jaywing-lab.js",
     publicPath: "/lab/javascripts/"
   },
   plugins: [],
   resolve: {
     extensions: [".js", ".jsx"],
     modules: [
-      path.resolve("./node_modules/giza-framework/lab/js"),
+      path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
       path.resolve(PATH_CONFIG.BASE, "node_modules")
     ]
   },
@@ -114,22 +114,22 @@ const webpackConfig = {
   }
 };
 
-const webpackConfig_production = {
-  context: path.resolve("./node_modules/giza-framework/lab/js"),
+const labWebpackConfig_production = {
+  context: path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
   entry: {
-    app: ["babel-polyfill", "./giza-lab.js"]
+    app: ["babel-polyfill", "./jaywing-lab.js"]
   },
   mode: "production",
   output: {
-    path: path.resolve("./node_modules/giza-framework/lab/js"),
-    filename: "giza-lab.js",
+    path: path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
+    filename: "jaywing-lab.js",
     publicPath: "javascripts/"
   },
   plugins: [],
   resolve: {
     extensions: [".js", ".jsx"],
     modules: [
-      path.resolve("./node_modules/giza-framework/lab/js"),
+      path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
       path.resolve(PATH_CONFIG.BASE, "node_modules")
     ]
   },
@@ -155,8 +155,8 @@ const webpackConfig_production = {
 };
 
 gulp.task("lab:javascripts", function() {
-  paths = {
-    src: projectPath("./node_modules/giza-framework/lab/js/**/{*,*.*}.js"),
+  labPaths = {
+    src: projectPath(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src, "**/*.js"),
     dest: projectPath(
       PATH_CONFIG.buildDest,
       PATH_CONFIG.buildLab,
@@ -165,14 +165,16 @@ gulp.task("lab:javascripts", function() {
   };
 
   return gulp
-    .src(paths.src)
-    .pipe(gulpif(!production, webpackStream(webpackConfig, webpack)))
-    .pipe(gulpif(production, webpackStream(webpackConfig_production, webpack)))
-    .pipe(gulp.dest(paths.dest));
+    .src(labPaths.src)
+    .pipe(gulpif(!production, webpackStream(labWebpackConfig, webpack)))
+    .pipe(
+      gulpif(production, webpackStream(labWebpackConfig_production, webpack))
+    )
+    .pipe(gulp.dest(labPaths.dest));
 });
 
 gulp.task("lab:images", function() {
-  paths = {
+  labImagesPaths = {
     src: [
       projectPath(
         PATH_CONFIG.lab,
@@ -187,5 +189,5 @@ gulp.task("lab:images", function() {
     )
   };
 
-  return gulp.src(paths.src).pipe(gulp.dest(paths.dest));
+  return gulp.src(labImagesPaths.src).pipe(gulp.dest(labImagesPaths.dest));
 });

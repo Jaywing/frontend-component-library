@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{131:function(t,e,s){"use strict";s.r(e),s.d(e,"default",function(){return i});class i{constructor(t,e){this.el=t,this.settings=Object.assign({},e),this.init()}init(){let t=this.el.offsetHeight,e=document.querySelector(".app-sidebar");document.body.style.paddingTop=`${t}px`,e.style.paddingTop=`${t}px`}}}}]);

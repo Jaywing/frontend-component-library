@@ -9,12 +9,12 @@ const projectPath = require("../lib/projectPath");
 const webpackConfig = {
   context: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
   entry: {
-    app: ["babel-polyfill", "./app.js"]
+    app: ["babel-polyfill", "./jaywing-component-library.js"]
   },
   mode: "development",
   output: {
     path: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
-    filename: "app.js",
+    filename: "jaywing-component-library.js",
     publicPath: "/javascripts/"
   },
   plugins: [],
@@ -41,12 +41,12 @@ const webpackConfig = {
 const webpackConfig_production = {
   context: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
   entry: {
-    app: ["babel-polyfill", "./app.js"]
+    app: ["babel-polyfill", "./jaywing-component-library.js"]
   },
   mode: "production",
   output: {
     path: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
-    filename: "app.js",
+    filename: "jaywing-component-library.js",
     publicPath:
       "https://jaywing.github.io/frontend-component-library/javascripts/"
   },
