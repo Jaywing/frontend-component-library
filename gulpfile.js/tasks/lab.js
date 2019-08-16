@@ -28,7 +28,9 @@ gulp.task("lab:html", function() {
     ],
     src_render: [
       projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src),
-      `./node_modules/giza-framework/lab/html`
+      `./node_modules/giza-framework/lab/html`,
+      `./node_modules/giza-framework/lab/html/layouts`,
+      `./node_modules/giza-framework/lab/html/macros`
     ],
     dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.buildLab)
   };
