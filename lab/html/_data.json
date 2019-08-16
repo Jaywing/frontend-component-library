@@ -103,6 +103,7 @@
         },
         { "id": "modal", "url": "components.modal.html", "title": "Modal" },
         { "id": "nav", "url": "components.nav.html", "title": "Nav" },
+        { "id": "navbar", "url": "components.navbar.html", "title": "Navbar" },
         { "id": "notice", "url": "components.notice.html", "title": "Notice" },
         {
           "id": "off-canvas",
