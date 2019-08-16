@@ -52,7 +52,7 @@
   .hero__text-background {
     display: inline-block;
     padding: ($spacer / 2);
-    background: $dark;
-    color: $light;
+    background: $color-dark;
+    color: $color-light;
   }
 }

@@ -1,6 +1,6 @@
 $slider-max-width: 100% !default;
 $slider-background-color: $dune !default;
-$slider-text-color: $light !default;
+$slider-text-color: $color-light !default;
 
 .slider {
   overflow: hidden;
@@ -16,7 +16,7 @@ $slider-text-color: $light !default;
 
 .slider__content {
   padding: $spacer;
-  color: $light;
+  color: $color-light;
 }
 
 .slider__title {
@@ -32,8 +32,8 @@ $slider-text-color: $light !default;
 .slider__text-background {
   display: inline-block;
   padding: ($spacer / 2);
-  background: $dark;
-  color: $light;
+  background: $color-dark;
+  color: $color-light;
 }
 
 .slider__slide {
@@ -92,6 +92,6 @@ $slider-text-color: $light !default;
     bottom: 0;
     left: 0;
     padding: $spacer;
-    color: $light;
+    color: $color-light;
   }
 }
