@@ -9,52 +9,46 @@ const plumber = require("gulp-plumber");
 const sourcemaps = require("gulp-sourcemaps");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const webpackStream = require("webpack-stream");
-const webpack = require("webpack");
-const WebpackStrip = require("strip-loader");
 const projectPath = require("../lib/projectPath");
 
 gulp.task("lab:html", function() {
-  paths = {
+  labHtmlPaths = {
     src: [
       `./node_modules/giza-framework/lab/html/**/*.html`,
-      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src, "**/*.html"),
-      "!" +
-        projectPath(
-          PATH_CONFIG.lab,
-          PATH_CONFIG.html.src,
-          "**/{layouts,shared,macros,data}/**"
-        )
+      projectPath(PATH_CONFIG.lab, "**/*.html"),
+      "!" + projectPath(PATH_CONFIG.lab, "**/{layouts,data}/**")
     ],
     src_render: [
-      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src),
+      projectPath(PATH_CONFIG.lab),
       `./node_modules/giza-framework/lab/html`,
       `./node_modules/giza-framework/lab/html/layouts`,
-      `./node_modules/giza-framework/lab/html/components`
+      `./node_modules/giza-framework/lab/html/content`,
+      `./node_modules/giza-framework/lab/html/components`,
+      `./node_modules/giza-framework/lab/html/modules`
     ],
     dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.buildLab)
   };
 
   const dataFunction = function() {
     var dataPath = path.resolve(
-      `${PATH_CONFIG.BASE}/${PATH_CONFIG.lab}/${PATH_CONFIG.html.src}/_data.json`
+      `${PATH_CONFIG.BASE}/${PATH_CONFIG.lab}/_data.json`
     );
     return JSON.parse(fs.readFileSync(dataPath, "utf8"));
   };
 
   return gulp
-    .src(paths.src)
+    .src(labHtmlPaths.src)
     .pipe(data(dataFunction))
     .pipe(
       nunjucksRender({
-        path: paths.src_render
+        path: labHtmlPaths.src_render
       })
     )
-    .pipe(gulp.dest(paths.dest));
+    .pipe(gulp.dest(labHtmlPaths.dest));
 });
 
 gulp.task("lab:stylesheets", function() {
-  paths = {
+  labStylesheetsPaths = {
     src: projectPath(PATH_CONFIG.lab, PATH_CONFIG.stylesheets.src, "**/*.scss"),
     dest: projectPath(
       PATH_CONFIG.buildDest,
@@ -64,7 +58,7 @@ gulp.task("lab:stylesheets", function() {
   };
 
   return gulp
-    .src(paths.src)
+    .src(labStylesheetsPaths.src)
     .pipe(gulpif(!production, sourcemaps.init()))
     .pipe(plumber())
     .pipe(
@@ -81,84 +75,14 @@ gulp.task("lab:stylesheets", function() {
     )
     .pipe(gulpif(production, sass({ outputStyle: "compressed" })))
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(paths.dest));
+    .pipe(gulp.dest(labStylesheetsPaths.dest));
 });
 
-const labWebpackConfig = {
-  context: path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
-  entry: {
-    app: ["babel-polyfill", "./jaywing-lab.js"]
-  },
-  mode: "development",
-  output: {
-    path: path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
-    filename: "jaywing-lab.js",
-    publicPath: "/lab/javascripts/"
-  },
-  plugins: [],
-  resolve: {
-    extensions: [".js", ".jsx"],
-    modules: [
-      path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
-      path.resolve(PATH_CONFIG.BASE, "node_modules")
-    ]
-  },
-  module: {
-    rules: [
-      {
-        loader: "babel-loader",
-        exclude: path.resolve(PATH_CONFIG.BASE, "node_modules"),
-        query: {
-          presets: [["es2015", { modules: false }], "stage-1", "react-app"]
-        }
-      }
-    ]
-  }
-};
-
-const labWebpackConfig_production = {
-  context: path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
-  entry: {
-    app: ["babel-polyfill", "./jaywing-lab.js"]
-  },
-  mode: "production",
-  output: {
-    path: path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
-    filename: "jaywing-lab.js",
-    publicPath: "javascripts/"
-  },
-  plugins: [],
-  resolve: {
-    extensions: [".js", ".jsx"],
-    modules: [
-      path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
-      path.resolve(PATH_CONFIG.BASE, "node_modules")
-    ]
-  },
-  module: {
-    rules: [
-      {
-        test: /.js$/,
-        exclude: path.resolve(PATH_CONFIG.BASE, "node_modules"),
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: [["es2015", { modules: false }], "stage-1", "react-app"]
-            }
-          },
-          {
-            loader: WebpackStrip.loader("debug", "console.log")
-          }
-        ]
-      }
-    ]
-  }
-};
-
 gulp.task("lab:javascripts", function() {
-  labPaths = {
-    src: projectPath(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src, "**/*.js"),
+  labJsPaths = {
+    src: projectPath(
+      "./node_modules/giza-framework/dist/lab/javascripts/{*,*.*}.js"
+    ),
     dest: projectPath(
       PATH_CONFIG.buildDest,
       PATH_CONFIG.buildLab,
@@ -166,13 +90,7 @@ gulp.task("lab:javascripts", function() {
     )
   };
 
-  return gulp
-    .src(labPaths.src)
-    .pipe(gulpif(!production, webpackStream(labWebpackConfig, webpack)))
-    .pipe(
-      gulpif(production, webpackStream(labWebpackConfig_production, webpack))
-    )
-    .pipe(gulp.dest(labPaths.dest));
+  return gulp.src(labJsPaths.src).pipe(gulp.dest(labJsPaths.dest));
 });
 
 gulp.task("lab:images", function() {
