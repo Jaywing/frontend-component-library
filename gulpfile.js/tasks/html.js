@@ -10,7 +10,9 @@ gulp.task("html", function() {
     src: [
       `./node_modules/giza-framework/html/**/*.html`,
       "!" +
-        projectPath(`./node_modules/giza-framework/html/**/{layouts,data}/**`),
+        projectPath(
+          `./node_modules/giza-framework/html/**/{layouts,macros,data}/**`
+        ),
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "**/*.html"),
       "!" +
         projectPath(
@@ -21,8 +23,9 @@ gulp.task("html", function() {
     ],
     src_render: [
       projectPath(PATH_CONFIG.lab),
-      `./node_modules/giza-framework/lab/html`,
-      `./node_modules/giza-framework/lab/html/layouts`,
+      `./node_modules/giza-framework/html`,
+      `./node_modules/giza-framework/html/layouts`,
+      `./node_modules/giza-framework/html/macros`,
       `./node_modules/giza-framework/html/content`,
       `./node_modules/giza-framework/html/components`,
       `./node_modules/giza-framework/html/modules`,
@@ -32,7 +35,9 @@ gulp.task("html", function() {
   };
 
   const dataFunction = function() {
-    var dataPath = path.resolve(`${PATH_CONFIG.lab}/_data.json`);
+    var dataPath = path.resolve(
+      `${PATH_CONFIG.BASE}/${PATH_CONFIG.html.src}/_data.json`
+    );
     return JSON.parse(fs.readFileSync(dataPath, "utf8"));
   };
 

@@ -3815,9 +3815,9 @@ getpass@^0.1.1:
     assert-plus "^1.0.0"
 
 giza-framework@*:
-  version "0.1.67"
-  resolved "https://registry.yarnpkg.com/giza-framework/-/giza-framework-0.1.67.tgz#5e4483ca35afbbbe180e58cdbe66256e6400b47a"
-  integrity sha512-2r8mKIsVYA0z2RNgEP5D6Tu9TwtofqF5I6b8aKAvdV0ZikdpaZx+Ogna3TnZLFyTQiYzSz9zorcRJ2XyseyaGw==
+  version "0.1.68"
+  resolved "https://registry.yarnpkg.com/giza-framework/-/giza-framework-0.1.68.tgz#6f847e9c5cc345a22310fb9471923aeaeb939f82"
+  integrity sha512-hcfP+Ht81hwFvdtLrvLH+qrGQzsXluja8BPMsTXLjjpY2/z82CyGoa3cdc2O1H9qmRZCuQPBAEyR00JYA0H5Aw==
   dependencies:
     babel-core "^6.25.0"
     babel-loader "^7.1.1"
@@ -9259,9 +9259,9 @@ utils-merge@1.0.1:
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
 uuid@^3.0.1, uuid@^3.3.2:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
-  integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
+  integrity sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==
 
 v8flags@^2.0.2:
   version "2.1.1"

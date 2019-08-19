@@ -16,10 +16,7 @@ gulp.task("production", function(cb) {
     "icons",
     "fonts",
     "static",
-    "lab:html",
-    "lab:stylesheets",
     "lab:javascripts",
-    "lab:images",
     "migrate",
     cb
   );

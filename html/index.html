@@ -1,7 +1,14 @@
-{% extends 'layouts/content.html' %}
+{% extends 'lab-side-content.html' %}
+
+{% set AppParentId = "getting-started" %}
+{% set AppCurrentId = "introduction" %}
 
 {% block content %}
-  <p class="text-center">
-    <a class="button" href="lab/">Go to the documentation</a>
-  </p>
+  <h1>Introduction</h1>
+
+  <p>An open source toolkit for developing with HTML, CSS and JS.</p>
+
+  <h3>Requirements</h3>
+
+  <p>Requires at least version 6 of Node. We reccomend using nvm to install and manage your Node versions.</p>
 {% endblock %}

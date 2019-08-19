@@ -14,10 +14,7 @@ gulp.task("default", function(cb) {
     "icons",
     "fonts",
     "static",
-    "lab:html",
-    "lab:stylesheets",
     "lab:javascripts",
-    "lab:images",
     "serve",
     "watch",
     cb
