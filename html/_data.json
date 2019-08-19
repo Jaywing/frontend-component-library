@@ -1,4 +1,9 @@
 {
+  "lab_stylesheet": "stylesheets/lab.css",
+  "lab_javascript": "javascripts/giza.js",
+  "lab_iframe_stylesheet": "../stylesheets/jaywing-component-library.css",
+  "lab_iframe_stylesheet_demo": "../stylesheets/lab-demo.css",
+  "lab_iframe_javascript": "../javascripts/jaywing-component-library.js",
   "app_file": "jaywing-component-library",
   "meta_title": "Jaywing Component Library",
   "lab_logo": "Jaywing",
