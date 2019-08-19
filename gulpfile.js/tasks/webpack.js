@@ -6,7 +6,7 @@ const webpack = require("webpack");
 const WebpackStrip = require("strip-loader");
 const projectPath = require("../lib/projectPath");
 
-const webpackConfig = {
+const webpackConfig_dev = {
   context: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
   entry: {
     app: ["babel-polyfill", "./jaywing-component-library.js"]
@@ -47,8 +47,7 @@ const webpackConfig_production = {
   output: {
     path: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
     filename: "jaywing-component-library.js",
-    publicPath:
-      "https://jaywing.github.io/frontend-component-library/javascripts/"
+    publicPath: "/frontend-component-library/javascripts/"
   },
   plugins: [],
   resolve: {
@@ -89,7 +88,7 @@ gulp.task("webpack", function() {
 
   return gulp
     .src(webpack_paths.src)
-    .pipe(gulpif(!production, webpackStream(webpackConfig, webpack)))
+    .pipe(gulpif(!production, webpackStream(webpackConfig_dev, webpack)))
     .pipe(gulpif(production, webpackStream(webpackConfig_production, webpack)))
     .pipe(gulp.dest(webpack_paths.dest));
 });
