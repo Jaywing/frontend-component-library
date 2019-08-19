@@ -23,7 +23,6 @@ gulp.task("html", function() {
     ],
     src_render: [
       projectPath(PATH_CONFIG.lab),
-      `./node_modules/giza-framework/html`,
       `./node_modules/giza-framework/html/layouts`,
       `./node_modules/giza-framework/html/macros`,
       `./node_modules/giza-framework/html/content`,
