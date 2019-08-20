@@ -96,21 +96,21 @@
         },
         { "id": "hero", "url": "components.hero.html", "title": "Hero" },
         {
-          "id": "masonry",
-          "url": "components.masonry.html",
-          "title": "Masonry"
-        },
-        {
           "id": "list-group",
           "url": "components.list-group.html",
           "title": "List Group"
         },
         {
+          "id": "masonry",
+          "url": "components.masonry.html",
+          "title": "Masonry"
+        },
+        { "id": "media", "url": "components.media.html", "title": "Media" },
+        {
           "id": "mega-nav",
           "url": "components.mega-nav.html",
           "title": "Mega Nav"
         },
-        { "id": "media", "url": "components.media.html", "title": "Media" },
         { "id": "modal", "url": "components.modal.html", "title": "Modal" },
         { "id": "nav", "url": "components.nav.html", "title": "Nav" },
         { "id": "navbar", "url": "components.navbar.html", "title": "Navbar" },
