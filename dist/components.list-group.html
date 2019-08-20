@@ -343,8 +343,6 @@
         
           
   
-    
-  
 
   
 
@@ -352,7 +350,7 @@
 
   
 
-  <li class="nav__item is-active">
+  <li class="nav__item">
     <a class="nav__link" href="components.hero.html">Hero</a>
     
 </li>
@@ -375,14 +373,16 @@
         
           
   
-
+    
   
 
   
 
   
 
-  <li class="nav__item">
+  
+
+  <li class="nav__item is-active">
     <a class="nav__link" href="components.list-group.html">List Group</a>
     
 </li>
@@ -685,9 +685,9 @@
   </div>
   <main class="app-content">
     
-  <h1>Hero</h1>
+  <h1>List Group</h1>
 
-  <p class="font-size-md">Add a hero to your page with image and video options.</p>
+  <p class="font-size-md">Add a list of content to your page supporting lists, with links or custom content.</p>
 
   <h3>Usage</h3>
 
@@ -695,9 +695,9 @@
   
     <div class="app-example">
       <div class="app-example__tabs">
-        <a class="app-example__tab" href="components/hero.html" target="_blank">Open this example in a new window</a>
+        <a class="app-example__tab" href="components/list-group.html" target="_blank">Open this example in a new window</a>
       </div>
-      <div data-module="LabFrame" data-options='{"src": "components/hero.html"}'></div>
+      <div data-module="LabFrame" data-options='{"src": "components/list-group.html"}'></div>
     </div>
   
 
@@ -705,34 +705,30 @@
   <div class="app-code" data-module="LabCode">
     <button class="button app-copy-button js-app-copy-button">Copy code</button>
     <pre class="language-html"><code class="language-html">
-  &lt;div class=&quot;hero&quot;&gt;
-    &lt;picture class=&quot;hero__image&quot;&gt;
-      &lt;source media=&quot;(min-width: 768px)&quot; srcset=&quot;...&quot;/&gt;
-      &lt;source srcset=&quot;...&quot;/&gt;
-      &lt;img src=&quot;...&quot; alt=&quot;&quot;/&gt;
-    &lt;/picture&gt;
-    &lt;div class=&quot;hero__body&quot;&gt;
-      &lt;div class=&quot;hero__title&quot;&gt;
-        &lt;span class=&quot;hero__text-background&quot;&gt;...&lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;hero__text&quot;&gt;
-        &lt;span class=&quot;hero__text-background&quot;&gt;...&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  &lt;ul class=&quot;list-group&quot;&gt;
+    &lt;li class=&quot;list-group__item&quot;&gt;
+      List group item
+    &lt;/li&gt;
+    &lt;li class=&quot;list-group__item&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Another list group item with a link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;list-group__item&quot;&gt;
+      Another list group item with just text
+    &lt;/li&gt;
+  &lt;/ul&gt;
   </code></pre>
   </div>
 
 
-  <h3>With video</h3>
+  <h3>Content</h3>
 
   
   
     <div class="app-example">
       <div class="app-example__tabs">
-        <a class="app-example__tab" href="components/hero.video.html" target="_blank">Open this example in a new window</a>
+        <a class="app-example__tab" href="components/list-group.content.html" target="_blank">Open this example in a new window</a>
       </div>
-      <div data-module="LabFrame" data-options='{"src": "components/hero.video.html"}'></div>
+      <div data-module="LabFrame" data-options='{"src": "components/list-group.content.html"}'></div>
     </div>
   
 
@@ -740,64 +736,6 @@
   <div class="app-code" data-module="LabCode">
     <button class="button app-copy-button js-app-copy-button">Copy code</button>
     <pre class="language-html"><code class="language-html">
-  &lt;div class=&quot;hero&quot;&gt;
-    &lt;div class=&quot;hero__media&quot;&gt;
-      &lt;picture class=&quot;hero__image&quot;&gt;
-        &lt;source media=&quot;(min-width: 768px)&quot; srcset=&quot;...&quot;/&gt;
-        &lt;source srcset=&quot;...&quot;/&gt;
-        &lt;img src=&quot;...&quot; alt=&quot;&quot;/&gt;
-      &lt;/picture&gt;
-      &lt;video autoplay=&quot;autoplay&quot; loop=&quot;loop&quot; muted=&quot;muted&quot; playsinline=&quot;playsinline&quot; class=&quot;hero__video&quot;&gt;
-        &lt;source src=&quot;....mp4&quot; type=&quot;video/mp4&quot;&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;hero__body&quot;&gt;
-      &lt;div class=&quot;hero__title&quot;&gt;
-        &lt;span class=&quot;hero__text-background&quot;&gt;...&lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;hero__text&quot;&gt;
-        &lt;span class=&quot;hero__text-background&quot;&gt;...&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  </code></pre>
-  </div>
-
-
-  <h3>With YouTube</h3>
-
-  
-  
-    <div class="app-example">
-      <div class="app-example__tabs">
-        <a class="app-example__tab" href="components/hero.youtube.html" target="_blank">Open this example in a new window</a>
-      </div>
-      <div data-module="LabFrame" data-options='{"src": "components/hero.youtube.html"}'></div>
-    </div>
-  
-
-  
-  <div class="app-code" data-module="LabCode">
-    <button class="button app-copy-button js-app-copy-button">Copy code</button>
-    <pre class="language-html"><code class="language-html">
-  &lt;div class=&quot;hero&quot;&gt;
-    &lt;div class=&quot;hero__media&quot;&gt;
-      &lt;picture class=&quot;hero__image&quot;&gt;
-        &lt;source media=&quot;(min-width: 768px)&quot; srcset=&quot;...&quot;/&gt;
-        &lt;source srcset=&quot;...&quot;/&gt;
-        &lt;img src=&quot;...&quot; alt=&quot;&quot;/&gt;
-      &lt;/picture&gt;
-      &lt;iframe class=&quot;hero__video&quot; src=&quot;https://www.youtube.com/embed/XXX?controls=0&amp;amp;showinfo=0&amp;amp;rel=0&amp;amp;autoplay=1&amp;amp;loop=1&amp;amp;mute=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;hero__body&quot;&gt;
-      &lt;div class=&quot;hero__title&quot;&gt;
-        &lt;span class=&quot;hero__text-background&quot;&gt;...&lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;hero__text&quot;&gt;
-        &lt;span class=&quot;hero__text-background&quot;&gt;...&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
   </code></pre>
   </div>
 
