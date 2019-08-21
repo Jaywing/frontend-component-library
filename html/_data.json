@@ -6,7 +6,6 @@
     "lab_iframe_stylesheet": "../stylesheets/jaywing-component-library.css",
     "lab_iframe_stylesheet_demo": "../stylesheets/lab-demo.css",
     "lab_iframe_javascript": "../javascripts/jaywing-component-library.js",
-    "app_file": "jaywing-component-library",
     "meta_title": "Jaywing Component Library",
     "logo": {
       "src": "images/app-logo-light.svg",
