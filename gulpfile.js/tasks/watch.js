@@ -20,7 +20,7 @@ gulp.task("watch", function() {
     iconsSrc: [projectPath(PATH_CONFIG.BASE, PATH_CONFIG.icons.src, "*.svg")]
   };
 
-  gulp.watch(paths.htmlSrc, ["html", "lab:html", browser.reload]);
+  gulp.watch(paths.htmlSrc, ["html", browser.reload]);
   gulp.watch(paths.stylesheetsSrc, ["stylesheets", browser.reload]);
   gulp.watch(paths.javascriptsSrc, ["webpack", browser.reload]);
   gulp.watch(paths.imagesSrc, ["images", browser.reload]);

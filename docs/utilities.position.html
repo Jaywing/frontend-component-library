@@ -22,17 +22,17 @@
       <div class="container app-header__inner">
         <a class="app-logo" href="index.html">
           <img class="app-logo__image" src="images/app-logo-light.svg" alt="Jaywing">
-          <span class="app-logo__text">Component Library</span>
         </a>
         <span class="app-version">v0.1.5</span>
         
           <a class="button app-download" href="getting-started.download.html">Download</a>
         
-        <button class="button app-sidebar-toggle" data-module="Toggle" data-options='{"target": ".app-sidebar"}'>
-          <div class="hamburger">
-            <div class="hamburger__inner"></div>
-            <div class="sr-only">Menu</div>
-          </div>
+        <button class="button app-sidebar-toggle" data-module="Toggle" data-options='{"target": ".app-sidebar"}' aria-label="Menu">
+          <span class="navbar__toggler-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </button>
       </div>
     </header>
@@ -364,21 +364,6 @@
   
 
   <li class="nav__item">
-    <a class="nav__link" href="components.masonry.html">Masonry</a>
-    
-</li>
-
-        
-          
-  
-
-  
-
-  
-
-  
-
-  <li class="nav__item">
     <a class="nav__link" href="components.list-group.html">List Group</a>
     
 </li>
@@ -394,7 +379,7 @@
   
 
   <li class="nav__item">
-    <a class="nav__link" href="components.mega-nav.html">Mega Nav</a>
+    <a class="nav__link" href="components.masonry.html">Masonry</a>
     
 </li>
 
@@ -410,6 +395,21 @@
 
   <li class="nav__item">
     <a class="nav__link" href="components.media.html">Media</a>
+    
+</li>
+
+        
+          
+  
+
+  
+
+  
+
+  
+
+  <li class="nav__item">
+    <a class="nav__link" href="components.mega-nav.html">Mega Nav</a>
     
 </li>
 
@@ -690,54 +690,52 @@
 
   
 
-  <table class="table" data-module="LabCode">
-    <tr>
-      <td style="padding: 1rem 0;" class="font-size-xs">Class</td>
-      <td style="padding: 1rem 0;" class="font-size-xs">Rule</td>
-    </tr>
-
-    
+  <div class="app-code" data-module="LabCode">
+    <table class="table">
       <tr>
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">.position-relative</code></pre>
-        </td>
-
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">position: relative;</code></pre>
-        </td>
+        <th class="font-size-xs">Class</th>
+        <th class="font-size-xs">Rule</th>
       </tr>
-    
-      <tr>
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">.position-absolute</code></pre>
-        </td>
 
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">position: absolute;</code></pre>
-        </td>
-      </tr>
-    
-      <tr>
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">.position-fixed</code></pre>
-        </td>
-
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">position: fixed;</code></pre>
-        </td>
-      </tr>
-    
-      <tr>
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">.position-static</code></pre>
-        </td>
-
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">position: static;</code></pre>
-        </td>
-      </tr>
-    
-  </table>
+      
+        <tr>
+          <td>
+            <pre class="language-css"><code class="language-css">.position-relative</code></pre>
+          </td>
+          <td>
+            <pre class="language-css"><code class="language-css">position: relative;</code></pre>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            <pre class="language-css"><code class="language-css">.position-absolute</code></pre>
+          </td>
+          <td>
+            <pre class="language-css"><code class="language-css">position: absolute;</code></pre>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            <pre class="language-css"><code class="language-css">.position-fixed</code></pre>
+          </td>
+          <td>
+            <pre class="language-css"><code class="language-css">position: fixed;</code></pre>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            <pre class="language-css"><code class="language-css">.position-static</code></pre>
+          </td>
+          <td>
+            <pre class="language-css"><code class="language-css">position: static;</code></pre>
+          </td>
+        </tr>
+      
+    </table>
+  </div>
 
 
 
