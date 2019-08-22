@@ -143,6 +143,11 @@
           "title": "Display"
         },
         {
+          "id": "flex",
+          "url": "utilities.flex.html",
+          "title": "Flex"
+        },
+        {
           "id": "position",
           "url": "utilities.position.html",
           "title": "Position"
@@ -153,9 +158,24 @@
           "title": "Size"
         },
         {
+          "id": "spacing",
+          "url": "utilities.spacing.html",
+          "title": "Spacing"
+        },
+        {
           "id": "text",
           "url": "utilities.text.html",
           "title": "Text"
+        },
+        {
+          "id": "type",
+          "url": "utilities.type.html",
+          "title": "Type"
+        },
+        {
+          "id": "visibility",
+          "url": "utilities.visibility.html",
+          "title": "Visibility"
         }
       ]
     },
