@@ -4,8 +4,10 @@
   width: 100%;
 }
 
-.masonry-demo {
-  padding: $spacer;
+.masonry__item {
+  img {
+    width: 100%;
+  }
 }
 
 @include md {
@@ -16,6 +18,22 @@
 }
 
 @include md {
+  .masonry--layout-feature {
+    .masonry__sizer {
+      width: 50%;
+    }
+
+    .masonry__item {
+      width: 50%;
+
+      &:nth-child(2) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include lg {
   .masonry--layout-feature {
     .masonry__sizer {
       width: 25%;

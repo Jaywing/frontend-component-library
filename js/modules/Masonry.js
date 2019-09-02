@@ -10,7 +10,8 @@ export default class Masonry {
       const msnry = new masonryLayout(grid, {
         columnWidth: ".masonry__sizer",
         itemSelector: ".masonry__item",
-        percentPosition: true
+        percentPosition: true,
+        transitionDuration: 0
       });
     });
   }
