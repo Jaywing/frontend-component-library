@@ -12,7 +12,7 @@ export default class Nav {
   cacheDom() {
     return {
       menuParent: this.el.querySelectorAll(
-        ".is-dropdown-button, .is-accordion-button"
+        ".is-parent-button, .nav--tabs .nav__link"
       )
     };
   }
@@ -34,12 +34,16 @@ export default class Nav {
       return null;
     };
 
+    let clickedContainer = getClosest(e.target, ".nav");
     let clickedParent = getClosest(e.target, ".nav__item");
-    console.log(clickedParent);
 
     if (clickedParent.classList.contains("is-active")) {
       clickedParent.classList.remove("is-active");
       return;
+    }
+
+    if (clickedContainer.classList.contains("nav--tabs")) {
+      this.handleTabs(e.target);
     }
 
     let items = clickedParent.parentNode.querySelectorAll(".nav__item");
@@ -49,5 +53,15 @@ export default class Nav {
     }
 
     clickedParent.classList.add("is-active");
+  }
+
+  handleTabs(elem) {
+    let target = elem.getAttribute("href").substr(1);
+    let tab = document.getElementById(target);
+    let tabs = tab.parentNode.querySelectorAll(".tab-pane");
+    for (let i = 0, len = tabs.length; i < len; i++) {
+      tabs[i].classList.remove("is-active");
+    }
+    tab.classList.add("is-active");
   }
 }

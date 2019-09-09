@@ -1,1 +1,1 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{136:function(t,s,i){"use strict";i.r(s),i.d(s,"default",function(){return n});class n{constructor(t,s){this.el=t,this.settings=Object.assign({},s),this.init()}init(){}}}}]);
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{136:function(t,s,i){"use strict";i.r(s),i.d(s,"default",(function(){return n}));class n{constructor(t,s){this.el=t,this.settings=Object.assign({},s),this.init()}init(){}}}}]);
