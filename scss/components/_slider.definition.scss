@@ -9,6 +9,10 @@ $slider-text-color: $white !default;
   color: $slider-text-color;
 }
 
+.slider__picture {
+  display: block;
+}
+
 .slider__image {
   width: 100%;
   transform: scale(1.0125);
