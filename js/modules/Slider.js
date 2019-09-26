@@ -38,18 +38,6 @@ export default class Slider {
     let direction = 1;
     let slidesTotal = this.dom.slide.length;
 
-    // Settings: Reactive slider
-    if (this.settings.slidesToShow) {
-      if (
-        this.settings.slidesToShowMd == 4 &&
-        window.jwAtomic.modules.Breakpoint.detail.gtSm
-      ) {
-        slidesTotal = this.dom.slide.length / this.settings.slidesToShowMd;
-      } else {
-        slidesTotal = this.dom.slide.length / this.settings.slidesToShow;
-      }
-    }
-
     for (let i = 0; i < slidesTotal; i++) {
       if (
         slidesTotal > 1 &&
@@ -58,41 +46,12 @@ export default class Slider {
         sliderNum = i;
       }
 
-      // Hero slider height
-      if (this.settings.type == "hero") {
-        let vheight =
-          window.innerHeight -
-          document.querySelector(".SiteHeader").offsetHeight;
-        vheight = vheight - (vheight * 10) / 100;
-        this.dom.slide[i].style.minHeight = `${vheight}px`;
-      }
-
       // Create pips
       if (slidesTotal > 1) {
         if (i == 0) {
           this.dom.pips.innerHTML += `<div class="slider__pip is-active"></div>`;
         } else {
           this.dom.pips.innerHTML += `<div class="slider__pip"></div>`;
-        }
-      }
-    }
-
-    // Reactive slider setup
-    if (this.settings.slidesToShow) {
-      for (let i = 0; i < this.dom.slide.length; i++) {
-        if (this.settings.slidesToShow == 2) {
-          this.dom.slide[i].style.flex = "0 0 50%";
-          this.dom.slide[i].style.width = "50%";
-        } else {
-          this.dom.slide[i].style.flex = "0 0 25%";
-          this.dom.slide[i].style.width = "25%";
-        }
-
-        if (window.jwAtomic.modules.Breakpoint.detail.gtSm) {
-          if (this.settings.slidesToShowMd == 4) {
-            this.dom.slide[i].style.flex = "0 0 25%";
-            this.dom.slide[i].style.width = "25%";
-          }
         }
       }
     }
@@ -132,9 +91,7 @@ export default class Slider {
 
     this.dom.nextButton.addEventListener("click", slideForward);
     this.dom.previousButton.addEventListener("click", slideBackward);
-    this.el
-      .querySelector(".slider__pips")
-      .addEventListener("click", setSlide);
+    this.el.querySelector(".slider__pips").addEventListener("click", setSlide);
   }
 
   changeSlide(sliderNum, direction) {
@@ -164,20 +121,7 @@ export default class Slider {
         );
     }
 
-    // Reactive slider
-    if (this.settings.slidesToShow) {
-      let slideWidth = this.dom.slide[sliderNum].offsetWidth;
-      let newSlideWidth = slideWidth * this.settings.slidesToShow;
-      if (window.jwAtomic.modules.Breakpoint.detail.gtSm) {
-        if (this.settings.slidesToShowMd == 4) {
-          newSlideWidth = slideWidth * this.settings.slidesToShowMd;
-        }
-      }
-      let transform = sliderNum * newSlideWidth;
-      this.dom.slides.style.transform = `translateX(-${transform}px)`;
-    }
-
-    // Set pip
+    // Set pips state
     this.el
       .querySelector(".slider__pip.is-active")
       .classList.remove("is-active");
