@@ -1,3 +1,5 @@
+import LazyLoad from "vanilla-lazyload";
+
 export default class Slider {
   constructor(el, options) {
     const defaults = {
@@ -15,8 +17,12 @@ export default class Slider {
     console.log(`${this} has initialised`);
     this.dom = this.cacheDom();
 
+    const lazyLoadInstance = new LazyLoad({
+      elements_selector: ".lazy"
+    });
+
     // Make the slider
-    this.makeSlider();
+    this.makeSlider(lazyLoadInstance);
     if (!Element.prototype.matches) {
       Element.prototype.matches = Element.prototype.msMatchesSelector;
     }
@@ -33,10 +39,12 @@ export default class Slider {
     };
   }
 
-  makeSlider() {
+  makeSlider(lazyLoadInstance) {
     let sliderNum = 0;
     let direction = 1;
     let slidesTotal = this.dom.slide.length;
+
+    lazyLoadInstance.update();
 
     for (let i = 0; i < slidesTotal; i++) {
       if (
