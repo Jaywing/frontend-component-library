@@ -22,7 +22,7 @@ export default class Slider {
     });
 
     // Make the slider
-    this.makeSlider(lazyLoadInstance);
+    this.makeSlider();
     if (!Element.prototype.matches) {
       Element.prototype.matches = Element.prototype.msMatchesSelector;
     }
@@ -39,12 +39,16 @@ export default class Slider {
     };
   }
 
-  makeSlider(lazyLoadInstance) {
+  makeSlider() {
     let sliderNum = 0;
     let direction = 1;
     let slidesTotal = this.dom.slide.length;
+    let slideHeight = this.dom.slide[0].querySelector("img").offsetHeight;
 
-    lazyLoadInstance.update();
+    el => {
+      console.log("Loaded", el);
+    };
+    this.el.style.minHeight = slideHeight;
 
     for (let i = 0; i < slidesTotal; i++) {
       if (
