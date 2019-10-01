@@ -1,0 +1,18 @@
+{% extends 'lab-side-content.html' %}
+
+{% set AppParentId = "components" %}
+{% set AppCurrentId = "share" %}
+
+{% block content %}
+  <h1>Share</h1>
+
+  <p class="font-size-md">Share to your social channels.</p>
+
+  <h3>Usage</h3>
+
+  {{LabExample(AppParentId, AppCurrentId)}}
+  {{LabCode('html', '
+  <div class="share">
+  </div>
+  ')}}
+{% endblock %}

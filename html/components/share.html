@@ -1,0 +1,13 @@
+{% extends 'lab-source.html' %}
+
+{% from 'icon.html' import Icon %}
+
+{% macro Share(modal) %}
+  <div class="share"></div>
+{% endmacro %}
+
+{% block body %}
+
+  {{ Share() }}
+
+{% endblock %}
