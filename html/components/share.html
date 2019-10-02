@@ -33,6 +33,27 @@
 
 {% block body %}
 
-  {{ Share() }}
+  {{ Share([
+  {
+    'name': 'facebook',
+    'url': '#',
+    'text': 'Share'
+  },
+  {
+    'name': 'twitter',
+    'url': '#',
+    'text': 'Tweet'
+  },
+  {
+    'name': 'pinterest',
+    'url': '#',
+    'text': 'Pinterest'
+  },
+  {
+    'name': 'envelope',
+    'url': '#',
+    'text': 'Email'
+  }
+  ]) }}
 
 {% endblock %}
