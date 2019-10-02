@@ -2,58 +2,41 @@
 
 {% from 'icon.html' import Icon %}
 
-{% macro Share(modal) %}
+{% macro Share(model) %}
   <div class="share">
-    <div class="share-item">
-      <a href="#" class="button share-link">
-        {{ Icon('facebook') }}
-        Share
-      </a>
-    </div>
-    <div class="share-item">
-      <a href="#" class="button share-link">
-        {{ Icon('twitter') }}
-        Tweet
-      </a>
-    </div>
-    <div class="share-item">
-      <a href="#" class="button share-link">
-        {{ Icon('pinterest') }}
-        Pinterest
-      </a>
-    </div>
-    <div class="share-item">
-      <a href="#" class="button share-link">
-        {{ Icon('envelope') }}
-        Email
-      </a>
-    </div>
-  </div>
-{% endmacro %}
+    {% for item in model %}
+      <div class="share-item">
+        <a href="{{item.url}}" class="button share-link">
+          {{ Icon(item.name) }}
+          {{item.text}}
+        </a>
+      </div>
+    {% endfor %}
+  {% endmacro %}
 
-{% block body %}
+  {% block body %}
 
-  {{ Share([
+    {{ Share([
   {
     'name': 'facebook',
-    'url': '#',
+    'url': 'https://www.facebook.com/sharer/sharer.php?u=https://jaywing.github.io/frontend-component-library',
     'text': 'Share'
   },
   {
     'name': 'twitter',
-    'url': '#',
+    'url': 'https://twitter.com/share?url=https://jaywing.github.io/frontend-component-library',
     'text': 'Tweet'
   },
   {
     'name': 'pinterest',
-    'url': '#',
+    'url': 'https://www.pinterest.com/pin/create/button/?url=https://jaywing.github.io/frontend-component-library',
     'text': 'Pinterest'
   },
   {
     'name': 'envelope',
-    'url': '#',
+    'url': 'mailto:example@example.com?subject=https://jaywing.github.io/frontend-component-library',
     'text': 'Email'
   }
   ]) }}
 
-{% endblock %}
+  {% endblock %}
