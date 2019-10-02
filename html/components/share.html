@@ -1,0 +1,42 @@
+{% extends 'lab-source.html' %}
+
+{% from 'icon.html' import Icon %}
+
+{% macro Share(model) %}
+  <div class="share">
+    {% for item in model %}
+      <div class="share-item">
+        <a href="{{item.url}}" class="button share-link">
+          {{ Icon(item.name) }}
+          {{item.text}}
+        </a>
+      </div>
+    {% endfor %}
+  {% endmacro %}
+
+  {% block body %}
+
+    {{ Share([
+  {
+    'name': 'facebook',
+    'url': 'https://www.facebook.com/sharer/sharer.php?u=https://jaywing.github.io/frontend-component-library',
+    'text': 'Share'
+  },
+  {
+    'name': 'twitter',
+    'url': 'https://twitter.com/share?url=https://jaywing.github.io/frontend-component-library',
+    'text': 'Tweet'
+  },
+  {
+    'name': 'pinterest',
+    'url': 'https://www.pinterest.com/pin/create/button/?url=https://jaywing.github.io/frontend-component-library',
+    'text': 'Pinterest'
+  },
+  {
+    'name': 'envelope',
+    'url': 'mailto:example@example.com?subject=https://jaywing.github.io/frontend-component-library',
+    'text': 'Email'
+  }
+  ]) }}
+
+  {% endblock %}

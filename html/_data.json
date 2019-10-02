@@ -128,6 +128,7 @@
           "url": "components.pagination.html",
           "title": "Pagination"
         },
+        { "id": "share", "url": "components.share.html", "title": "Share" },
         { "id": "slider", "url": "components.slider.html", "title": "Slider" },
         { "id": "table", "url": "components.table.html", "title": "Table" }
       ]
