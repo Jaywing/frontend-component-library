@@ -3,7 +3,32 @@
 {% from 'icon.html' import Icon %}
 
 {% macro Share(modal) %}
-  <div class="share"></div>
+  <div class="share">
+    <div class="share-item">
+      <a href="#" class="button share-link">
+        {{ Icon('facebook') }}
+        Share
+      </a>
+    </div>
+    <div class="share-item">
+      <a href="#" class="button share-link">
+        {{ Icon('twitter') }}
+        Tweet
+      </a>
+    </div>
+    <div class="share-item">
+      <a href="#" class="button share-link">
+        {{ Icon('pinterest') }}
+        Pinterest
+      </a>
+    </div>
+    <div class="share-item">
+      <a href="#" class="button share-link">
+        {{ Icon('envelope') }}
+        Email
+      </a>
+    </div>
+  </div>
 {% endmacro %}
 
 {% block body %}
