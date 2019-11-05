@@ -8,18 +8,18 @@ const fs = require("fs");
 gulp.task("html", function() {
   paths = {
     src: [
-      `./node_modules/giza-framework/html/**/*.html`,
-      "!" +
-        projectPath(
-          `./node_modules/giza-framework/html/**/{layouts,macros,data}/**`
-        ),
-      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "**/*.html"),
-      "!" +
-        projectPath(
-          PATH_CONFIG.BASE,
-          PATH_CONFIG.html.src,
-          "**/{layouts,data}/**"
-        )
+      `./node_modules/giza-framework/html/templates/**/*.html`,
+      `./node_modules/giza-framework/html/{components,content,modules}/**/*.html`,
+      projectPath(
+        PATH_CONFIG.BASE,
+        PATH_CONFIG.html.src,
+        "templates/**/*.html"
+      ),
+      projectPath(
+        PATH_CONFIG.BASE,
+        PATH_CONFIG.html.src,
+        "{components,content,modules}/**/*.html"
+      )
     ],
     src_render: [
       projectPath(PATH_CONFIG.lab),
