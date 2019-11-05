@@ -1,6 +1,7 @@
 {
   "version": "0.1.5",
   "settings": {
+    "base_url": "https://jaywing.github.io/frontend-component-library/",
     "lab_stylesheet": "stylesheets/lab.css",
     "lab_javascript": "javascripts/giza.js",
     "lab_iframe_stylesheet": "../stylesheets/jaywing-component-library.css",
