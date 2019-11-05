@@ -1,0 +1,23 @@
+.share {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.share-item {
+  &:not(:last-child) {
+    margin-right: $spacer;
+  }
+}
+
+a.button.share-link,
+.share-link {
+  @include font-size-sm;
+
+  text-decoration: none;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: $spacer-sm;
+  }
+}

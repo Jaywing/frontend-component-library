@@ -1,0 +1,58 @@
+{% extends 'lab-side-content.html' %}
+
+{% set AppParentId = "components" %}
+{% set AppCurrentId = "share" %}
+
+{% block content %}
+  <h1>Share</h1>
+
+  <p class="font-size-md">Share to your social channels.</p>
+
+  <h3>Usage</h3>
+
+  {{LabExample(AppParentId, AppCurrentId)}}
+  {{LabCode('html', '
+  <div class="share">
+    <div class="share-item">
+      <a href="#" class="button share-link">
+        <span class="icon icon--facebook">
+          <svg viewBox="0 0 1 1">
+            <use xlink:href="../images/icons.svg#facebook"></use>
+          </svg>
+        </span>
+        Share
+      </a>
+    </div>
+    <div class="share-item">
+      <a href="#" class="button share-link">
+        <span class="icon icon--twitter">
+          <svg viewBox="0 0 1 1">
+            <use xlink:href="../images/icons.svg#twitter"></use>
+          </svg>
+        </span>
+        Tweet
+      </a>
+    </div>
+    <div class="share-item">
+      <a href="#" class="button share-link">
+        <span class="icon icon--pinterest">
+          <svg viewBox="0 0 1 1">
+            <use xlink:href="../images/icons.svg#pinterest"></use>
+          </svg>
+        </span>
+        Pinterest
+      </a>
+    </div>
+    <div class="share-item">
+      <a href="#" class="button share-link">
+        <span class="icon icon--envelope">
+          <svg viewBox="0 0 1 1">
+            <use xlink:href="../images/icons.svg#envelope"></use>
+          </svg>
+        </span>
+        Email
+      </a>
+    </div>
+  </div>
+  ')}}
+{% endblock %}
