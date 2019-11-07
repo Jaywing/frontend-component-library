@@ -13,25 +13,31 @@
         <img src="{{model.img.srcLg}}" alt=""/>
       </picture>
       {% if model.title or model.description %}
-        <div class="hero__body">
-          {% if model.title %}
-            <h2 class="hero__title">
-              <span class="hero__text-background">{{model.title}}</span>
-            </h2>
+        {% if model.innerContainer %}
+          <div class="container position-relative">
           {% endif %}
-          <div class="hero__text">
-            {% if model.description %}
-              <span class="hero__text-background">{{model.description}}</span>
+          <div class="hero__body">
+            {% if model.title %}
+              <h2 class="hero__title">
+                <span class="hero__text-background">{{model.title}}</span>
+              </h2>
             {% endif %}
-          </div>
-          {% if model.button or model.buttonSecondary %}
-            <div class="hero__footer">
-              {% if model.button %}
-                {{ Button(model.button) }}
+            <div class="hero__text">
+              {% if model.description %}
+                <span class="hero__text-background">{{model.description}}</span>
               {% endif %}
-              {% if model.buttonSecondary %}
-                {{ Button(model.buttonSecondary) }}
-              {% endif %}
+            </div>
+            {% if model.button or model.buttonSecondary %}
+              <div class="hero__footer">
+                {% if model.button %}
+                  {{ Button(model.button) }}
+                {% endif %}
+                {% if model.buttonSecondary %}
+                  {{ Button(model.buttonSecondary) }}
+                {% endif %}
+              </div>
+            {% endif %}
+            {% if model.innerContainer %}
             </div>
           {% endif %}
         </div>
@@ -60,7 +66,8 @@
     'buttonSecondary': {
       'url': '#',
       'description': 'Go somewhere else'
-    }
+    },
+    'innerContainer': true
   }) }}
 
 {% endblock %}
