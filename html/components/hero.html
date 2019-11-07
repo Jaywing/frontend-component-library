@@ -20,13 +20,17 @@
           {% if model.description %}
             <span class="hero__text-background">{{model.description}}</span>
           {% endif %}
-          {% if model.button %}
-            {{ Button(model.button) }}
-          {% endif %}
-          {% if model.buttonSecondary %}
-            {{ Button(model.buttonSecondary) }}
-          {% endif %}
         </div>
+        {% if model.button or model.buttonSecondary %}
+          <div class="hero__footer">
+            {% if model.button %}
+              {{ Button(model.button) }}
+            {% endif %}
+            {% if model.buttonSecondary %}
+              {{ Button(model.buttonSecondary) }}
+            {% endif %}
+          </div>
+        {% endif %}
       </div>
     {% endif %}
   </div>
