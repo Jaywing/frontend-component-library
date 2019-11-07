@@ -1,25 +1,56 @@
 {% extends 'lab-source.html' %}
 
-{% macro Hero(modal) %}
+{% from 'button.html' import Button %}
+
+{% macro Hero(model) %}
   <div class="hero">
     <picture class="hero__image">
-      <source media="(min-width: 960px)" srcset="//placehold.it/1200x600"/>
-      <source srcset="//placehold.it/600x300"/>
-      <img src="//placehold.it/1200x600" alt=""/>
+      <source media="(min-width: 960px)" srcset="{{model.img.srcLg}}"/>
+      <source srcset="{{model.img.srcSm}}"/>
+      <img src="{{model.img.srcLg}}" alt=""/>
     </picture>
-    <div class="hero__body">
-      <h2 class="hero__title">
-        <span class="hero__text-background">Hero title</span>
-      </h2>
-      <div class="hero__text">
-        <span class="hero__text-background">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin.</span>
+    {% if model.title or model.description %}
+      <div class="hero__body">
+        {% if model.title %}
+          <h2 class="hero__title">
+            <span class="hero__text-background">{{model.title}}</span>
+          </h2>
+        {% endif %}
+        <div class="hero__text">
+          {% if model.description %}
+            <span class="hero__text-background">{{model.description}}</span>
+          {% endif %}
+          {% if model.button %}
+            {{ Button(model.button) }}
+          {% endif %}
+          {% if model.buttonSecondary %}
+            {{ Button(model.buttonSecondary) }}
+          {% endif %}
+        </div>
       </div>
-    </div>
+    {% endif %}
   </div>
 {% endmacro %}
 
 {% block body %}
 
-  {{ Hero() }}
+  {{ Hero({
+    'title': 'Hero title',
+    'description': 'Some text adding to the hero title and to add volume to the hero\'s content.',
+    'img': {
+      'srcLg': '//placehold.it/1200x600',
+      'srcSm': '//placehold.it/600x300',
+      'description': ''
+    },
+    'button': {
+      'url': '#',
+      'description': 'Go somewhere'
+    }
+    ,
+    'buttonSecondary': {
+      'url': '#',
+      'description': 'Go somewhere else'
+    }
+  }) }}
 
 {% endblock %}
