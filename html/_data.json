@@ -1,12 +1,11 @@
 {
   "version": "0.1.5",
   "settings": {
-    "base_url": "https://jaywing.github.io/frontend-component-library/",
     "lab_stylesheet": "stylesheets/lab.css",
     "lab_javascript": "javascripts/giza.js",
-    "lab_iframe_stylesheet": "../stylesheets/jaywing-component-library.css",
-    "lab_iframe_stylesheet_demo": "../stylesheets/lab-demo.css",
-    "lab_iframe_javascript": "../javascripts/jaywing-component-library.js",
+    "lab_iframe_stylesheet": "stylesheets/jaywing-component-library.css",
+    "lab_iframe_stylesheet_demo": "stylesheets/lab-demo.css",
+    "lab_iframe_javascript": "javascripts/jaywing-component-library.js",
     "meta_title": "Jaywing Component Library",
     "logo": {
       "src": "images/app-logo-light.svg",
