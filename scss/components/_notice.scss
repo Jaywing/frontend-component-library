@@ -10,14 +10,6 @@ $notice-text-color: $black !default;
   color: $notice-text-color;
 }
 
-.notice--modal {
-  display: none;
-
-  &.is-active {
-    display: flex;
-  }
-}
-
 .notice__img {
   width: 100%;
 }

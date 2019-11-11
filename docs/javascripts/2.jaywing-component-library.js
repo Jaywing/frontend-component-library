@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{137:function(t,s,e){"use strict";Object.defineProperty(s,"__esModule",{value:!0});var i,n=e(354),o=(i=n)&&i.__esModule?i:{default:i};s.default=function t(s,e){!function(t,s){if(!(t instanceof s))throw new TypeError("Cannot call a class as a function")}(this,t);this.el=s,this.settings=Object.assign({stickyItem:".sticky__item"},e);(0,o.default)(this.settings.stickyItem)}},354:function(t,s,e){"use strict";e.r(s);
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{140:function(t,s,e){"use strict";Object.defineProperty(s,"__esModule",{value:!0});var i,n=e(357),o=(i=n)&&i.__esModule?i:{default:i};s.default=function t(s,e){!function(t,s){if(!(t instanceof s))throw new TypeError("Cannot call a class as a function")}(this,t);this.el=s,this.settings=Object.assign({stickyItem:".sticky__item"},e);(0,o.default)(this.settings.stickyItem)}},357:function(t,s,e){"use strict";e.r(s);
 /**
   stickybits - Stickybits is a lightweight alternative to `position: sticky` polyfills
   @version v3.7.0

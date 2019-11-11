@@ -1,16 +1,20 @@
 {% extends 'lab-source.html' %}
 
 {% macro CookieMessage(title, text, buttonText, buttonUrl) %}
-  <div class="notice notice--modal is-active" data-module="CookieMessage">
-    <div class="notice__body">
-      <div class="notice__title">{{title}}</div>
-      <div class="notice__text">
-        {{text|safe}}
+  <div class="modal is-active" data-module="Modal" data-options='{"name": "CookieMessage"}'>
+    <div class="modal__content">
+      <div class="notice">
+        <div class="notice__body">
+          <div class="notice__title">{{title}}</div>
+          <div class="notice__text">
+            {{text|safe}}
+          </div>
+        </div>
+        <div class="notice__footer">
+          <a class="button js-modal-close">{{buttonText}}</a>
+          <a class="button" href="{{buttonUrl}}">Find out more</a>
+        </div>
       </div>
-    </div>
-    <div class="notice__footer">
-      <a class="button js-cookie-message-close" href="{{buttonUrl}}">{{buttonText}}</a>
-      <a class="button js-cookie-message-close" href="#">Find out more</a>
     </div>
   </div>
 {% endmacro %}
