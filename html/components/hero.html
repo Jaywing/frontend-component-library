@@ -7,11 +7,24 @@
     <div class="container">
     {% endif %}
     <div class="hero">
-      <picture class="hero__image">
-        <source media="(min-width: 960px)" srcset="{{model.img.srcLg}}"/>
-        <source srcset="{{model.img.srcSm}}"/>
-        <img src="{{model.img.srcLg}}" alt=""/>
-      </picture>
+      {% if model.img %}
+        <picture class="hero__image">
+          <source media="(min-width: 960px)" srcset="{{model.img.srcLg}}"/>
+          <source srcset="{{model.img.srcSm}}"/>
+          <img src="{{model.img.srcLg}}" alt=""/>
+        </picture>
+      {% endif %}
+      {% if model.video %}
+        <video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" class="hero__video">
+          <source src="{{model.video}}" type="video/mp4">
+        </video>
+      {% endif %}
+      {% if model.vimeo %}
+        <iframe class="hero__video" src="https://player.vimeo.com/video/{{model.vimeo}}?background=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen"></iframe>
+      {% endif %}
+      {% if model.youtube %}
+        <iframe class="hero__video" src="https://www.youtube.com/embed/{{model.youtube}}?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1&amp;playlist=Q5yX-p0q3PY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+      {% endif %}
       {% if model.title or model.description %}
         {% if model.innerContainer %}
           <div class="container position-relative display-flex">
@@ -61,8 +74,7 @@
     'button': {
       'url': '#',
       'description': 'Go somewhere'
-    }
-    ,
+    },
     'buttonSecondary': {
       'url': '#',
       'description': 'Go somewhere else'

@@ -1,34 +1,27 @@
 {% extends 'lab-source.html' %}
 
-{% macro HeroYoutube(modal) %}
-  <div class="hero">
-    <picture class="hero__image">
-      <source media="(min-width: 960px)" srcset="{{model.img.srcLg}}"/>
-      <source srcset="{{model.img.srcSm}}"/>
-      <img src="{{model.img.srcLg}}" alt=""/>
-    </picture>
-    <iframe class="hero__video" src="https://player.vimeo.com/video/76979871?background=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen"></iframe>
-    <div class="hero__body">
-      <h2 class="hero__title">
-        <span class="hero__text-background">Hero title</span>
-      </h2>
-      <div class="hero__text">
-        <span class="hero__text-background">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin.</span>
-      </div>
-    </div>
-  </div>
-{% endmacro %}
+{% from 'components/hero.html' import Hero %}
 
 {% block body %}
 
-  {{ HeroVideo({
+  {{ Hero({
     'title': 'Hero title',
     'description': 'Some text adding to the hero title and to add volume to the hero\'s content.',
     'img': {
       'srcLg': '//placehold.it/1200x600',
       'srcSm': '//placehold.it/640x360',
       'description': ''
-    }
+    },
+    'vimeo': '76979871',
+    'button': {
+      'url': '#',
+      'description': 'Go somewhere'
+    },
+    'buttonSecondary': {
+      'url': '#',
+      'description': 'Go somewhere else'
+    },
+    'innerContainer': true
   }) }}
 
 {% endblock %}
