@@ -1,21 +1,12 @@
-.hero__media {
+.hero {
   position: relative;
   overflow: hidden;
-}
 
-.hero__image {
-  img {
-    width: 100%;
+  .container {
+    .hero__body {
+      padding: $spacer 0;
+    }
   }
-}
-
-.hero__video {
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 100%;
-  height: 200%;
-  transform: translateY(-50%);
 }
 
 .hero__body {
@@ -42,18 +33,36 @@
   }
 }
 
+.hero__image {
+  img {
+    width: 100%;
+  }
+}
+
+.hero__video {
+  position: absolute;
+  top: 50%;
+  // top: 0;
+  display: block;
+  width: 100%;
+  // height: 200%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(-50%);
+}
+
 @include md {
   .hero {
-    position: relative;
+    display: flex;
+    min-height: 20rem;
+    flex-wrap: wrap;
   }
 
   .hero__body {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     max-width: 40rem;
+    align-self: flex-end;
   }
 
   .hero__title {
@@ -79,6 +88,21 @@
 
     .button {
       margin: $spacer $spacer 0 0;
+    }
+  }
+
+  .hero__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      height: 100%;
+      object-fit: cover;
     }
   }
 }

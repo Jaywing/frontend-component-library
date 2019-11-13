@@ -2,16 +2,14 @@
 
 {% macro HeroVideo(modal) %}
   <div class="hero">
-    <div class="hero__media">
-      <picture class="hero__image">
-        <source media="(min-width: 960px)" srcset="//placehold.it/1200x600"/>
-        <source srcset="//placehold.it/600x300"/>
-        <img src="//placehold.it/1200x600" alt=""/>
-      </picture>
-      <video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" class="hero__video">
-        <source src="../images/SonicShort.mp4" type="video/mp4">
-      </video>
-    </div>
+    <picture class="hero__image">
+      <source media="(min-width: 960px)" srcset="{{model.img.srcLg}}"/>
+      <source srcset="{{model.img.srcSm}}"/>
+      <img src="{{model.img.srcLg}}" alt=""/>
+    </picture>
+    <video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" class="hero__video">
+      <source src="../images/SonicShort.mp4" type="video/mp4">
+    </video>
     <div class="hero__body">
       <h2 class="hero__title">
         <span class="hero__text-background">Gotta go fast</span>
@@ -25,6 +23,14 @@
 
 {% block body %}
 
-  {{ HeroVideo() }}
+  {{ HeroVideo({
+    'title': 'Hero title',
+    'description': 'Some text adding to the hero title and to add volume to the hero\'s content.',
+    'img': {
+      'srcLg': '//placehold.it/1200x600',
+      'srcSm': '//placehold.it/640x360',
+      'description': ''
+    }
+  }) }}
 
 {% endblock %}
