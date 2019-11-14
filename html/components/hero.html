@@ -37,7 +37,7 @@
             {% endif %}
             <div class="hero__text">
               {% if model.description %}
-                <span class="hero__text-background">{{model.description}}</span>
+                <span class="hero__text-background">{{model.description|safe}}</span>
               {% endif %}
             </div>
             {% if model.button or model.buttonSecondary %}
